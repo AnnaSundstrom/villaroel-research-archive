@@ -5,20 +5,33 @@
     <title>Om Beatriz Villarroel</title>
     <meta name="description" content="Presentation av astronomen Beatriz Villarroel och hennes vetenskapliga arbete.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Georgia, "Times New Roman", serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            color: #222;
-            background-color: #fff;
-        }
-        h1, h2 {
-            font-weight: normal;
-        }
-    </style>
+<style>
+  html, body {
+    background-color: #ffffff;
+    color: #222222;
+  }
+
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  h1, h2 {
+    font-weight: normal;
+  }
+
+  a {
+    color: #222222;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
 </head>
 
 <body>
