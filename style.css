@@ -1,1 +1,55 @@
+/* Globalt: tvinga ljus bakgrund oavsett mörkt läge */
+html, body {
+  background-color: #ffffff !important;
+  color: #222222 !important;
+}
 
+/* Baslayout */
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  max-width: 820px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Rubriker */
+h1, h2 {
+  font-weight: normal;
+  margin-top: 1.2em;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+/* Navigation */
+nav p {
+  margin: 0;
+}
+
+nav hr {
+  margin: 12px 0 22px 0;
+}
+
+/* Länkar */
+a {
+  color: #222222;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Listor */
+ul {
+  padding-left: 18px;
+}
+
+/* Horisontella linjer */
+hr {
+  border: none;
+  border-top: 1px solid #dddddd;
+  margin: 22px 0;
+}
