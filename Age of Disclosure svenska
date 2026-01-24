@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>The Age of Disclosure – svensk översättning</title>
+  <meta name="description" content="Svensk översättning av en text relaterad till The Age of Disclosure och Beatriz Villarroels forskning, med saklig sammanfattning och texttrogen återgivning.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #222;
+      background-color: #fff;
+    }
+
+    h1, h2 {
+      font-weight: normal;
+    }
+
+    /* ===== Navigation ===== */
+    nav a:link,
+    nav a:visited {
+      color: #222;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: #7a3cff;          /* klar lila hover */
+      text-decoration: underline;
+    }
+
+    nav a.active {
+      color: #7a3cff;          /* klar lila aktiv sida */
+      text-decoration: underline;
+    }
+
+    /* ===== Textblock ===== */
+    .lead {
+      margin-top: 10px;
+    }
+
+    .summary {
+      margin: 28px 0;
+      padding: 14px 16px;
+      border-left: 3px solid #ddd;
+      background: #fafafa;
+    }
+
+    .meta {
+      color: #555;
+      font-size: 0.95em;
+      margin-top: 6px;
+    }
+
+    .translation {
+      margin-top: 26px;
+    }
+
+    .translation p {
+      margin: 0 0 14px 0;
+    }
+
+    hr.section {
+      margin: 30px 0;
+      border: 0;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <p>
+      <a href="index.html">Start</a> |
+      <a href="about.html">Om Beatriz Villarroel</a> |
+      <a href="projects.html">Forskningsprojekt</a> |
+      <a href="methodology.html">Metod</a> |
+      <a href="misconceptions.html">Vanliga missförstånd</a> |
+      <a href="sources.html">Källor</a> |
+      <a href="age-of-disclosure.html" class="active">The Age of Disclosure</a>
+    </p>
+    <hr>
+  </nav>
+
+  <h1>The Age of Disclosure – svensk översättning</h1>
+
+  <p class="lead">
+    Denna sida presenterar en svensk översättning av en text i anslutning till den samtida diskussionen om UAP
+    och <em>The Age of Disclosure</em>. Syftet är att göra materialet tillgängligt på svenska i en texttrogen form,
+    utan tolkande tillägg.
+  </p>
+
+  <p class="meta">
+    Original (engelska): “We Were Told There Is No Scientific Evidence for UFOs. Our Research Says Otherwise” – Beatriz Villarroel, <em>Liberation Times</em>.
+  </p>
+
+  <hr class="section">
+
+  <h2>Sammanfattning</h2>
+
+  <div class="summary">
+    <p>
+      Artikeln <em>“We Were Told There Is No Scientific Evidence for UFOs. Our Research Says Otherwise”</em> är en essä av astronomen Beatriz Villarroel,
+      publicerad i <em>Liberation Times</em>. Texten tar sin utgångspunkt i det ofta förekommande konstaterandet att det saknas vetenskaplig evidens för UFO-fenomen
+      och redogör för hur Villarroels forskning förhåller sig till detta konstaterande.
+    </p>
+
+    <p>
+      Bakgrunden är den ökade offentliga diskussionen om oidentifierade luftfenomen (UAP), bland annat i samband med dokumentären <em>The Age of Disclosure</em>.
+      Artikeln beskriver hur denna diskussion återkommande möts av bedömningen att det inte finns några vetenskapliga data som stöder förekomsten av sådana fenomen.
+    </p>
+
+    <p>
+      Villarroel redogör därefter för sin forskning, som bygger på systematiska analyser av historiska fotografiska himmelsplåtar från tiden före den moderna satellitepoken.
+      I detta material har kortvariga ljusfenomen, så kallade transienta objekt, identifierats. Enligt artikeln uppvisar dessa observationer statistiska egenskaper som inte enkelt
+      kan förklaras av kända naturliga fenomen, instrumentella artefakter eller slumpmässiga variationer.
+    </p>
+
+    <p>
+      Ett centralt resultat som lyfts fram är en statistiskt signifikant brist på sådana ljusfenomen i jordens skugga (umbran), i jämförelse med övriga delar av himlen.
+      Detta mönster redovisas som ett resultat av statistisk analys och används i artikeln för att visa att observationerna inte är slumpmässigt spridda över himlen,
+      utan följer ett tydligt mönster.
+    </p>
+
+    <p>
+      Artikeln redogör även för tolkningar som har diskuterats inom ramen för forskningen, däribland hypotesen att vissa observationer kan vara förenliga med reflekterande objekt i rymden.
+      Författaren betonar att dessa resonemang inte utgör fastställda slutsatser, utan förs som försök att förstå observerade avvikelser i data.
+    </p>
+
+    <p>
+      Avslutningsvis argumenterar artikeln för att konstaterandet att det saknas vetenskaplig evidens för UFO-fenomen är förenklat.
+      Enligt Villarroel visar de redovisade observationerna och de statistiska resultaten att det finns empiriskt underlag som motiverar fortsatt vetenskaplig undersökning av dessa anomalier,
+      även om deras natur ännu inte är fastställd.
+    </p>
+  </div>
+
+  <hr class="section">
+
+  <h2>Svensk översättning</h2>
+
+  <div class="translation">
+    <!-- Klistra in din svenska översättning här, som vanliga <p>...</p>-stycken. -->
+
+    <p><em>[Klistra in översättningen här.]</em></p>
+
+  </div>
+
+</body>
+</html>
