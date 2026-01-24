@@ -21,8 +21,7 @@
       font-weight: normal;
     }
 
-    /* ===== Navigation ===== */
-
+    /* Navigation */
     nav a:link,
     nav a:visited {
       color: #222;
@@ -31,23 +30,22 @@
 
     nav a:hover,
     nav a:focus {
-      color: #7a3cff;          /* klar lila hover */
+      color: #7a3cff;
       text-decoration: underline;
     }
 
     nav a.active {
-      color: #7a3cff;          /* klar lila aktiv sida */
+      color: #7a3cff;
       text-decoration: underline;
     }
 
-    /* ===== Porträtt ===== */
-
-    figure.portrait {
+    /* Porträtt */
+    figure {
       text-align: center;
       margin: 48px 0;
     }
 
-    figure.portrait img {
+    figure img {
       max-width: 420px;
       width: 100%;
       height: auto;
@@ -55,7 +53,7 @@
       margin: 0 auto;
     }
 
-    figure.portrait figcaption {
+    figure figcaption {
       margin-top: 16px;
       font-style: italic;
       font-size: 0.95em;
@@ -65,20 +63,14 @@
       margin-right: auto;
     }
 
-    /* ===== Media (video) ===== */
-
+    /* Video thumbnail */
     .media-thumb {
       text-align: center;
-      margin: 24px 0;
-    }
-
-    .media-thumb a {
-      display: inline-block;
-      text-decoration: none;
+      margin: 28px 0;
     }
 
     .media-thumb img {
-      max-width: 480px;
+      max-width: 560px;
       width: 100%;
       height: auto;
       display: block;
@@ -89,90 +81,86 @@
 </head>
 
 <body>
-  <nav>
-    <p>
-      <a href="index.html" class="active">Start</a> |
-      <a href="about.html">Om Beatriz Villarroel</a> |
-      <a href="projects.html">Forskningsprojekt</a> |
-      <a href="methodology.html">Metod</a> |
-      <a href="misconceptions.html">Vanliga missförstånd</a> |
-      <a href="sources.html">Källor</a>
-    </p>
-    <hr>
-  </nav>
 
-  <h1>Beatriz och hennes forskning</h1>
-
-  <figure class="portrait">
-    <img
-      src="Beatriz-quote.jpg"
-      alt="Porträtt av Beatriz Villarroel med citat om kosmiskt sällskap"
-    >
-    <figcaption>
-      “If I look at everything that I have learned over the last few years, I will be fair: I don’t think we’re alone. I think we have company.”
-      <br>
-      <span style="font-style: normal;">— Dr. Beatriz Villarroel</span>
-    </figcaption>
-  </figure>
-
+<nav>
   <p>
-    Denna webbplats är tillägnad att presentera svenska astronomen
-    <strong>Beatriz Villarroels</strong> forskning och vetenskapliga arbete.
-  </p>
-
-  <p>
-    Forskningen utgår från systematiska studier av historiska astronomiska data,
-    framför allt fotografiska himmelsplåtar från mitten av 1900-talet,
-    där oväntade försvinnanden och framträdanden av ljusstarka objekt har identifierats.
-  </p>
-
-  <p>
-    Syftet med webbplatsen är inte att driva spekulationer eller föra fram färdiga
-    förklaringar, utan att tillgängliggöra
-    <strong>metoder, observationer och vetenskapligt publicerat material</strong>.
-  </p>
-
-  <p>
-    Vetenskapliga framsteg har alltid börjat med att anomalier tagits på allvar.
-  </p>
-
-  <p>
-    Webbplatsen har initierats och sammanställts av en oberoende medhjälpare till forskningen.
-  </p>
-
-  <p>
-    Initiativet grundar sig i en övertygelse om att den typ av långsiktig,
-    metodisk och arkivbaserad forskning som Beatriz Villarroel bedriver
-    är av <strong>stor vetenskaplig betydelse</strong>
-    och förtjänar ökad synlighet och saklig uppmärksamhet.
-  </p>
-
-  <p>
-    Erfarenheten visar att forskningsområden som utmanar etablerade ramar
-    ofta möter motstånd, och att kvinnor inom sådana fält
-    inte sällan behöver navigera ytterligare hinder utöver de vetenskapliga.
-  </p>
-
-  <p>
-    Denna webbplats har skapats för att presentera Beatrizs arbete öppet,
-    och samtidigt med en förhoppning att flera ska förstå vidden
-    av den banbrytande forskningen hon är involverad i —
-    den som kan få betydelse för mänsklighetens framtid,
-    eftersom hennes forskning pekar allt mer mot att
-    <strong>vi aldrig har varit ensamma på denna jord</strong>.
-  </p>
-
-  <h2>Video</h2>
-  <p>Nedan visas en video där Beatriz intervjuas om sin forskning.</p>
-
-  <div class="media-thumb">
-    <a href="https://youtu.be/pCqqKWQLoA4" target="_blank" rel="noopener">
-      <img
-        src="https://img.youtube.com/vi/pCqqKWQLoA4/hqdefault.jpg"
-        alt="Video thumbnail"
-      >
+    <a href="index.html" class="active">Start</a> |
+    <a href="about.html">Om Beatriz Villarroel</a> |
+    <a href="projects.html">Forskningsprojekt</a> |
+    <a href="methodology.html">Metod</a> |
+    <a href="misconceptions.html">Vanliga missförstånd</a> |
+    <a href="sources.html">Källor</a> |
+    <a href="age-of-disclosure.html"
+       title="Svensk översättning och saklig sammanfattning av Beatriz Villarroels text i anslutning till The Age of Disclosure.">
+      Age of Disclosure
     </a>
-  </div>
+  </p>
+  <hr>
+</nav>
+
+<h1>Beatriz och hennes forskning</h1>
+
+<figure>
+  <img
+    src="Beatriz-quote.jpg"
+    alt="Porträtt av Beatriz Villarroel"
+  >
+  <figcaption>
+    “If I look at everything that I have learned over the last few years,
+    I will be fair: I don’t think we’re alone. I think we have company.”
+    <br>
+    <span style="font-style: normal;">— Dr. Beatriz Villarroel</span>
+  </figcaption>
+</figure>
+
+<p>
+Denna webbplats är tillägnad att presentera den svenska astronomen
+<strong>Beatriz Villarroels</strong> forskning och vetenskapliga arbete.
+</p>
+
+<p>
+Forskningen utgår från systematiska studier av historiska astronomiska data,
+framför allt fotografiska himmelsplåtar från mitten av 1900-talet, där oväntade
+försvinnanden och framträdanden av ljusstarka objekt har identifierats.
+</p>
+
+<p>
+Syftet med webbplatsen är inte att driva spekulationer eller föra fram färdiga
+förklaringar, utan att tillgängliggöra
+<strong>metoder, observationer och vetenskapligt publicerat material</strong>.
+</p>
+
+<p>
+Vetenskapliga framsteg har alltid börjat med att anomalier tagits på allvar.
+</p>
+
+<p>
+Webbplatsen har initierats och sammanställts av en oberoende medhjälpare
+till forskningen.
+</p>
+
+<p>
+Initiativet grundar sig i en övertygelse om att den typ av långsiktig,
+metodisk och arkivbaserad forskning som Beatriz Villarroel bedriver är av
+<strong>stor vetenskaplig betydelse</strong> och förtjänar ökad synlighet och
+saklig uppmärksamhet.
+</p>
+
+<h2>Video</h2>
+
+<p>
+Nedan visas en intervju där Beatriz Villarroel berättar om sin forskning
+och det vetenskapliga sammanhang den ingår i.
+</p>
+
+<div class="media-thumb">
+  <a href="https://youtu.be/pCqqKWQLoA4" target="_blank" rel="noopener">
+    <img
+      src="https://img.youtube.com/vi/pCqqKWQLoA4/hqdefault.jpg"
+      alt="Intervju med Beatriz Villarroel"
+    >
+  </a>
+</div>
 
 </body>
 </html>
