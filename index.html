@@ -21,6 +21,18 @@
       font-weight: normal;
     }
 
+    /* Brödtextlänkar (gäller alla länkar utanför menyn) */
+    a:link,
+    a:visited {
+      color: #222;
+      text-decoration: underline;
+    }
+
+    a:hover,
+    a:focus {
+      color: #7a3cff;
+    }
+
     /* Navigation */
     nav a:link,
     nav a:visited {
@@ -82,7 +94,7 @@
 
 <body>
 
-<nav>
+<nav aria-label="Huvudmeny">
   <p>
     <a href="index.html" class="active">Start</a> |
     <a href="about.html">Om Beatriz Villarroel</a> |
