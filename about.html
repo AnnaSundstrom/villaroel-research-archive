@@ -1,71 +1,133 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <title>Forskningsarkiv – Beatriz Villarroel</title>
-    <meta name="description" content="Ett oberoende forskningsarkiv om historiska astronomiska anomalier och Beatriz Villarroels vetenskapliga arbete.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Georgia, "Times New Roman", serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            color: #222;
-            background-color: #fff;
-        }
-        h1, h2 {
-            font-weight: normal;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Om Beatriz Villarroel – Forskningsarkiv</title>
+  <meta name="description" content="Presentation av Beatriz Villarroel, hennes vetenskapliga bakgrund, forskning och medverkan i media.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #222;
+      background-color: #fff;
+    }
+
+    h1, h2 {
+      font-weight: normal;
+    }
+
+    /* Brödtextlänkar */
+    a:link,
+    a:visited {
+      color: #222;
+      text-decoration: underline;
+    }
+
+    a:hover,
+    a:focus {
+      color: #7a3cff;
+    }
+
+    /* Navigation */
+    nav a:link,
+    nav a:visited {
+      color: #222;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: #7a3cff;
+      text-decoration: underline;
+    }
+
+    nav a.active {
+      color: #7a3cff;
+      text-decoration: underline;
+    }
+
+    .media-image {
+      text-align: center;
+      margin: 24px 0;
+    }
+
+    .media-image img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid #ddd;
+    }
+
+    .caption {
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
 </head>
+
 <body>
-    <nav>
+
+<nav aria-label="Huvudmeny">
   <p>
     <a href="index.html">Start</a> |
-    <a href="about.html">Om Beatriz Villarroel</a> |
+    <a href="about.html" class="active">Om Beatriz Villarroel</a> |
     <a href="projects.html">Forskningsprojekt</a> |
     <a href="methodology.html">Metod</a> |
     <a href="misconceptions.html">Vanliga missförstånd</a> |
-    <a href="sources.html">Källor</a>
+    <a href="sources.html">Källor</a> |
+    <a href="age-of-disclosure.html">Age of Disclosure</a>
   </p>
   <hr>
-    </nav>
+</nav>
+
 <h1>Om Beatriz Villarroel</h1>
 
 <p>
-<p>Beatriz Villarroel </p>är astronom med inriktning mot observationsastronomi och studier av historiska astronomiska data.
-
-<p>
-
-Hennes forskning fokuserar på systematiska analyser av fotografiska himmelsplåtar och arkivmaterial, främst från mitten av 1900-talet.</p>
-
-<p>
-
-Genom jämförelser mellan olika epoker har hon identifierat anomalier i form av oväntade försvinnanden och framträdanden.</p>
-
-
- <p>Arbetet bedrivs inom ramen för etablerade vetenskapliga metoder och kombinerar klassisk astronomi med modern dataanalys. </p>
-
-
-<p>Ett centralt inslag är transparens och som pionjär inom ny forskning av observationella fynd.</p>
+<strong>Beatriz Villarroel</strong> är astronom med inriktning mot observationsastronomi
+och studier av historiska astronomiska data.
 </p>
 
-</body>
-</html>
-<p></p>
+<p>
+Hennes forskning fokuserar på systematiska analyser av fotografiska himmelsplåtar
+och arkivmaterial, främst från mitten av 1900-talet.
+</p>
+
+<p>
+Genom jämförelser mellan olika epoker har hon identifierat anomalier i form av
+oväntade försvinnanden och framträdanden.
+</p>
+
+<p>
+Arbetet bedrivs inom ramen för etablerade vetenskapliga metoder och kombinerar
+klassisk astronomi med modern dataanalys.
+</p>
+
+<p>
+Ett centralt inslag i forskningen är transparens och metodisk noggrannhet, och
+Villarroel räknas som en pionjär inom systematiska studier av observationella
+arkivfynd.
+</p>
+
 <h2>Medverkan i media</h2>
 
 <p>
-Beatriz Villarroel har uppmärksammats i svensk media där hennes forskning och metodik diskuteras i ett bredare vetenskapligt sammanhang.
+Beatriz Villarroel har uppmärksammats i svensk media där hennes forskning och
+metodik diskuteras i ett bredare vetenskapligt sammanhang.
 </p>
 
 <p>
 <a href="fokus-9-december-2025.pdf" target="_blank" rel="noopener">
-Läs artikel i Fokus (9 december 2025, PDF)
+Läs artikel i <em>Fokus</em> (9 december 2025, PDF)
 </a>
 </p>
+
 <h2>Artikel från Fokus</h2>
 
 <p>
@@ -79,25 +141,20 @@ Veckans Fokus
 
 <p>
 En svensk astrofysiker öppnar i ansedda <em>Nature</em> för möjligheten att
-icke-mänsklig intelligens har varit i jordens omloppsbana ett tag.
+icke-mänsklig intelligens kan ha varit närvarande i jordens omloppsbana.
 </p>
 
-<div style="text-align: center; margin: 24px 0;">
+<div class="media-image">
   <a href="fokus-9-december-2025.pdf" target="_blank" rel="noopener">
     <img
       src="press-fokus.jpg"
-      alt="Observatorium med teleskop under stjärnhimmel – astronomisk forskning"
-      style="
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        border: 1px solid #ddd;
-      "
+      alt="Artikel i Fokus om Beatriz Villarroels forskning"
     >
   </a>
 </div>
 
-<p style="text-align: center; font-size: 0.9em; color: #555;">
-  Klicka på bilden för att läsa artikeln i <em>Fokus</em> (9 december 2025, PDF).
+<p class="caption"><em>Fokus</em>(9 december 2025, PDF).
 </p>
+
+</body>
+</html>
