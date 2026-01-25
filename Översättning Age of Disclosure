@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Forskningsarkiv – Beatriz Villarroel</title>
+  <meta name="description" content="Ett oberoende forskningsarkiv om historiska astronomiska anomalier och Beatriz Villarroels vetenskapliga arbete.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #222;
+      background-color: #fff;
+    }
+
+    h1, h2 {
+      font-weight: normal;
+    }
+
+    nav a:link,
+    nav a:visited {
+      color: #222;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a:focus,
+    nav a.active {
+      color: #7a3cff;
+      text-decoration: underline;
+    }
+
+    figure {
+      text-align: center;
+      margin: 48px 0;
+    }
+
+    figure img {
+      max-width: 420px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    figure figcaption {
+      margin-top: 16px;
+      font-style: italic;
+      font-size: 0.95em;
+      color: #444;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .media-thumb {
+      text-align: center;
+      margin: 24px 0;
+    }
+
+    .media-thumb img {
+      max-width: 560px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <p>
+    <a href="index.html" class="active">Start</a> |
+    <a href="about.html">Om Beatriz Villarroel</a> |
+    <a href="projects.html">Forskningsprojekt</a> |
+    <a href="methodology.html">Metod</a> |
+    <a href="misconceptions.html">Vanliga missförstånd</a> |
+    <a href="sources.html">Källor</a> |
+    <a href="age-of-disclosure.html">Age of Disclosure</a>
+  </p>
+  <hr>
+</nav>
+
+<h1>Beatriz och hennes forskning</h1>
+
+
+
+</body>
+</html>
