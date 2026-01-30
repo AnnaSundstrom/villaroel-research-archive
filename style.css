@@ -80,3 +80,32 @@ hr {
   border-top: 1px solid #dddddd;
   margin: 22px 0;
 }
+/* ============================= */
+/* Hjälpklasser & media          */
+/* ============================= */
+
+/* Aktiv länk i menyn */
+nav a.active {
+  text-decoration: underline;
+}
+
+/* Media-bild + bildtext */
+.media-image {
+  text-align: center;
+  margin: 24px 0;
+}
+
+.media-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #dddddd;
+}
+
+.caption {
+  text-align: center;
+  font-size: 0.95em;
+  opacity: 0.85;
+  margin-top: 8px;
+}
