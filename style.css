@@ -109,3 +109,21 @@ nav a.active {
   opacity: 0.85;
   margin-top: 8px;
 }
+
+/* ============================= */
+/* Länkbeteende – arkivstandard */
+/* ============================= */
+
+/* Brödtextlänkar: alltid understrukna */
+main a {
+  text-decoration: underline;
+}
+
+/* Navigationslänkar: ej understrukna som standard */
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
