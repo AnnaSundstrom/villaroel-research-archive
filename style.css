@@ -200,13 +200,11 @@ nav a.active {
   margin: 2em 0;
 }
 
-.embed-frame{
-  position: relative;
+.embed-frame {
   width: 100%;
-  max-width: 720px;
-  aspect-ratio: 16 / 9;
-  background: #000;
+  max-width: 520px; 
   margin: 0 auto;
+  aspect-ratio: 16 / 9;
 }
 
 .embed-frame iframe{
