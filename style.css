@@ -262,4 +262,11 @@ blockquote footer{
   text-decoration: underline;
 }
 
+ol {
+  padding-left: 18px;
+}
+
+main ol {
+  margin-left: 1.2em;
+}
 
