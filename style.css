@@ -268,3 +268,48 @@ blockquote footer{
 .back-to-top a:focus{
   text-decoration: underline;
 }
+/* ============================= */
+/* Kärnvapenepoken – sidklass    */
+/* ============================= */
+
+.karnvapenepoken .section-block{
+  margin: 3.2em 0;
+}
+
+/* Små notiser/ingresser på sidan */
+.karnvapenepoken .tiny-link{
+  font-size: 0.85em;
+  opacity: 0.85;
+  margin-top: 0.6em;
+}
+
+.karnvapenepoken .tiny{
+  font-size: 0.85em;
+  opacity: 0.85;
+}
+
+/* Bred media för collage/illustrationer (inte porträtt) */
+.media-wide{
+  text-align: center;
+  margin: 24px 0;
+}
+
+.media-wide img{
+  width: 100%;
+  max-width: 860px;  /* följer din site-maxbredd */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #dddddd;
+}
+
+/* Lista i notdel */
+.note-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.note-list li{
+  margin: 0 0 1.2em 0;
+}
