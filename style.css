@@ -270,3 +270,7 @@ main ol {
   margin-left: 1.2em;
 }
 
+/* Index – liten signatur i citat */
+.quote-attrib{
+  font-style: normal;
+}
