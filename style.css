@@ -201,8 +201,10 @@ nav a.active {
 .embed-frame{
   position: relative;
   width: 100%;
+  max-width: 720px;
   aspect-ratio: 16 / 9;
-  background: #000; /* diskret, hjälper om iframe laddar sent */
+  background: #000;
+  margin: 0 auto;
 }
 
 .embed-frame iframe{
