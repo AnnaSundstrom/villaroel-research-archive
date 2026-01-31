@@ -50,6 +50,11 @@ nav hr {
   margin: 12px 0 22px 0;
 }
 
+/* Aktiv länk i menyn */
+nav a.active {
+  text-decoration: underline;
+}
+
 /* ============================= */
 /* Länkar                       */
 /* ============================= */
@@ -62,65 +67,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
-/* ============================= */
-/* Listor                       */
-/* ============================= */
-
-ul {
-  padding-left: 18px;
-}
-
-/* Finjustering: listor i brödtext */
-main ul {
-  margin-left: 1.2em;
-}
-
-/* ============================= */
-/* Horisontella linjer          */
-/* ============================= */
-
-hr {
-  border: none;
-  border-top: 1px solid #dddddd;
-  margin: 22px 0;
-}
-
-/* ============================= */
-/* Hjälpklasser & media         */
-/* ============================= */
-
-/* Aktiv länk i menyn */
-nav a.active {
-  text-decoration: underline;
-}
-
-/* Media-bild + bildtext */
-.media-image {
-  text-align: center;
-  margin: 24px 0;
-}
-
-/* Stillbilder / porträtt – kontrollerad bredd */
-.media-image img{
-  width: 100%;
-  max-width: 380px;   
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border: 1px solid #dddddd;
-}
-
-.caption {
-  text-align: center;
-  font-size: 0.95em;
-  opacity: 0.85;
-  margin-top: 8px;
-}
-
-/* ============================= */
-/* Länkbeteende – arkivstandard */
-/* ============================= */
 
 /* Brödtextlänkar: alltid understrukna */
 main a {
@@ -165,8 +111,33 @@ nav a.active {
   color: #7a3cff;
   text-decoration: underline;
 }
+
 /* ============================= */
-/* Textklasser (ingress m.m.)    */
+/* Listor                       */
+/* ============================= */
+
+ul, ol {
+  padding-left: 18px;
+}
+
+/* Finjustering: listor i brödtext */
+main ul,
+main ol {
+  margin-left: 1.2em;
+}
+
+/* ============================= */
+/* Horisontella linjer          */
+/* ============================= */
+
+hr {
+  border: none;
+  border-top: 1px solid #dddddd;
+  margin: 22px 0;
+}
+
+/* ============================= */
+/* Textklasser (ingress m.m.)   */
 /* ============================= */
 
 .subtitle{
@@ -192,19 +163,51 @@ nav a.active {
   margin-top: 2em;
 }
 
+/* Index – liten signatur i citat */
+.quote-attrib{
+  font-style: normal;
+}
+
 /* ============================= */
-/* Responsiv inbäddning (TED)    */
+/* Media-standard v1.0 – LÅST   */
 /* ============================= */
 
+/* Media-bild + bildtext */
+.media-image {
+  text-align: center;
+  margin: 24px 0;
+}
+
+/* Stillbilder / porträtt – kontrollerad bredd */
+.media-image img{
+  width: 100%;
+  max-width: 380px;     /* lugn, boklik bredd */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #dddddd;
+}
+
+.caption {
+  text-align: center;
+  font-size: 0.95em;
+  opacity: 0.85;
+  margin-top: 8px;
+}
+
+/* Video / embed (TED + YouTube) */
 .embed{
   margin: 2em 0;
 }
 
-.embed-frame {
+.embed-frame{
+  position: relative;   /* KRITISK: annars hoppar iframen */
   width: 100%;
-  max-width: 520px; 
-  margin: 0 auto;
+  max-width: 520px;     /* din önskade videobredd */
   aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #000;
 }
 
 .embed-frame iframe{
@@ -213,6 +216,7 @@ nav a.active {
   width: 100%;
   height: 100%;
   border: 0;
+  display: block;
 }
 
 /* ============================= */
@@ -224,16 +228,19 @@ blockquote{
   padding: 0.75em 1em;
   border-left: 3px solid #dddddd;
 }
+
 blockquote p{
   margin: 0.6em 0;
 }
+
 blockquote footer{
   margin-top: 0.6em;
   opacity: 0.85;
   font-size: 0.95em;
 }
+
 /* ============================= */
-/* Age of Disclosure – tillägg   */
+/* Age of Disclosure – tillägg  */
 /* ============================= */
 
 .meta{
@@ -256,46 +263,8 @@ blockquote footer{
 .back-to-top a{
   text-decoration: none;
 }
+
 .back-to-top a:hover,
 .back-to-top a:focus{
   text-decoration: underline;
-}
-
-ol {
-  padding-left: 18px;
-}
-
-main ol {
-  margin-left: 1.2em;
-}
-
-/* Index – liten signatur i citat */
-.quote-attrib{
-  font-style: normal;
-}
-/* ============================= */
-/* Media-standard v1.0 – video  */
-/* ============================= */
-
-.embed{
-  margin: 2em 0;
-}
-
-.embed-frame{
-  position: relative;     /* KRITISK */
-  width: 100%;
-  max-width: 560px;       /* lagom, i linje med porträtten */
-  aspect-ratio: 16 / 9;
-  margin: 0 auto;
-  overflow: hidden;
-  background: #000;
-}
-
-.embed-frame iframe{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
 }
