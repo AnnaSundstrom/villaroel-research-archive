@@ -231,11 +231,3 @@ blockquote footer{
   font-size: 0.95em;
 }
 
-/* ============================= */
-/* Listor i MAIN    */
-/* ============================= */
-
-/* Om du vill ha lite luftigare listor i brödtexten */
-main ul{
-  margin-left: 1.2em;
-}
