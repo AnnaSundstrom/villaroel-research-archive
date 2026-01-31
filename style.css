@@ -232,5 +232,33 @@ blockquote footer{
   opacity: 0.85;
   font-size: 0.95em;
 }
+/* ============================= */
+/* Age of Disclosure – tillägg   */
+/* ============================= */
+
+.meta{
+  font-size: 0.95em;
+  opacity: 0.85;
+}
+
+.section-block{
+  margin: 3em 0;
+}
+
+.back-to-top{
+  margin-top: 4em;
+  font-size: 0.9em;
+  opacity: 0.8;
+  text-align: right;
+}
+
+/* Gör topp-länken lugnare än vanliga brödtextlänkar */
+.back-to-top a{
+  text-decoration: none;
+}
+.back-to-top a:hover,
+.back-to-top a:focus{
+  text-decoration: underline;
+}
 
 
