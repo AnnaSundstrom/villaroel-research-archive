@@ -45,6 +45,23 @@ h3{
 }
 
 /* ============================= */
+/* Rubrikhierarki – tydligare   */
+/* (NYTT: skilj H2/H3 bättre)   */
+/* ============================= */
+
+h2{
+  margin-top: 1.7em;
+  margin-bottom: 0.7em;
+}
+
+h3{
+  font-size: 1.05rem;      /* tydligt mindre än h2 */
+  margin-top: 2.0em;       /* mer luft före */
+  margin-bottom: 0.6em;
+  letter-spacing: 0.01em;  /* subtil under-rubrik-känsla */
+}
+
+/* ============================= */
 /* Navigation                   */
 /* ============================= */
 
@@ -215,6 +232,22 @@ hr {
 .section-block > .media-wide:not(:first-of-type){
   margin-top: 28px;
   margin-bottom: 36px;
+}
+
+/* ============================= */
+/* Kärnvapenepoken – luft efter media */
+/* (NYTT: fixar “för nära rubrik”)    */
+/* ============================= */
+
+/* Mer luft efter figurer innan nästa text/rubrik */
+.karnvapenepoken figure{
+  margin-bottom: 34px;
+}
+
+/* Extra luft om en rubrik kommer direkt efter en figure */
+.karnvapenepoken figure + h2,
+.karnvapenepoken figure + h3{
+  margin-top: 2.2em;
 }
 
 /* ============================= */
