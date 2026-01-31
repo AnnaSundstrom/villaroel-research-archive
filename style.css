@@ -296,7 +296,7 @@ blockquote footer{
 
 .media-wide img{
   width: 100%;
-  max-width: 860px;  /* följer din site-maxbredd */
+  max-width: 380px;  /* följer 380 px */
   height: auto;
   display: block;
   margin: 0 auto;
