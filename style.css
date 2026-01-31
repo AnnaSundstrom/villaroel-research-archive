@@ -321,3 +321,24 @@ blockquote + blockquote{
   display: block;
   margin-bottom: 0.2em;
 }
+
+/* ===== Kärnvapenepoken – blockquote mer diskret (steg 2) ===== */
+
+.karnvapenepoken blockquote{
+  max-width: 520px;          /* smalare än textkolumnen */
+  margin: 1.1em auto;        /* centrerad, mindre luft */
+  padding: 0.45em 0.7em;     /* mindre box-känsla */
+}
+
+.karnvapenepoken blockquote + blockquote{
+  margin-top: 0.9em;         /* mindre mellan citaten */
+}
+
+.karnvapenepoken blockquote p{
+  margin: 0.35em 0;
+}
+
+.karnvapenepoken blockquote footer{
+  margin-top: 0.35em;
+  font-size: 0.92em;
+}
