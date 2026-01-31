@@ -56,7 +56,6 @@ nav hr {
   margin: 12px 0 22px 0;
 }
 
-/* Aktiv länk i menyn */
 nav a.active {
   text-decoration: underline;
 }
@@ -74,12 +73,10 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Brödtextlänkar: alltid understrukna */
 main a {
   text-decoration: underline;
 }
 
-/* Navigationslänkar: ej understrukna som standard */
 nav a {
   text-decoration: none;
 }
@@ -95,27 +92,22 @@ nav a:hover {
 main a:link,
 main a:visited {
   color: #222222;
-  text-decoration: underline;
 }
 
 main a:hover,
 main a:focus {
   color: #7a3cff;
-  text-decoration: underline;
 }
 
-/* Navigation: lugn men tydlig */
 nav a:link,
 nav a:visited {
   color: #222222;
-  text-decoration: none;
 }
 
 nav a:hover,
 nav a:focus,
 nav a.active {
   color: #7a3cff;
-  text-decoration: underline;
 }
 
 /* ============================= */
@@ -126,7 +118,6 @@ ul, ol {
   padding-left: 18px;
 }
 
-/* Finjustering: listor i brödtext */
 main ul,
 main ol {
   margin-left: 1.2em;
@@ -143,7 +134,7 @@ hr {
 }
 
 /* ============================= */
-/* Textklasser (ingress m.m.)   */
+/* Textklasser                  */
 /* ============================= */
 
 .subtitle{
@@ -210,13 +201,32 @@ hr {
   margin-top: 8px;
 }
 
-/* Video / embed (TED + YouTube) */
+/* ============================= */
+/* Kärnvapenepoken – bildrytm   */
+/* ============================= */
+
+/* Första bilden i ett block – mer luft */
+.section-block > .media-wide:first-of-type{
+  margin-top: 48px;
+  margin-bottom: 40px;
+}
+
+/* Efterföljande bilder i samma block – något tajtare */
+.section-block > .media-wide:not(:first-of-type){
+  margin-top: 28px;
+  margin-bottom: 36px;
+}
+
+/* ============================= */
+/* Video / embed – LÅST         */
+/* ============================= */
+
 .embed{
   margin: 2em 0;
 }
 
 .embed-frame{
-  position: relative;   /* KRITISK */
+  position: relative;
   width: 100%;
   max-width: 520px;     /* LÅST */
   aspect-ratio: 16 / 9;
@@ -235,15 +245,14 @@ hr {
 }
 
 /* ============================= */
-/* Blockquote – “sweet spot”    */
-/* mindre och mer diskret       */
+/* Blockquote – diskret stil    */
 /* ============================= */
 
 blockquote{
   margin: 1.4em 0;
   padding: 0.55em 0.85em;
   border-left: 3px solid #dddddd;
-  background: transparent;  /* steg 1: ingen bakgrund */
+  background: transparent;
 }
 
 blockquote p{
@@ -256,44 +265,37 @@ blockquote footer{
   font-size: 0.95em;
 }
 
-/* Lite extra luft om citat ligger direkt efter varandra */
 blockquote + blockquote{
   margin-top: 1.8em;
 }
 
-/* ============================= */
-/* Age of Disclosure – tillägg  */
-/* ============================= */
-
-.meta{
-  font-size: 0.95em;
-  opacity: 0.85;
+/* Kärnvapenepoken – extra diskret */
+.karnvapenepoken blockquote{
+  max-width: 520px;
+  margin: 1.1em auto;
+  padding: 0.45em 0.7em;
 }
+
+.karnvapenepoken blockquote + blockquote{
+  margin-top: 0.9em;
+}
+
+.karnvapenepoken blockquote p{
+  margin: 0.35em 0;
+}
+
+.karnvapenepoken blockquote footer{
+  margin-top: 0.35em;
+  font-size: 0.92em;
+}
+
+/* ============================= */
+/* Sektioner                    */
+/* ============================= */
 
 .section-block{
   margin: 3em 0;
 }
-
-.back-to-top{
-  margin-top: 4em;
-  font-size: 0.9em;
-  opacity: 0.8;
-  text-align: right;
-}
-
-.back-to-top a{
-  text-decoration: none;
-}
-
-.back-to-top a:hover,
-.back-to-top a:focus{
-  text-decoration: underline;
-}
-
-/* ============================= */
-/* Kärnvapenepoken – sidklass   */
-/* luftigare mellan block       */
-/* ============================= */
 
 .karnvapenepoken .section-block{
   margin: 3.4em 0;
@@ -321,29 +323,3 @@ blockquote + blockquote{
   display: block;
   margin-bottom: 0.2em;
 }
-
-/* ===== Kärnvapenepoken – blockquote mer diskret (steg 2) ===== */
-
-.karnvapenepoken blockquote{
-  max-width: 520px;          /* smalare än textkolumnen */
-  margin: 1.1em auto;        /* centrerad, mindre luft */
-  padding: 0.45em 0.7em;     /* mindre box-känsla */
-}
-
-.karnvapenepoken blockquote + blockquote{
-  margin-top: 0.9em;         /* mindre mellan citaten */
-}
-
-.karnvapenepoken blockquote p{
-  margin: 0.35em 0;
-}
-
-.karnvapenepoken blockquote footer{
-  margin-top: 0.35em;
-  font-size: 0.92em;
-}
-/* ===== Punkt 2 – extra separation mellan två media-wide i rad ===== */
-#punkt-2 figure.media-wide + figure.media-wide{
-  margin-top: 42px;
-}
-
