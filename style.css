@@ -278,48 +278,24 @@ hr {
 }
 
 /* ============================= */
-/* Blockquote – diskret stil    */
+/* Citat – kursiv essästil      */
 /* ============================= */
 
-blockquote{
-  margin: 1.4em 0;
-  padding: 0.55em 0.85em;
-  border-left: 3px solid #dddddd;
-  background: transparent;
+.quote-inline{
+  margin: 1.6em 0 2.2em 0;   /* luft före/efter citatet */
+  font-size: 0.98em;
+  line-height: 1.6;
 }
 
-blockquote p{
-  margin: 0.45em 0;
+.quote-inline em{
+  font-style: italic;
 }
 
-blockquote footer{
-  margin-top: 0.5em;
-  opacity: 0.85;
-  font-size: 0.95em;
-}
-
-blockquote + blockquote{
-  margin-top: 1.8em;
-}
-
-/* Kärnvapenepoken – extra diskret */
-.karnvapenepoken blockquote{
-  max-width: 520px;
-  margin: 1.1em auto;
-  padding: 0.45em 0.7em;
-}
-
-.karnvapenepoken blockquote + blockquote{
-  margin-top: 0.9em;
-}
-
-.karnvapenepoken blockquote p{
-  margin: 0.35em 0;
-}
-
-.karnvapenepoken blockquote footer{
-  margin-top: 0.35em;
-  font-size: 0.92em;
+.quote-attrib{
+  display: block;
+  margin-top: 0.4em;
+  font-size: 0.9em;
+  opacity: 0.75;
 }
 
 /* ============================= */
