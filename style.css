@@ -230,4 +230,8 @@ blockquote footer{
   opacity: 0.85;
   font-size: 0.95em;
 }
+/* Finjustering: listor i brödtext */
+main ul {
+  margin-left: 1.2em;
+}
 
