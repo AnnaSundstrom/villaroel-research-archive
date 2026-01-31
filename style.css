@@ -356,3 +356,48 @@ blockquote + blockquote{
   display: block;
   margin-bottom: 0.2em;
 }
+/* ===================================================== */
+/* Kärnvapenepoken – layoutfinish v1.0 (END-OVERRIDES)    */
+/* Fokus: luftigare rytm + diskreta citat + ren notdel    */
+/* ===================================================== */
+
+/* 1) Citat: mindre “box”, mer citatrad */
+.karnvapenepoken blockquote{
+  max-width: 420px;          /* smalare än textkolumnen */
+  margin: 1.0em auto;        /* centrerad, mindre luft */
+  padding: 0.25em 0.1em;     /* mindre box-känsla */
+  border-left: 2px solid #dddddd;
+  background: transparent;
+}
+
+.karnvapenepoken blockquote + blockquote{
+  margin-top: 0.6em;         /* mindre mellan citaten */
+}
+
+.karnvapenepoken blockquote p{
+  margin: 0.2em 0;
+}
+
+.karnvapenepoken blockquote footer{
+  margin-top: 0.25em;
+  font-size: 0.9em;
+  opacity: 0.85;
+}
+
+/* 2) Luft efter bild innan nästa underrubrik (White Sands → h3) */
+.karnvapenepoken figure + h3{
+  margin-top: 2.4em;
+}
+
+/* 3) Notdel: mer redaktionell känsla med diskreta avdelare */
+.karnvapenepoken .note-list li{
+  padding-bottom: 0.9em;
+  border-bottom: 1px solid #eeeeee;
+  margin: 0 0 1.2em 0;       /* håller ihop listan */
+}
+
+.karnvapenepoken .note-list li:last-child{
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
