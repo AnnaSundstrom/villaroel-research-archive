@@ -377,3 +377,36 @@ hr {
   padding-bottom: 0;
   margin-bottom: 0;
 }
+/* ============================= */
+/* Citat inline (ersätter blockquote) */
+/* ============================= */
+
+.quote-inline{
+  max-width: 520px;       /* lugn citatkolumn */
+  margin: 0.8em auto 1.6em auto;
+  padding-left: 14px;
+  border-left: 2px solid #dddddd;
+}
+
+.quote-inline em{
+  display: block;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.quote-inline .quote-attrib{
+  display: inline-block;
+  margin-top: 6px;
+  opacity: 0.85;
+  font-size: 0.95em;
+}
+
+/* Om du har flera citat i rad */
+.quote-inline + .quote-inline{
+  margin-top: 1em;
+}
+
+.karnvapenepoken .tiny-link{
+  margin-top: 0.8em;
+  margin-bottom: 1.6em;
+}
