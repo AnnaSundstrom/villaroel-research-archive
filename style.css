@@ -354,4 +354,10 @@ strong{
 .quote-inline em{
   font-size: 0.95em;
 }
+/* === Finjustering: citatens ton (låg risk) === */
+.quote-inline{
+  font-size: 0.95em;
+  opacity: 0.92;
+}
+
 
