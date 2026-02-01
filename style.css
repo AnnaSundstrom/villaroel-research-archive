@@ -342,3 +342,12 @@ hr{
 .karnvapenepoken h3 + .quote-inline{
   margin-top: 0 !important;
 }
+
+/* ============================= */
+/* Subtil global fetstil – LÅST  */
+/* ============================= */
+
+strong{
+  font-weight: 600;
+  font-variant-numeric: lining-nums;
+}
