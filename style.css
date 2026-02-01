@@ -2,15 +2,14 @@
 /* Global bas – arkivlayout     */
 /* ============================= */
 
-html, body {
+html, body{
   background-color: #ffffff;
   color: #222222;
   margin: 0;
   padding: 0;
 }
 
-/* Baslayout */
-body {
+body{
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.6;
   max-width: 860px;
@@ -22,58 +21,42 @@ body {
 /* Rubriker                     */
 /* ============================= */
 
-h1, h2, h3 {
+h1, h2, h3{
   font-weight: normal;
 }
 
-h1 {
+h1{
   margin-top: 0;
   font-size: clamp(2rem, 5vw, 3.2rem);
   line-height: 1.08;
 }
 
-h2 {
-  margin-top: 1.2em;
+h2{
+  margin-top: 1.7em;
+  margin-bottom: 0.7em;
   font-size: clamp(1.35rem, 3.2vw, 1.8rem);
   line-height: 1.2;
 }
 
 h3{
-  margin-top: 1.1em;
-  font-size: clamp(1.1rem, 2.8vw, 1.35rem);
-  line-height: 1.25;
-}
-
-/* ============================= */
-/* Rubrikhierarki – tydligare   */
-/* (NYTT: skilj H2/H3 bättre)   */
-/* ============================= */
-
-h2{
-  margin-top: 1.7em;
-  margin-bottom: 0.7em;
-}
-
-h3{
-  font-size: 1.05rem;      /* tydligt mindre än h2 */
-  margin-top: 2.0em;       /* mer luft före */
+  font-size: 1.05rem;
+  margin-top: 2.0em;
   margin-bottom: 0.6em;
-  letter-spacing: 0.01em;  /* subtil under-rubrik-känsla */
+  line-height: 1.25;
+  letter-spacing: 0.01em;
 }
 
 /* ============================= */
 /* Navigation                   */
 /* ============================= */
 
-nav p {
-  margin: 0;
-}
+nav p{ margin: 0; }
 
-nav hr {
+nav hr{
   margin: 12px 0 22px 0;
 }
 
-nav a.active {
+nav a.active{
   text-decoration: underline;
 }
 
@@ -81,49 +64,36 @@ nav a.active {
 /* Länkar                       */
 /* ============================= */
 
-a {
+a{
   color: #222222;
   text-decoration: none;
 }
 
-a:hover {
+a:hover{
   text-decoration: underline;
 }
 
-main a {
+main a{
   text-decoration: underline;
 }
 
-nav a {
+nav a{
   text-decoration: none;
 }
 
-nav a:hover {
+nav a:hover{
   text-decoration: underline;
 }
 
-/* ============================= */
-/* Länkfärger – konsekvens      */
-/* ============================= */
-
-main a:link,
-main a:visited {
-  color: #222222;
-}
-
+/* Länkfärger */
 main a:hover,
-main a:focus {
+main a:focus{
   color: #7a3cff;
-}
-
-nav a:link,
-nav a:visited {
-  color: #222222;
 }
 
 nav a:hover,
 nav a:focus,
-nav a.active {
+nav a.active{
   color: #7a3cff;
 }
 
@@ -131,20 +101,16 @@ nav a.active {
 /* Listor                       */
 /* ============================= */
 
-ul, ol {
-  padding-left: 18px;
-}
+ul, ol{ padding-left: 18px; }
 
 main ul,
-main ol {
-  margin-left: 1.2em;
-}
+main ol{ margin-left: 1.2em; }
 
 /* ============================= */
 /* Horisontella linjer          */
 /* ============================= */
 
-hr {
+hr{
   border: none;
   border-top: 1px solid #dddddd;
   margin: 22px 0;
@@ -159,9 +125,7 @@ hr {
   margin-top: 0.5em;
 }
 
-.ingress{
-  margin-top: 1.5em;
-}
+.ingress{ margin-top: 1.5em; }
 
 .small-note{
   font-size: 0.9em;
@@ -169,25 +133,21 @@ hr {
   margin-top: 0.6em;
 }
 
-.tiny-link{
-  font-size: 0.85em;
-  opacity: 0.85;
-  margin-top: 0.6em;
-}
-
+.tiny-link,
 .tiny{
   font-size: 0.85em;
   opacity: 0.85;
+}
+
+.tiny-link{
+  margin-top: 0.8em;
+  margin-bottom: 1.6em;
 }
 
 .footer-note{
   font-size: 0.9em;
   opacity: 0.8;
   margin-top: 2em;
-}
-
-.quote-attrib{
-  font-style: normal;
 }
 
 /* ============================= */
@@ -211,7 +171,7 @@ hr {
   border: 1px solid #dddddd;
 }
 
-.caption {
+.caption{
   text-align: center;
   font-size: 0.95em;
   opacity: 0.85;
@@ -222,31 +182,26 @@ hr {
 /* Kärnvapenepoken – bildrytm   */
 /* ============================= */
 
-/* Första bilden i ett block – mer luft */
 .section-block > .media-wide:first-of-type{
   margin-top: 48px;
   margin-bottom: 40px;
 }
 
-/* Efterföljande bilder i samma block – något tajtare */
 .section-block > .media-wide:not(:first-of-type){
   margin-top: 28px;
   margin-bottom: 36px;
 }
 
-/* ============================= */
-/* Kärnvapenepoken – luft efter media */
-/* (NYTT: fixar “för nära rubrik”)    */
-/* ============================= */
-
-/* Mer luft efter figurer innan nästa text/rubrik */
-.karnvapenepoken figure{
+/* Luft efter media innan nästa rubrik/text */
+.karnvapenepoken figure.media-wide,
+.karnvapenepoken figure.media-image{
   margin-bottom: 34px;
 }
 
-/* Extra luft om en rubrik kommer direkt efter en figure */
-.karnvapenepoken figure + h2,
-.karnvapenepoken figure + h3{
+.karnvapenepoken figure.media-wide + h2,
+.karnvapenepoken figure.media-wide + h3,
+.karnvapenepoken figure.media-image + h2,
+.karnvapenepoken figure.media-image + h3{
   margin-top: 2.2em;
 }
 
@@ -254,9 +209,7 @@ hr {
 /* Video / embed – LÅST         */
 /* ============================= */
 
-.embed{
-  margin: 2em 0;
-}
+.embed{ margin: 2em 0; }
 
 .embed-frame{
   position: relative;
@@ -278,41 +231,42 @@ hr {
 }
 
 /* ============================= */
-/* Citat – kursiv essästil      */
+/* Citat – inline (ersätter blockquote) */
 /* ============================= */
 
 .quote-inline{
-  margin: 1.6em 0 2.2em 0;   /* luft före/efter citatet */
-  font-size: 0.98em;
-  line-height: 1.6;
+  max-width: 520px;
+  margin: 0.8em auto 1.6em auto;
+  padding-left: 14px;
+  border-left: 2px solid #dddddd;
 }
 
 .quote-inline em{
+  display: block;
   font-style: italic;
+  line-height: 1.55;
 }
 
-.quote-attrib{
-  display: block;
-  margin-top: 0.4em;
-  font-size: 0.9em;
-  opacity: 0.75;
+.quote-inline .quote-attrib{
+  display: inline-block;
+  margin-top: 6px;
+  opacity: 0.85;
+  font-size: 0.95em;
+}
+
+.quote-inline + .quote-inline{
+  margin-top: 1em;
 }
 
 /* ============================= */
 /* Sektioner                    */
 /* ============================= */
 
-.section-block{
-  margin: 3em 0;
-}
+.section-block{ margin: 3em 0; }
 
-.karnvapenepoken .section-block{
-  margin: 3.4em 0;
-}
+.karnvapenepoken .section-block{ margin: 3.4em 0; }
 
-.karnvapenepoken hr{
-  margin: 30px 0;
-}
+.karnvapenepoken hr{ margin: 30px 0; }
 
 /* ============================= */
 /* Notdel – lista               */
@@ -332,44 +286,11 @@ hr {
   display: block;
   margin-bottom: 0.2em;
 }
-/* ===================================================== */
-/* Kärnvapenepoken – layoutfinish v1.0 (END-OVERRIDES)    */
-/* Fokus: luftigare rytm + diskreta citat + ren notdel    */
-/* ===================================================== */
 
-/* 1) Citat: mindre “box”, mer citatrad */
-.karnvapenepoken blockquote{
-  max-width: 420px;          /* smalare än textkolumnen */
-  margin: 1.0em auto;        /* centrerad, mindre luft */
-  padding: 0.25em 0.1em;     /* mindre box-känsla */
-  border-left: 2px solid #dddddd;
-  background: transparent;
-}
-
-.karnvapenepoken blockquote + blockquote{
-  margin-top: 0.6em;         /* mindre mellan citaten */
-}
-
-.karnvapenepoken blockquote p{
-  margin: 0.2em 0;
-}
-
-.karnvapenepoken blockquote footer{
-  margin-top: 0.25em;
-  font-size: 0.9em;
-  opacity: 0.85;
-}
-
-/* 2) Luft efter bild innan nästa underrubrik (White Sands → h3) */
-.karnvapenepoken figure + h3{
-  margin-top: 2.4em;
-}
-
-/* 3) Notdel: mer redaktionell känsla med diskreta avdelare */
 .karnvapenepoken .note-list li{
   padding-bottom: 0.9em;
   border-bottom: 1px solid #eeeeee;
-  margin: 0 0 1.2em 0;       /* håller ihop listan */
+  margin: 0 0 1.2em 0;
 }
 
 .karnvapenepoken .note-list li:last-child{
@@ -377,36 +298,4 @@ hr {
   padding-bottom: 0;
   margin-bottom: 0;
 }
-/* ============================= */
-/* Citat inline (ersätter blockquote) */
-/* ============================= */
 
-.quote-inline{
-  max-width: 520px;       /* lugn citatkolumn */
-  margin: 0.8em auto 1.6em auto;
-  padding-left: 14px;
-  border-left: 2px solid #dddddd;
-}
-
-.quote-inline em{
-  display: block;
-  font-style: italic;
-  line-height: 1.55;
-}
-
-.quote-inline .quote-attrib{
-  display: inline-block;
-  margin-top: 6px;
-  opacity: 0.85;
-  font-size: 0.95em;
-}
-
-/* Om du har flera citat i rad */
-.quote-inline + .quote-inline{
-  margin-top: 1em;
-}
-
-.karnvapenepoken .tiny-link{
-  margin-top: 0.8em;
-  margin-bottom: 1.6em;
-}
