@@ -234,11 +234,13 @@ hr{
 /* Citat – inline (ersätter blockquote) */
 /* ============================= */
 
+
 .quote-inline{
   max-width: 520px;
   margin: 0.8em auto 1.6em auto;
-  padding-left: 14px;
-  border-left: 2px solid #dddddd;
+  padding-left: 0;
+  font-style: italic;
+  opacity: 0.95;
 }
 
 .quote-inline em{
