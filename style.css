@@ -350,4 +350,5 @@ hr{
 strong{
   font-weight: 600;
   font-variant-numeric: lining-nums;
+  letter-spacing: 0.02em;
 }
