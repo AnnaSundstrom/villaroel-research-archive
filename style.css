@@ -351,3 +351,7 @@ strong{
   font-weight: 600;
   color: #333333;
 }
+.quote-inline em{
+  font-size: 0.95em;
+}
+
