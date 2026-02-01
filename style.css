@@ -330,3 +330,15 @@ hr{
 .karnvapenepoken h3 + .quote-inline{
   margin-top: 0;             /* tar bort citatets toppmarginal */
 }
+/* ============================= */
+/* Sagan-citat – LÅST SNÄV RHYTM */
+/* ============================= */
+
+.karnvapenepoken h3{
+  margin-top: 1.2em !important;
+  margin-bottom: 0.1em !important;
+}
+
+.karnvapenepoken h3 + .quote-inline{
+  margin-top: 0 !important;
+}
