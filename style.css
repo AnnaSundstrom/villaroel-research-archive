@@ -348,16 +348,16 @@ hr{
 /* ============================= */
 
 strong{
-  font-weight: 600;
+  font-weight: 400;
   color: #333333;
 }
 .quote-inline em{
-  font-size: 0.95em;
+  font-size: 0.85em;
 }
 /* === Finjustering: citatens ton (låg risk) === */
 .quote-inline{
-  font-size: 0.95em;
-  opacity: 0.92;
+  font-size: 0.85em;
+  opacity: 0.82;
 }
 
 
