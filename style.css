@@ -321,3 +321,12 @@ hr{
 .karnvapenepoken h3 + .quote-inline{
   margin-top: 0.25em;     /* tajt direkt under rubriken */
 }
+
+/* Citat – SUPER NÄRA rubrik */
+.karnvapenepoken h3{
+  margin: 1.1em 0 0.15em 0;   /* lite luft före, nästan inget efter */
+}
+
+.karnvapenepoken h3 + .quote-inline{
+  margin-top: 0;             /* tar bort citatets toppmarginal */
+}
