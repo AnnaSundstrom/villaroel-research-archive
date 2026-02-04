@@ -129,9 +129,7 @@ hr{
   font-size: 1.09em;
   font-weight: 500;
   color: #222222;
-
-  line-height: 1.45;      /* ← detta gör den “samlad” */
-  max-width: 38em;        /* ← gör ingressen lite mer samlad på desktop */
+  line-height: 1.45;
 }
 
 
