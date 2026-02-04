@@ -1,5 +1,5 @@
 /* ============================= */
-/* Global bas – arkivlayout     */
+/* Global bas – arkivlayout      */
 /* ============================= */
 
 html, body{
@@ -18,7 +18,7 @@ body{
 }
 
 /* ============================= */
-/* Rubriker                     */
+/* Rubriker                      */
 /* ============================= */
 
 h1, h2, h3{
@@ -47,7 +47,7 @@ h3{
 }
 
 /* ============================= */
-/* Navigation                   */
+/* Navigation                    */
 /* ============================= */
 
 nav p{ margin: 0; }
@@ -61,7 +61,7 @@ nav a.active{
 }
 
 /* ============================= */
-/* Länkar                       */
+/* Länkar                        */
 /* ============================= */
 
 a{
@@ -98,7 +98,7 @@ nav a.active{
 }
 
 /* ============================= */
-/* Listor                       */
+/* Listor                        */
 /* ============================= */
 
 ul, ol{ padding-left: 18px; }
@@ -107,7 +107,7 @@ main ul,
 main ol{ margin-left: 1.2em; }
 
 /* ============================= */
-/* Horisontella linjer          */
+/* Horisontella linjer           */
 /* ============================= */
 
 hr{
@@ -117,15 +117,17 @@ hr{
 }
 
 /* ============================= */
-/* Textklasser                  */
+/* Textklasser                   */
 /* ============================= */
+
+.ingress{
+  margin-top: 1.5em;
+}
 
 .subtitle{
   font-style: italic;
   margin-top: 0.5em;
 }
-
-.ingress{ margin-top: 1.5em; }
 
 .small-note{
   font-size: 0.9em;
@@ -140,6 +142,7 @@ hr{
 }
 
 .tiny-link{
+  display: block;
   margin-top: 0.8em;
   margin-bottom: 1.6em;
 }
@@ -151,8 +154,19 @@ hr{
 }
 
 /* ============================= */
-/* Media-standard v1.0 – LÅST   */
-/* Bilder 380px, video 520px    */
+/* Kärnvapenepoken – mobil-läsbarhet */
+/* Gör small-note diskret men inte för liten */
+/* ============================= */
+
+.karnvapenepoken .small-note{
+  font-size: clamp(0.95rem, 3.2vw, 1.02rem);
+  line-height: 1.5;
+}
+
+/* ============================= */
+/* Media-standard v1.0 (LÅST)    */
+/* Porträtt 380px                */
+/* Bred media följer sidbredd    */
 /* ============================= */
 
 .media-image,
@@ -161,10 +175,18 @@ hr{
   margin: 24px 0;
 }
 
-.media-image img,
+.media-image img{
+  width: 100%;
+  max-width: 380px;   /* LÅST */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #dddddd;
+}
+
 .media-wide img{
   width: 100%;
-  max-width: 380px;     /* LÅST */
+  max-width: 860px;   /* följer sidans maxbredd */
   height: auto;
   display: block;
   margin: 0 auto;
@@ -179,7 +201,7 @@ hr{
 }
 
 /* ============================= */
-/* Kärnvapenepoken – bildrytm   */
+/* Kärnvapenepoken – bildrytm    */
 /* ============================= */
 
 .section-block > .media-wide:first-of-type{
@@ -206,7 +228,7 @@ hr{
 }
 
 /* ============================= */
-/* Video / embed – LÅST         */
+/* Video / embed – LÅST          */
 /* ============================= */
 
 .embed{ margin: 2em 0; }
@@ -214,7 +236,7 @@ hr{
 .embed-frame{
   position: relative;
   width: 100%;
-  max-width: 520px;     /* LÅST */
+  max-width: 520px;   /* LÅST */
   aspect-ratio: 16 / 9;
   margin: 0 auto;
   overflow: hidden;
@@ -231,7 +253,7 @@ hr{
 }
 
 /* ============================= */
-/* Citat – inline (ersätter blockquote) */
+/* Citat – inline (om du använder .quote-inline) */
 /* ============================= */
 
 .quote-inline{
@@ -239,12 +261,15 @@ hr{
   margin: 0.8em auto 1.6em auto;
   padding-left: 0;
   border-left: none;
+  font-size: 0.85em;
+  opacity: 0.82;
 }
 
 .quote-inline em{
   display: block;
   font-style: italic;
   line-height: 1.55;
+  font-size: 1em;
 }
 
 .quote-inline .quote-attrib{
@@ -259,7 +284,7 @@ hr{
 }
 
 /* ============================= */
-/* Sektioner                    */
+/* Sektioner                     */
 /* ============================= */
 
 .section-block{ margin: 3em 0; }
@@ -269,7 +294,7 @@ hr{
 .karnvapenepoken hr{ margin: 30px 0; }
 
 /* ============================= */
-/* Notdel – lista               */
+/* Notdel – lista                */
 /* ============================= */
 
 .note-list{
@@ -279,7 +304,7 @@ hr{
 }
 
 .note-list li{
-  margin: 0 0 1.4em 0;
+  margin: 0 0 1.1rem 0;
 }
 
 .note-list strong{
@@ -287,6 +312,7 @@ hr{
   margin-bottom: 0.2em;
 }
 
+/* Kärnvapenepoken: diskreta avdelare */
 .karnvapenepoken .note-list li{
   padding-bottom: 0.9em;
   border-bottom: 1px solid #eeeeee;
@@ -299,48 +325,27 @@ hr{
   margin-bottom: 0;
 }
 
+/* Gör källraden (tiny) till egen rad – ger tydliga "linjebrytningar" */
+.note-list .tiny{
+  display: block;
+  margin-top: 0.25em;
+}
+
+.note-list .tiny a{
+  display: inline-block;
+  padding-top: 0.1em;
+}
+
+/* ============================= */
+/* Center-not (om du använder den) */
+/* ============================= */
+
 .center-note{
   text-align: center;
   max-width: 560px;
   margin: 1.4em auto 0 auto;
   font-size: 0.95em;
   opacity: 0.9;
-}
-
-/* ============================= */
-/* Kärnvapenepoken – citatrytm  */
-/* (NYTT, ENDA FIXEN)           */
-/* Tajtare H3 → citat           */
-/* ============================= */
-
-.karnvapenepoken h3{
-  margin-top: 1.6em;      /* lite mindre luft före rubrik */
-  margin-bottom: 0.25em;  /* tajt mot citatet */
-}
-
-.karnvapenepoken h3 + .quote-inline{
-  margin-top: 0.25em;     /* tajt direkt under rubriken */
-}
-
-/* Citat – SUPER NÄRA rubrik */
-.karnvapenepoken h3{
-  margin: 1.1em 0 0.15em 0;   /* lite luft före, nästan inget efter */
-}
-
-.karnvapenepoken h3 + .quote-inline{
-  margin-top: 0;             /* tar bort citatets toppmarginal */
-}
-/* ============================= */
-/* Sagan-citat – LÅST SNÄV RHYTM */
-/* ============================= */
-
-.karnvapenepoken h3{
-  margin-top: 1.2em !important;
-  margin-bottom: 0.1em !important;
-}
-
-.karnvapenepoken h3 + .quote-inline{
-  margin-top: 0 !important;
 }
 
 /* ============================= */
@@ -351,38 +356,4 @@ strong{
   font-weight: 400;
   color: #333333;
 }
-.quote-inline em{
-  font-size: 0.85em;
-}
-/* === Finjustering: citatens ton (låg risk) === */
-.quote-inline{
-  font-size: 0.85em;
-  opacity: 0.82;
-}
 
-.media-image img{
-  width: 100%;
-  max-width: 380px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border: 1px solid #dddddd;
-}
-
-.media-wide img{
-  width: 100%;
-  max-width: 860px; /* följer sidans maxbredd */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border: 1px solid #dddddd;
-}
-
-.tiny-link {
-  display: block;
-  margin-top: 0.35rem;
-}
-
-.note-list li {
-  margin-bottom: 1.1rem;
-}
