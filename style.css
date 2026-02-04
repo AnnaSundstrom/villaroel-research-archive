@@ -123,15 +123,15 @@ hr{
 /* Textklasser                   */
 /* ============================= */
 
+
 .ingress{
-  margin: 1.4em 0 0 0;
+  margin: 1.2em 0 0 0;
   font-size: 1.09em;
   font-weight: 500;
   color: #222222;
-  line-height: 1.5;
 
-  max-width: none;   /* viktigt: ingen egen kolumn */
-  text-align: left;
+  line-height: 1.45;      /* ← detta gör den “samlad” */
+  max-width: 38em;        /* ← gör ingressen lite mer samlad på desktop */
 }
 
 
