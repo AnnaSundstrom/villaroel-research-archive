@@ -36,10 +36,9 @@ h1, h2, h3{
 
 h1{
   margin: 0 0 0.55em 0;
-  font-size: 3rem;             /* stabil på desktop */
-  line-height: 1.08;
-  max-width: 18ch;
-  margin-bottom: 0.7em;         /* SAMLAR RUBRIKEN */
+  font-size: 2.6rem;
+  line-height: 1.12;
+  max-width: 24ch;
 }
 
   
