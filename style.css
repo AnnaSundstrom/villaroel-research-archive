@@ -124,10 +124,14 @@ hr{
 /* ============================= */
 
 .ingress{
-  margin-top: 1.5em;
+  margin: 1.6em auto 0 auto;
+  font-size: 1.09em;
+  font-weight: 500;
   color: #222222;
-  font-size: 1.09em;   /* aning större */
-  font-weight: 500;    /* lätt tyngd, inte bold */
+
+  max-width: 42rem;
+  line-height: 1.45;
+  text-align: center;
 }
 
 .subtitle{
