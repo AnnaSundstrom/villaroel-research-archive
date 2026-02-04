@@ -360,4 +360,21 @@ strong{
   opacity: 0.82;
 }
 
+.media-image img{
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #dddddd;
+}
+
+.media-wide img{
+  width: 100%;
+  max-width: 860px; /* följer sidans maxbredd */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #dddddd;
+}
 
