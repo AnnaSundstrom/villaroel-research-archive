@@ -1,88 +1,84 @@
-/* ========================================================= */
-/* style.css – RENSAD v1.0 (stabil, “normalt” beteende)       */
-/* Fokus: förutsägbar typografi, inga opacity-tricks,         */
-/* inga dubbla regler, strong är strong.                      */
-/* ========================================================= */
+/* ========================================================= /
+/ style.css – RENSAD v1.0 (stabil, “normalt” beteende)       /
+/ Fokus: förutsägbar typografi, inga opacity-tricks,         /
+/ inga dubbla regler, strong är strong.                      /
+/ ========================================================= */
 
-/* ============================= */
-/* Global bas – arkivlayout      */
-/* ============================= */
+/* ============================= /
+/ Global bas – arkivlayout      /
+/ ============================= */
 
 html, body{
-  background-color: #ffffff;
-  color: #222222;
-  margin: 0;
-  padding: 0;
+background-color: #ffffff;
+color: #222222;
+margin: 0;
+padding: 0;
 }
 
 body{
-  font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.6;
-  max-width: 860px;
-  margin: 40px auto;
-  padding: 0 20px;
+font-family: Georgia, "Times New Roman", serif;
+line-height: 1.6;
+max-width: 860px;
+margin: 40px auto;
+padding: 0 20px;
 }
 
-/* ============================= */
-/* Rubriker                      */
-/* ============================= */
+/* ============================= /
+/ Rubriker                      /
+/ ============================= */
 
 h1, h2, h3{
-h1, h2, h3{
-  font-weight: 400;            /* normal men tydlig */
-  color: #222222;
+font-weight: 400;            /* normal men tydlig */
+color: #222222;
 }
 
-  
 h1{
 margin: 0 0 0.55em 0;
 font-size: 3rem;             /* stabil på desktop */
 line-height: 1.08;
 }
 
-  
 h2{
-  margin: 1.7em 0 0.7em 0;
-  font-size: 1.8rem;
-  line-height: 1.2;
+margin: 1.7em 0 0.7em 0;
+font-size: 1.8rem;
+line-height: 1.2;
 }
 
-
 h3{
-  margin: 2.0em 0 0.6em 0;
-  font-size: 1.05rem;
-  line-height: 1.25;
-  letter-spacing: 0.01em;
+margin: 2.0em 0 0.6em 0;
+font-size: 1.05rem;
+line-height: 1.25;
+letter-spacing: 0.01em;
 }
 
 /* Mobil: minska rubriker utan clamp */
 @media (max-width: 600px){
-  body{ margin: 22px auto; }
-  h1{ font-size: 2.6rem; }
-  h2{ font-size: 1.45rem; }
+body{ margin: 22px auto; }
+h1{ font-size: 2.6rem; }
+h2{ font-size: 1.45rem; }
 }
-  
-/* ============================= */
-/* Navigation                    */
-/* ============================= */
+
+/* ============================= /
+/ Navigation                    /
+/ ============================= */
 
 nav p{ margin: 0; }
 
 nav hr{
-  margin: 12px 0 22px 0;
+margin: 12px 0 22px 0;
 }
 
 nav a.active{
-  text-decoration: underline;
+text-decoration: underline;
 }
 
-/* ============================= */
-/* Länkar                        */
-/* ============================= */
+/* ============================= /
+/ Länkar                        /
+/ ============================= */
 
 a{
-  color: #222222;
-  text-decoration: none;
+color: #222222;
+text-decoration: none;
 }
 
 a:hover{ text-decoration: underline; }
@@ -95,82 +91,83 @@ nav a:hover{ text-decoration: underline; }
 /* Länkfärger (hover/focus) */
 main a:hover,
 main a:focus{
-  color: #7a3cff;
+color: #7a3cff;
 }
 
 nav a:hover,
 nav a:focus,
 nav a.active{
-  color: #7a3cff;
+color: #7a3cff;
 }
 
-/* ============================= */
-/* Listor                        */
-/* ============================= */
+/* ============================= /
+/ Listor                        /
+/ ============================= */
 
 ul, ol{ padding-left: 18px; }
 
 main ul,
 main ol{ margin-left: 1.2em; }
 
-/* ============================= */
-/* Horisontella linjer           */
-/* ============================= */
+/* ============================= /
+/ Horisontella linjer           /
+/ ============================= */
 
 hr{
-  border: none;
-  border-top: 1px solid #dddddd;
-  margin: 22px 0;
+border: none;
+border-top: 1px solid #dddddd;
+margin: 22px 0;
 }
 
-/* ============================= */
-/* Textklasser                   */
-/* ============================= */
-
+/* ============================= /
+/ Textklasser                   /
+/ ============================= */
 
 .ingress{
-  margin: 1.2em 0 0 0;
+  margin: 1.4em 0 0 0;
   font-size: 1.09em;
   font-weight: 500;
   color: #222222;
-  line-height: 1.45;
+  line-height: 1.5;
+
+  max-width: none; /* viktigt: ingen egen kolumn */
+  text-align: left;
 }
 
-
 .subtitle{
-  font-style: italic;
-  margin-top: 0.5em;
-  color: #222222;
+font-style: italic;
+margin-top: 0.5em;
+color: #222222;
 }
 
 /* Not/ingress-typ (utan opacity = stabilare mellan laptop/mobil) */
 .small-note{
-  font-size: 0.95em;
-  color: #333333;
-  margin-top: 0.6em;
+font-size: 0.95em;
+color: #333333;
+margin-top: 0.6em;
 }
 
 .tiny,
 .tiny-link{
-  font-size: 0.85em;
-  color: #555555;
+font-size: 0.85em;
+color: #555555;
 }
 
 .tiny-link{
-  display: block;
-  margin-top: 0.8em;
-  margin-bottom: 1.6em;
+display: block;
+margin-top: 0.8em;
+margin-bottom: 1.6em;
 }
 
 .footer-note{
-  font-size: 0.9em;
-  color: #555555;
-  margin-top: 2em;
+font-size: 0.9em;
+color: #555555;
+margin-top: 2em;
 }
 
-/* ============================= */
-/* Sektioner                     */
-/* ============================= */
+/* ============================= /
+/ Sektioner                     /
+/ ============================= */
 
 .section-block{ margin: 3em 0; }
 
@@ -178,184 +175,183 @@ hr{
 .karnvapenepoken .section-block{ margin: 3.4em 0; }
 .karnvapenepoken hr{ margin: 30px 0; }
 
-/* ============================= */
-/* Media-standard v1.0 (LÅST)    */
-/* Porträtt 380px                */
-/* Bred media följer sidbredd    */
-/* ============================= */
+/* ============================= /
+/ Media-standard v1.0 (LÅST)    /
+/ Porträtt 380px                /
+/ Bred media följer sidbredd    /
+/ ============================= */
 
 .media-image,
 .media-wide{
-  text-align: center;
-  margin: 24px 0;
+text-align: center;
+margin: 24px 0;
 }
 
 .media-image img{
-  width: 100%;
-  max-width: 380px;   /* LÅST */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border: 1px solid #dddddd;
+width: 100%;
+max-width: 380px;   /* LÅST */
+height: auto;
+display: block;
+margin: 0 auto;
+border: 1px solid #dddddd;
 }
 
 .media-wide img{
-  width: 100%;
-  max-width: 860px;   /* följer sidans maxbredd */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border: 1px solid #dddddd;
+width: 100%;
+max-width: 860px;   /* följer sidans maxbredd */
+height: auto;
+display: block;
+margin: 0 auto;
+border: 1px solid #dddddd;
 }
 
 .caption{
-  text-align: center;
-  font-size: 0.95em;
-  color: #555555;
-  margin-top: 8px;
+text-align: center;
+font-size: 0.95em;
+color: #555555;
+margin-top: 8px;
 }
 
 /* Kärnvapenepoken – bildrytm */
 .section-block > .media-wide:first-of-type{
-  margin-top: 48px;
-  margin-bottom: 40px;
+margin-top: 48px;
+margin-bottom: 40px;
 }
 
 .section-block > .media-wide:not(:first-of-type){
-  margin-top: 28px;
-  margin-bottom: 36px;
+margin-top: 28px;
+margin-bottom: 36px;
 }
 
 /* Luft efter media innan nästa rubrik/text */
 .karnvapenepoken figure.media-wide,
 .karnvapenepoken figure.media-image{
-  margin-bottom: 34px;
+margin-bottom: 34px;
 }
 
 .karnvapenepoken figure.media-wide + h2,
 .karnvapenepoken figure.media-wide + h3,
 .karnvapenepoken figure.media-image + h2,
 .karnvapenepoken figure.media-image + h3{
-  margin-top: 2.2em;
+margin-top: 2.2em;
 }
 
-/* ============================= */
-/* Video / embed – LÅST          */
-/* ============================= */
+/* ============================= /
+/ Video / embed – LÅST          /
+/ ============================= */
 
 .embed{ margin: 2em 0; }
 
 .embed-frame{
-  position: relative;
-  width: 100%;
-  max-width: 520px;   /* LÅST */
-  aspect-ratio: 16 / 9;
-  margin: 0 auto;
-  overflow: hidden;
-  background: #000;
+position: relative;
+width: 100%;
+max-width: 520px;   /* LÅST */
+aspect-ratio: 16 / 9;
+margin: 0 auto;
+overflow: hidden;
+background: #000;
 }
 
 .embed-frame iframe{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+border: 0;
+display: block;
 }
 
-/* ============================= */
-/* Citat – inline                */
-/* ============================= */
+/* ============================= /
+/ Citat – inline                /
+/ ============================= */
 
 .quote-inline{
-  max-width: 520px;
-  margin: 0.8em auto 1.6em auto;
-  padding-left: 0;
-  border-left: none;
-  font-size: 0.9em;
-  color: #555555;
+max-width: 520px;
+margin: 0.8em auto 1.6em auto;
+padding-left: 0;
+border-left: none;
+font-size: 0.9em;
+color: #555555;
 }
 
 .quote-inline em{
-  display: block;
-  font-style: italic;
-  line-height: 1.55;
-  font-size: 1em;
+display: block;
+font-style: italic;
+line-height: 1.55;
+font-size: 1em;
 }
 
 .quote-inline .quote-attrib{
-  display: inline-block;
-  margin-top: 6px;
-  color: #666666;
-  font-size: 0.95em;
+display: inline-block;
+margin-top: 6px;
+color: #666666;
+font-size: 0.95em;
 }
 
 .quote-inline + .quote-inline{
-  margin-top: 1em;
+margin-top: 1em;
 }
 
-/* ============================= */
-/* Notdel – lista                */
-/* ============================= */
+/* ============================= /
+/ Notdel – lista                /
+/ ============================= */
 
 .note-list{
-  list-style: none;
-  padding: 0;
-  margin: 0;
+list-style: none;
+padding: 0;
+margin: 0;
 }
 
 .note-list li{
-  margin: 0 0 1.1rem 0;
+margin: 0 0 1.1rem 0;
 }
 
 .note-list strong{
-  display: block;
-  margin-bottom: 0.2em;
+display: block;
+margin-bottom: 0.2em;
 }
 
 /* Kärnvapenepoken: diskreta avdelare */
 .karnvapenepoken .note-list li{
-  padding-bottom: 0.9em;
-  border-bottom: 1px solid #eeeeee;
-  margin: 0 0 1.2em 0;
+padding-bottom: 0.9em;
+border-bottom: 1px solid #eeeeee;
+margin: 0 0 1.2em 0;
 }
 
 .karnvapenepoken .note-list li:last-child{
-  border-bottom: none;
-  padding-bottom: 0;
-  margin-bottom: 0;
+border-bottom: none;
+padding-bottom: 0;
+margin-bottom: 0;
 }
 
 /* Gör källraden (tiny) till egen rad */
 .note-list .tiny{
-  display: block;
-  margin-top: 0.25em;
+display: block;
+margin-top: 0.25em;
 }
 
 .note-list .tiny a{
-  display: inline-block;
-  padding-top: 0.1em;
+display: inline-block;
+padding-top: 0.1em;
 }
 
-/* ============================= */
-/* Center-not (om du använder den) */
-/* ============================= */
+/* ============================= /
+/ Center-not (om du använder den) /
+/ ============================= */
 
 .center-note{
-  text-align: center;
-  max-width: 560px;
-  margin: 1.4em auto 0 auto;
-  font-size: 0.95em;
-  color: #555555;
+text-align: center;
+max-width: 560px;
+margin: 1.4em auto 0 auto;
+font-size: 0.95em;
+color: #555555;
 }
 
-/* ============================= */
-/* Strong / fetstil (NORMAL)     */
-/* ============================= */
+/* ============================= /
+/ Strong / fetstil (NORMAL)     /
+/ ============================= */
 
 strong{
-  font-weight: 600;   /* strong ska synas */
-  color: #222222;
+font-weight: 600;   /* strong ska synas */
+color: #222222;
 }
-
