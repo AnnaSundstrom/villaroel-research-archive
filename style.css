@@ -378,3 +378,11 @@ strong{
   border: 1px solid #dddddd;
 }
 
+.tiny-link {
+  display: block;
+  margin-top: 0.35rem;
+}
+
+.note-list li {
+  margin-bottom: 1.1rem;
+}
