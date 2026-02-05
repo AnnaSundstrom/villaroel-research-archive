@@ -130,10 +130,15 @@ margin: 22px 0;
 }
 
 .subtitle{
-font-style: italic;
-margin-top: 0.5em;
-color: #222222;
+  margin-top: 1.0em;
+  font-size: 1.09em;
+  line-height: 1.45;
+  font-weight: 600;
+  color: #222222;
+  opacity: 1;
 }
+
+
 
 /* Not/ingress-typ (utan opacity = stabilare mellan laptop/mobil) */
 .small-note{
@@ -142,14 +147,6 @@ color: #333333;
 margin-top: 0.6em;
 }
 
-.subtitle{
-  margin-top: 1.0em;
-  font-size: 1.15rem;
-  line-height: 1.45;
-  font-weight: 600;
-  color: #222222;
-  opacity: 1;
-}
 
 /* Stoppa rubrik från att "flyta ut" */
 h1{
