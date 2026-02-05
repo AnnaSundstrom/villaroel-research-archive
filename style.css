@@ -1,6 +1,6 @@
 /* =======================================================
-   style.css – arkivlayout (v1.x) – STÄDAD & LÅST
-   Princip: Layout överst, typografi sist (vinner alltid)
+   style.css – arkivlayout – STÄDAD & LÅST
+   Princip: layout överst, typografi sist (vinner alltid)
    ======================================================= */
 
 /* ============================= */
@@ -13,7 +13,7 @@ html, body{
   padding: 0;
 }
 
-/* Layout kvar här (max-width etc). Typografi låses längst ned. */
+/* Layout (maxbredd etc). Typografi låses längre ned. */
 body{
   max-width: 860px;
   margin: 40px auto;
@@ -95,7 +95,7 @@ hr{
   margin: 0 0 0.8em 0;
 }
 
-/* Not/ingress-typ (utan opacity = stabilare mellan laptop/mobil) */
+/* Not/ingress-typ */
 .small-note{
   font-size: 0.95em;
   color: #333333;
@@ -186,7 +186,7 @@ hr{
 .karnvapenepoken figure.media-wide + h2,
 .karnvapenepoken figure.media-wide + h3,
 .karnvapenepoken figure.media-image + h2,
-.karnvapenoken figure.media-image + h3{
+.karnvapenepoken figure.media-image + h3{
   margin-top: 2.2em;
 }
 
@@ -312,7 +312,6 @@ strong{
 
 /* =======================================================
    TYPOGRAFI – SLUTLIG & LÅST
-   (läggs sist så den alltid vinner)
    ======================================================= */
 
 /* Brödtext – lugn, klassisk serif (inte rund/bullig) */
@@ -346,23 +345,23 @@ h1, h2, h3 {
   text-transform: none;
 }
 
-/* H1 */
+/* H1 – bas (desktop + allmänt) */
 h1 {
   font-size: 3rem;
   line-height: 1.15;
   margin: 0 0 0.6rem 0;
 
-  font-weight: 600;          /* mindre blockigt på Android */
+  font-weight: 600;
   background: none;
   padding: 0;
   border-radius: 0;
   box-shadow: none;
 
-  overflow-wrap: break-word; /* lugnare radbrytning */
+  overflow-wrap: break-word;
   word-break: normal;
 }
 
-/* H2 + H3 (tydligare hierarki) */
+/* H2 + H3 (tydlig hierarki) */
 h2 { 
   font-size: 1.8rem;
   line-height: 1.2;
@@ -395,30 +394,39 @@ h3 {
   margin: 0 0 1.4em 0;
 }
 
-/* Brygga – “Mot denna bakgrund …” (global) */
+/* Brygga – om du använder klass i HTML */
 .bridge{
-  font-size: 1.06rem;
+  font-size: 1.12rem;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.55;
-  color: #333333;
-  margin: 1.2em 0 1.6em 0;
+  color: #222222;
+  margin: 1.4em 0 2.0em 0;
 }
 
-/* Mobil – luftig H1 utan hack */
+/* VIKTIGT SKIFTE mellan block: figure + p (om raden saknar klass) */
+.karnvapenepoken figure + p{
+  font-size: 1.12rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #222222;
+  margin: 1.4em 0 2.0em 0;
+}
+
+/* Mobil – luftig H1 (mindre svart/kantig) */
 @media (max-width: 600px) {
-  body { margin: 22px auto; } /* din mobilmarginal */
+  body { margin: 22px auto; }
 
   h1{
     font-size: 2.6rem;
-    font-weight: 500;
-    letter-spacing: -0.015em;
+    font-weight: 450;        /* luftigare på Samsung */
+    letter-spacing: 0.005em; /* öppnar upp formen */
     line-height: 1.12;
+    color: #2a2a2a;          /* pyttelite mjukare än #222 */
   }
 
   h2{
     font-size: 1.45rem;
   }
-
-  
 }
