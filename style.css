@@ -123,15 +123,10 @@ margin: 22px 0;
 / Textklasser                   /
 / ============================= */
 
-.ingress{
-  margin: 1.4em 0 0 0;
-  font-size: 1.09em;
-  font-weight: 500;
-  color: #222222;
-  line-height: 1.5;
 
-  max-width: none; /* viktigt: ingen egen kolumn */
-  text-align: left;
+.ingress{
+  font-size: 1.09em;
+  line-height: 1.5;   /* samlar rytmen */
 }
 
 .subtitle{
@@ -379,3 +374,4 @@ strong{
 font-weight: 600;   /* strong ska synas */
 color: #222222;
 }
+
