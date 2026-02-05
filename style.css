@@ -124,19 +124,24 @@ margin: 22px 0;
 / ============================= */
 
 .ingress{
-  font-size: 1.09rem;
+  margin-top: 1.1em;
+  font-size: 1.09em;
+  line-height: 1.5;
   color: #222222;
 }
 
 .subtitle{
-  font-style: oblique;
-  margin-top: 0.5em;
+  margin-top: 1.0em;
+  font-size: 1.15rem;
+  line-height: 1.45;
+  font-weight: 600;
   color: #222222;
+  opacity: 1;
 }
 
 /* Not/ingress-typ (utan opacity = stabilare mellan laptop/mobil) */
 .small-note{
-font-size: 0.95em;
+font-size: 0.85em;
 color: #333333;
 margin-top: 0.6em;
 }
