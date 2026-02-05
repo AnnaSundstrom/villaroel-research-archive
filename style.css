@@ -393,20 +393,29 @@ h3 {
   }
 
 /* Ingress */
-.ingress {
-  font-size: 1.09em;
+.ingress{
+  font-size: 1.12em;      /* lite tydligare */
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.55;
   color: #222222;
-  margin: 0 0 0.8em 0;
+  margin: 0 0 0.75em 0;
 }
 
-.ingress-sub {
-  font-size: 1.02em;
+.ingress-sub{
+  font-size: 1.03em;
   font-weight: 400;
-  line-height: 1.5;
-  color: #222222;
-  margin: 0 0 1.2em 0;
+  line-height: 1.55;
+  color: #444444;         /* nyans, inte blekt */
+  margin: 0 0 1.4em 0;
 }
 
+  .bridge{
+  font-size: 1.06rem;     /* tydligare än brödtext men inte rubrik */
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #333333;
+  margin: 1.2em 0 1.6em 0;
+  }
 
+  
