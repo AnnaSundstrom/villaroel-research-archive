@@ -129,7 +129,8 @@ margin: 22px 0;
 }
 
 .subtitle{
-  font-size: 1.05rem;
+  font-style: oblique;
+  margin-top: 0.5em;
   color: #222222;
 }
 
