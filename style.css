@@ -118,15 +118,14 @@ margin: 22px 0;
 / Textklasser /
 / ============================= */
 
+
 .ingress{
-  margin-top: 1.45em;
+  margin: 1.2em 0 0 0;
   font-size: 1.09em;
   font-weight: 500;
-  line-height: 1.48;
   color: #222222;
-  text-align: left;
+  line-height: 1.45;
 }
-
 
 
 .subtitle{
@@ -137,8 +136,6 @@ margin: 22px 0;
   color: #222222;
   opacity: 1;
 }
-
-
 
 /* Not/ingress-typ (utan opacity = stabilare mellan laptop/mobil) */
 .small-note{
