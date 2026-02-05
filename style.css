@@ -354,11 +354,14 @@ h1 {
   font-size: 3rem;
   line-height: 1.15;
   margin: 0 0 0.6rem 0;
+
+  font-weight: 600;              /* NYTT: mindre blockigt på Android */
   background: none;
   padding: 0;
   border-radius: 0;
   box-shadow: none;
-  overflow-wrap: anywhere;
+
+  overflow-wrap: break-word;     /* BYT: lugnare radbrytning */
   word-break: normal;
 }
 
