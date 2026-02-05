@@ -174,16 +174,17 @@ h3 {
 
 .ingress {
   font-size: 1.12em;
-  font-weight: 500;
+  font-weight: 600;        /* upp från 500 */
   line-height: 1.55;
-  margin: 0 0 0.75em 0;
+  color: #222222;
+  margin: 0 0 0.6em 0;
 }
 
 .ingress-sub {
-  font-size: 1.03em;
-  font-weight: 400;
+  font-size: 1.04em;
+  font-weight: 600;        /* detta är nyckeln */
   line-height: 1.55;
-  color: #444444;
+  color: #333333;          /* mycket liten skillnad */
   margin: 0 0 1.4em 0;
 }
 
@@ -194,6 +195,14 @@ h3 {
   line-height: 1.6;
   color: #333333;
   margin: 1.6em 0 2em 0;
+}
+
+.subtitle {
+  font-size: 1.05em;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #333333;
+  margin: 0.6em 0 1.2em 0;
 }
 
 /* ========================================================= */
