@@ -1,11 +1,14 @@
-/* 
-/ style.css – ====== /
-/ Global bas – arkivlayout /
-/ ============================= */
+/* =======================================================
+   style.css – arkivlayout (v1.x) – STÄDAD & LÅST
+   Princip: Layout överst, typografi sist (vinner alltid)
+   ======================================================= */
+
+/* ============================= */
+/* Global bas */
+/* ============================= */
 
 html, body{
   background-color: #ffffff;
-  color: #222222;
   margin: 0;
   padding: 0;
 }
@@ -17,9 +20,9 @@ body{
   padding: 0 20px;
 }
 
-/* ============================= /
-/ Navigation /
-/ ============================= */
+/* ============================= */
+/* Navigation */
+/* ============================= */
 
 nav p{ margin: 0; }
 
@@ -31,9 +34,9 @@ nav a.active{
   text-decoration: underline;
 }
 
-/* ============================= /
-/ Länkar /
-/ ============================= */
+/* ============================= */
+/* Länkar */
+/* ============================= */
 
 a{
   color: #222222;
@@ -59,18 +62,18 @@ nav a.active{
   color: #7a3cff;
 }
 
-/* ============================= /
-/ Listor /
-/ ============================= */
+/* ============================= */
+/* Listor */
+/* ============================= */
 
 ul, ol{ padding-left: 18px; }
 
 main ul,
 main ol{ margin-left: 1.2em; }
 
-/* ============================= /
-/ Horisontella linjer /
-/ ============================= */
+/* ============================= */
+/* Horisontella linjer */
+/* ============================= */
 
 hr{
   border: none;
@@ -78,14 +81,11 @@ hr{
   margin: 22px 0;
 }
 
-/* ============================= /
-/ Textklasser (övriga) /
-/ ============================= */
-
 /* ============================= */
+/* Textklasser (övriga) */
+/* ============================= */
+
 /* Subtitle – LÅST */
-/* ============================= */
-
 .subtitle{
   font-size: 1.06rem;
   font-style: italic;
@@ -120,9 +120,9 @@ hr{
   margin-top: 2em;
 }
 
-/* ============================= /
-/ Sektioner /
-/ ============================= */
+/* ============================= */
+/* Sektioner */
+/* ============================= */
 
 .section-block{ margin: 3em 0; }
 
@@ -130,11 +130,10 @@ hr{
 .karnvapenepoken .section-block{ margin: 3.4em 0; }
 .karnvapenepoken hr{ margin: 30px 0; }
 
-/* ============================= /
-/ Media-standard v1.0 (LÅST) /
-/ Porträtt 380px /
-/ Bred media följer sidbredd /
-/ ============================= */
+/* ============================= */
+/* Media-standard v1.0 (LÅST) */
+/* Porträtt 380px / Bred media följer sidbredd */
+/* ============================= */
 
 .media-image,
 .media-wide{
@@ -187,13 +186,13 @@ hr{
 .karnvapenepoken figure.media-wide + h2,
 .karnvapenepoken figure.media-wide + h3,
 .karnvapenepoken figure.media-image + h2,
-.karnvapenepoken figure.media-image + h3{
+.karnvapenoken figure.media-image + h3{
   margin-top: 2.2em;
 }
 
-/* ============================= /
-/ Video / embed – LÅST /
-/ ============================= */
+/* ============================= */
+/* Video / embed – LÅST */
+/* ============================= */
 
 .embed{ margin: 2em 0; }
 
@@ -216,9 +215,9 @@ hr{
   display: block;
 }
 
-/* ============================= /
-/ Citat – inline /
-/ ============================= */
+/* ============================= */
+/* Citat – inline */
+/* ============================= */
 
 .quote-inline{
   max-width: 520px;
@@ -247,9 +246,9 @@ hr{
   margin-top: 1em;
 }
 
-/* ============================= /
-/ Notdel – lista /
-/ ============================= */
+/* ============================= */
+/* Notdel – lista */
+/* ============================= */
 
 .note-list{
   list-style: none;
@@ -290,9 +289,9 @@ hr{
   padding-top: 0.1em;
 }
 
-/* ============================= /
-/ Center-not (om du använder den) /
-/ ============================= */
+/* ============================= */
+/* Center-not (om du använder den) */
+/* ============================= */
 
 .center-note{
   text-align: center;
@@ -302,22 +301,21 @@ hr{
   color: #555555;
 }
 
-/* ============================= /
-/ Strong / fetstil (NORMAL) /
-/ ============================= */
+/* ============================= */
+/* Strong / fetstil (NORMAL) */
+/* ============================= */
 
 strong{
-  font-weight: 600; /* strong ska synas */
+  font-weight: 600;
   color: #222222;
 }
 
+/* =======================================================
+   TYPOGRAFI – SLUTLIG & LÅST
+   (läggs sist så den alltid vinner)
+   ======================================================= */
 
-/* ============================= */
-/* TYPOGRAFI – SLUTLIG & LÅST */
-/* (läggs sist så den alltid vinner) */
-/* ============================= */
-
-/* Brödtext – lugn, klassisk serif */
+/* Brödtext – lugn, klassisk serif (inte rund/bullig) */
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1rem;
@@ -333,7 +331,7 @@ main p:last-child {
   margin-bottom: 0;
 }
 
-/* Rubriker – rak sans */
+/* Rubriker – rak sans (Samsung-säker) */
 h1, h2, h3 {
   font-family:
     -apple-system,
@@ -344,7 +342,6 @@ h1, h2, h3 {
     Arial,
     sans-serif;
   color: #222222;
-  font-weight: 700;
   letter-spacing: -0.01em;
   text-transform: none;
 }
@@ -355,46 +352,35 @@ h1 {
   line-height: 1.15;
   margin: 0 0 0.6rem 0;
 
-  font-weight: 600;              /* NYTT: mindre blockigt på Android */
+  font-weight: 600;          /* mindre blockigt på Android */
   background: none;
   padding: 0;
   border-radius: 0;
   box-shadow: none;
 
-  overflow-wrap: break-word;     /* BYT: lugnare radbrytning */
+  overflow-wrap: break-word; /* lugnare radbrytning */
   word-break: normal;
 }
 
-/* H2 */
-h2 {
+/* H2 + H3 (tydligare hierarki) */
+h2 { 
   font-size: 1.8rem;
   line-height: 1.2;
   margin: 1.7em 0 0.7em 0;
+  font-weight: 700;
 }
 
-/* H3 */
 h3 {
   font-size: 1.05rem;
   line-height: 1.25;
   margin: 2.0em 0 0.6em 0;
   letter-spacing: 0;
+  font-weight: 700;
 }
 
-/* Mobil */
-@media (max-width: 600px) {
-  h1{
-    font-weight: 500;        /* slimmar och lättar */
-    letter-spacing: -0.015em;/* lite mer luft */
-    line-height: 1.12;       /* snyggare blockrytm */
-  }
-
-  h2{
-    font-size: 1.45rem;
-  }
-
-/* Ingress */
+/* Ingress – tydligare (global) */
 .ingress{
-  font-size: 1.12em;      /* lite tydligare */
+  font-size: 1.12em;
   font-weight: 500;
   line-height: 1.55;
   color: #222222;
@@ -405,17 +391,34 @@ h3 {
   font-size: 1.03em;
   font-weight: 400;
   line-height: 1.55;
-  color: #444444;         /* nyans, inte blekt */
+  color: #444444;
   margin: 0 0 1.4em 0;
 }
 
-  .bridge{
-  font-size: 1.06rem;     /* tydligare än brödtext men inte rubrik */
+/* Brygga – “Mot denna bakgrund …” (global) */
+.bridge{
+  font-size: 1.06rem;
   font-style: italic;
   font-weight: 400;
   line-height: 1.55;
   color: #333333;
   margin: 1.2em 0 1.6em 0;
+}
+
+/* Mobil – luftig H1 utan hack */
+@media (max-width: 600px) {
+  body { margin: 22px auto; } /* din mobilmarginal */
+
+  h1{
+    font-size: 2.6rem;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.12;
+  }
+
+  h2{
+    font-size: 1.45rem;
   }
 
   
+}
