@@ -124,20 +124,13 @@ margin: 22px 0;
 / ============================= */
 
 .ingress{
-  margin-top: 1.1em;
   font-size: 1.09rem;
-  line-height: 1.5;
   color: #222222;
-  opacity: 1;
 }
 
 .subtitle{
-  margin-top: 0.5em;
   font-size: 1.05rem;
-  line-height: 1.45;
-  font-weight: 450;
   color: #222222;
-  opacity: 1;
 }
 
 /* Not/ingress-typ (utan opacity = stabilare mellan laptop/mobil) */
