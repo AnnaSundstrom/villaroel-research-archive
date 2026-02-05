@@ -1,12 +1,6 @@
-     
-/* ========================================================= /
-/ style.css – RENSAD v1.0 (stabil, “normalt” beteende)       /
-/ Fokus: förutsägbar typografi, inga opacity-tricks,         /
-/ inga dubbla regler, strong är strong.                      /
-/ ========================================================= */
-
-/* ============================= /
-/ Global bas – arkivlayout      /
+/* 
+/ style.css – ====== /
+/ Global bas – arkivlayout /
 / ============================= */
 
 html, body{
@@ -25,17 +19,17 @@ padding: 0 20px;
 }
 
 /* ============================= /
-/ Rubriker                      /
+/ Rubriker /
 / ============================= */
 
 h1, h2, h3{
-font-weight: 400;            /* normal men tydlig */
+font-weight: 400; /* normal men tydlig */
 color: #222222;
 }
 
 h1{
 margin: 0 0 0.55em 0;
-font-size: 3rem;             /* stabil på desktop */
+font-size: 3rem; /* stabil på desktop */
 line-height: 1.08;
 }
 
@@ -60,7 +54,7 @@ h2{ font-size: 1.45rem; }
 }
 
 /* ============================= /
-/ Navigation                    /
+/ Navigation /
 / ============================= */
 
 nav p{ margin: 0; }
@@ -74,7 +68,7 @@ text-decoration: underline;
 }
 
 /* ============================= /
-/ Länkar                        /
+/ Länkar /
 / ============================= */
 
 a{
@@ -102,7 +96,7 @@ color: #7a3cff;
 }
 
 /* ============================= /
-/ Listor                        /
+/ Listor /
 / ============================= */
 
 ul, ol{ padding-left: 18px; }
@@ -111,7 +105,7 @@ main ul,
 main ol{ margin-left: 1.2em; }
 
 /* ============================= /
-/ Horisontella linjer           /
+/ Horisontella linjer /
 / ============================= */
 
 hr{
@@ -121,10 +115,25 @@ margin: 22px 0;
 }
 
 /* ============================= /
-/ Textklasser                   /
+/ Textklasser /
 / ============================= */
 
+.ingress{
+  margin: 1.4em 0 0 0;
+  font-size: 1.09em;
+  font-weight: 500;
+  color: #222222;
+  line-height: 1.5;
 
+  max-width: none; /* viktigt: ingen egen kolumn */
+  text-align: left;
+}
+
+.subtitle{
+font-style: italic;
+margin-top: 0.5em;
+color: #222222;
+}
 
 /* Not/ingress-typ (utan opacity = stabilare mellan laptop/mobil) */
 .small-note{
@@ -176,7 +185,7 @@ margin-top: 2em;
 }
 
 /* ============================= /
-/ Sektioner                     /
+/ Sektioner /
 / ============================= */
 
 .section-block{ margin: 3em 0; }
@@ -186,9 +195,9 @@ margin-top: 2em;
 .karnvapenepoken hr{ margin: 30px 0; }
 
 /* ============================= /
-/ Media-standard v1.0 (LÅST)    /
-/ Porträtt 380px                /
-/ Bred media följer sidbredd    /
+/ Media-standard v1.0 (LÅST) /
+/ Porträtt 380px /
+/ Bred media följer sidbredd /
 / ============================= */
 
 .media-image,
@@ -199,7 +208,7 @@ margin: 24px 0;
 
 .media-image img{
 width: 100%;
-max-width: 380px;   /* LÅST */
+max-width: 380px; /* LÅST */
 height: auto;
 display: block;
 margin: 0 auto;
@@ -208,7 +217,7 @@ border: 1px solid #dddddd;
 
 .media-wide img{
 width: 100%;
-max-width: 860px;   /* följer sidans maxbredd */
+max-width: 860px; /* följer sidans maxbredd */
 height: auto;
 display: block;
 margin: 0 auto;
@@ -247,7 +256,7 @@ margin-top: 2.2em;
 }
 
 /* ============================= /
-/ Video / embed – LÅST          /
+/ Video / embed – LÅST /
 / ============================= */
 
 .embed{ margin: 2em 0; }
@@ -255,7 +264,7 @@ margin-top: 2.2em;
 .embed-frame{
 position: relative;
 width: 100%;
-max-width: 520px;   /* LÅST */
+max-width: 520px; /* LÅST */
 aspect-ratio: 16 / 9;
 margin: 0 auto;
 overflow: hidden;
@@ -272,7 +281,7 @@ display: block;
 }
 
 /* ============================= /
-/ Citat – inline                /
+/ Citat – inline /
 / ============================= */
 
 .quote-inline{
@@ -303,7 +312,7 @@ margin-top: 1em;
 }
 
 /* ============================= /
-/ Notdel – lista                /
+/ Notdel – lista /
 / ============================= */
 
 .note-list{
@@ -358,11 +367,10 @@ color: #555555;
 }
 
 /* ============================= /
-/ Strong / fetstil (NORMAL)     /
+/ Strong / fetstil (NORMAL) /
 / ============================= */
 
 strong{
-font-weight: 600;   /* strong ska synas */
+font-weight: 600; /* strong ska synas */
 color: #222222;
 }
-           
