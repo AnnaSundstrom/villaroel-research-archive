@@ -1,43 +1,56 @@
 /* =========================================================
    style.css – VILLARROEL-INFO.ORG
-   SLUTLIG TYPOGRAFI & LAYOUT
+   SLUTLIG TYPOGRAFI & LAYOUT (STÄDAD v2)
+   Princip:
+   - Bas/layoutramar först
+   - Typografi låses en gång
+   - Rubriker = sans, allt annat = serif
    ========================================================= */
 
 /* ============================= */
-/* Bas */
+/* Bas + layout */
 /* ============================= */
 
-html, body {
+html, body{
   background-color: #ffffff;
-  color: #222222;
   margin: 0;
   padding: 0;
 }
 
-/* Layout */
-body {
+body{
   max-width: 860px;
   margin: 40px auto;
   padding: 0 20px;
+  color: #222222;
+
+  /* Brödtext – SERIF som standard */
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Brödtextmarginal */
+main p{
+  margin: 0 0 1.1em 0;
 }
 
 /* ============================= */
 /* Navigation */
 /* ============================= */
 
-nav p { margin: 0; }
+nav p{ margin: 0; }
 
-nav hr {
+nav hr{
   margin: 12px 0 22px 0;
 }
 
-nav a {
+nav a{
   color: #222222;
   text-decoration: none;
 }
 
 nav a:hover,
-nav a.active {
+nav a.active{
   text-decoration: underline;
   color: #7a3cff;
 }
@@ -46,13 +59,13 @@ nav a.active {
 /* Länkar */
 /* ============================= */
 
-main a {
+main a{
   color: #222222;
   text-decoration: underline;
 }
 
 main a:hover,
-main a:focus {
+main a:focus{
   color: #7a3cff;
 }
 
@@ -60,69 +73,27 @@ main a:focus {
 /* Listor */
 /* ============================= */
 
-ul, ol {
-  padding-left: 18px;
-}
+ul, ol{ padding-left: 18px; }
 
 main ul,
-main ol {
-  margin-left: 1.2em;
-}
+main ol{ margin-left: 1.2em; }
 
 /* ============================= */
 /* Horisontella linjer */
 /* ============================= */
 
-hr {
+hr{
   border: none;
   border-top: 1px solid #dddddd;
   margin: 22px 0;
 }
 
 /* ========================================================= */
-/* TYPOGRAFI – ABSOLUT LÅSNING */
+/* TYPOGRAFI – HÅRDLÅSNING */
 /* ========================================================= */
 
-/* ---------------------------------------------------------
-   Brödtext – SERIF ÖVERALLT (inkl. runt bilder)
-   --------------------------------------------------------- */
-
-body,
-main,
-main p,
-main li,
-main blockquote,
-figure,
-figcaption,
-.caption,
-.subtitle,
-.small-note,
-.tiny,
-.tiny-link,
-.footer-note,
-.quote-inline,
-.quote-inline em,
-.quote-inline .quote-attrib,
-.note-list,
-.note-list li,
-.center-note,
-.bridge {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #222222;
-}
-
-/* Brödtext */
-main p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0 0 1.1em 0;
-}
-
-/* ========================================================= */
-/* Rubriker – ENDAST SANS */
-/* ========================================================= */
-
-h1, h2, h3 {
+/* Endast rubriker får vara sans */
+h1, h2, h3{
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -138,9 +109,9 @@ h1, h2, h3 {
 }
 
 /* H1 */
-h1 {
+h1{
   font-size: 3rem;
-  font-weight: 600;          /* luftigare än 700 */
+  font-weight: 600;
   line-height: 1.15;
   margin: 0 0 0.6rem 0;
 
@@ -154,42 +125,46 @@ h1 {
 }
 
 /* H2 */
-h2 {
+h2{
   font-size: 1.8rem;
   line-height: 1.2;
   margin: 1.7em 0 0.7em 0;
 }
 
 /* H3 */
-h3 {
+h3{
   font-size: 1.05rem;
   line-height: 1.25;
   margin: 2em 0 0.6em 0;
   letter-spacing: 0;
 }
 
-/* ========================================================= */
-/* Ingress & bryggor */
-/* ========================================================= */
+/* HÅRDLÅS: captions/figcaption ska alltid vara SERIF */
+figure,
+figcaption,
+caption,
+.caption{
+  font-family: Georgia, "Times New Roman", Times, serif !important;
+}
 
-.ingress {
+/* Övriga textklasser – serif (utan !important, de ärver ändå) */
+.ingress{
   font-size: 1.12em;
-  font-weight: 600;        /* upp från 500 */
+  font-weight: 600;
   line-height: 1.55;
-  color: #222222;
   margin: 0 0 0.6em 0;
 }
 
-.ingress-sub {
+.ingress-sub{
   font-size: 1.04em;
-  font-weight: 600;        /* detta är nyckeln */
+  font-weight: 600;
   line-height: 1.55;
-  color: #333333;          /* mycket liten skillnad */
+  color: #333333;
   margin: 0 0 1.4em 0;
 }
 
 /* Viktig bryggtext – t.ex. "Mot denna bakgrund..." */
-.bridge {
+.bridge{
   font-size: 1.08rem;
   font-style: italic;
   line-height: 1.6;
@@ -197,7 +172,7 @@ h3 {
   margin: 1.6em 0 2em 0;
 }
 
-.subtitle {
+.subtitle{
   font-size: 1.05em;
   font-weight: 600;
   line-height: 1.45;
@@ -205,17 +180,42 @@ h3 {
   margin: 0.6em 0 1.2em 0;
 }
 
-/* ========================================================= */
+/* Småtexter */
+.small-note{
+  font-size: 0.95em;
+  color: #333333;
+  margin-top: 0.6em;
+}
+
+.tiny,
+.tiny-link{
+  font-size: 0.85em;
+  color: #555555;
+}
+
+.tiny-link{
+  display: block;
+  margin-top: 0.8em;
+  margin-bottom: 1.6em;
+}
+
+.footer-note{
+  font-size: 0.9em;
+  color: #555555;
+  margin-top: 2em;
+}
+
+/* ============================= */
 /* Media – LÅST STANDARD */
-/* ========================================================= */
+/* ============================= */
 
 .media-image,
-.media-wide {
+.media-wide{
   text-align: center;
   margin: 24px 0;
 }
 
-.media-image img {
+.media-image img{
   width: 100%;
   max-width: 380px;
   height: auto;
@@ -224,7 +224,7 @@ h3 {
   border: 1px solid #dddddd;
 }
 
-.media-wide img {
+.media-wide img{
   width: 100%;
   max-width: 860px;
   height: auto;
@@ -233,7 +233,7 @@ h3 {
   border: 1px solid #dddddd;
 }
 
-.caption {
+.caption{
   font-size: 0.95em;
   color: #555555;
   margin-top: 8px;
@@ -241,24 +241,43 @@ h3 {
 }
 
 /* ========================================================= */
-/* Mobiljustering */
+/* Mobil – FINJUSTERAD & LÅST */
 /* ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 600px){
 
-  body {
+  body{
     margin: 22px auto;
   }
 
-  h1 {
-    font-size: 2.6rem;
-    font-weight: 500;
+  h1{
+    font-size: 2.35rem;
+    font-weight: 560;
     letter-spacing: -0.015em;
     line-height: 1.12;
+    margin-bottom: 0.45rem;
   }
 
-  h2 {
+  h2{
     font-size: 1.45rem;
   }
-}
+
+  .ingress{
+    font-size: 1.06em;
+    line-height: 1.5;
+    margin: 0 0 0.55em 0;
+  }
+
+  .ingress-sub{
+    font-size: 1.00em;
+    line-height: 1.5;
+    margin: 0 0 1.15em 0;
+  }
+
+  .subtitle{
+    font-size: 1.01em;
+    line-height: 1.45;
+    margin: 0.55em 0 1.05em 0;
+  }
+        }
 
