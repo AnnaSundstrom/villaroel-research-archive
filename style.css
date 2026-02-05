@@ -1,20 +1,21 @@
-/* =======================================================
-   style.css – arkivlayout – STÄDAD & LÅST
-   Princip: layout överst, typografi sist (vinner alltid)
-   ======================================================= */
+/* =========================================================
+   style.css – VILLARROEL-INFO.ORG
+   SLUTLIG TYPOGRAFI & LAYOUT
+   ========================================================= */
 
 /* ============================= */
-/* Global bas */
+/* Bas */
 /* ============================= */
 
-html, body{
+html, body {
   background-color: #ffffff;
+  color: #222222;
   margin: 0;
   padding: 0;
 }
 
-/* Layout (maxbredd etc). Typografi låses längre ned. */
-body{
+/* Layout */
+body {
   max-width: 860px;
   margin: 40px auto;
   padding: 0 20px;
@@ -24,41 +25,34 @@ body{
 /* Navigation */
 /* ============================= */
 
-nav p{ margin: 0; }
+nav p { margin: 0; }
 
-nav hr{
+nav hr {
   margin: 12px 0 22px 0;
 }
 
-nav a.active{
+nav a {
+  color: #222222;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
   text-decoration: underline;
+  color: #7a3cff;
 }
 
 /* ============================= */
 /* Länkar */
 /* ============================= */
 
-a{
+main a {
   color: #222222;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
-a:hover{ text-decoration: underline; }
-
-main a{ text-decoration: underline; }
-
-nav a{ text-decoration: none; }
-nav a:hover{ text-decoration: underline; }
-
-/* Länkfärger (hover/focus) */
 main a:hover,
-main a:focus{
-  color: #7a3cff;
-}
-
-nav a:hover,
-nav a:focus,
-nav a.active{
+main a:focus {
   color: #7a3cff;
 }
 
@@ -66,271 +60,68 @@ nav a.active{
 /* Listor */
 /* ============================= */
 
-ul, ol{ padding-left: 18px; }
+ul, ol {
+  padding-left: 18px;
+}
 
 main ul,
-main ol{ margin-left: 1.2em; }
+main ol {
+  margin-left: 1.2em;
+}
 
 /* ============================= */
 /* Horisontella linjer */
 /* ============================= */
 
-hr{
+hr {
   border: none;
   border-top: 1px solid #dddddd;
   margin: 22px 0;
 }
 
-/* ============================= */
-/* Textklasser (övriga) */
-/* ============================= */
+/* ========================================================= */
+/* TYPOGRAFI – ABSOLUT LÅSNING */
+/* ========================================================= */
 
-/* Subtitle – LÅST */
-.subtitle{
-  font-size: 1.06rem;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #222222;
-  margin: 0 0 0.8em 0;
-}
+/* ---------------------------------------------------------
+   Brödtext – SERIF ÖVERALLT (inkl. runt bilder)
+   --------------------------------------------------------- */
 
-/* Not/ingress-typ */
-.small-note{
-  font-size: 0.95em;
-  color: #333333;
-  margin-top: 0.6em;
-}
-
+body,
+main,
+main p,
+main li,
+main blockquote,
+figure,
+figcaption,
+.caption,
+.subtitle,
+.small-note,
 .tiny,
-.tiny-link{
-  font-size: 0.85em;
-  color: #555555;
-}
-
-.tiny-link{
-  display: block;
-  margin-top: 0.8em;
-  margin-bottom: 1.6em;
-}
-
-.footer-note{
-  font-size: 0.9em;
-  color: #555555;
-  margin-top: 2em;
-}
-
-/* ============================= */
-/* Sektioner */
-/* ============================= */
-
-.section-block{ margin: 3em 0; }
-
-/* Om du använder klass på body/html för sidan */
-.karnvapenepoken .section-block{ margin: 3.4em 0; }
-.karnvapenepoken hr{ margin: 30px 0; }
-
-/* ============================= */
-/* Media-standard v1.0 (LÅST) */
-/* Porträtt 380px / Bred media följer sidbredd */
-/* ============================= */
-
-.media-image,
-.media-wide{
-  text-align: center;
-  margin: 24px 0;
-}
-
-.media-image img{
-  width: 100%;
-  max-width: 380px; /* LÅST */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border: 1px solid #dddddd;
-}
-
-.media-wide img{
-  width: 100%;
-  max-width: 860px; /* följer sidans maxbredd */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border: 1px solid #dddddd;
-}
-
-.caption{
-  text-align: center;
-  font-size: 0.95em;
-  color: #555555;
-  margin-top: 8px;
-}
-
-/* Kärnvapenepoken – bildrytm */
-.section-block > .media-wide:first-of-type{
-  margin-top: 48px;
-  margin-bottom: 40px;
-}
-
-.section-block > .media-wide:not(:first-of-type){
-  margin-top: 28px;
-  margin-bottom: 36px;
-}
-
-/* Luft efter media innan nästa rubrik/text */
-.karnvapenepoken figure.media-wide,
-.karnvapenepoken figure.media-image{
-  margin-bottom: 34px;
-}
-
-.karnvapenepoken figure.media-wide + h2,
-.karnvapenepoken figure.media-wide + h3,
-.karnvapenepoken figure.media-image + h2,
-.karnvapenepoken figure.media-image + h3{
-  margin-top: 2.2em;
-}
-
-/* ============================= */
-/* Video / embed – LÅST */
-/* ============================= */
-
-.embed{ margin: 2em 0; }
-
-.embed-frame{
-  position: relative;
-  width: 100%;
-  max-width: 520px; /* LÅST */
-  aspect-ratio: 16 / 9;
-  margin: 0 auto;
-  overflow: hidden;
-  background: #000;
-}
-
-.embed-frame iframe{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
-
-/* ============================= */
-/* Citat – inline */
-/* ============================= */
-
-.quote-inline{
-  max-width: 520px;
-  margin: 0.8em auto 1.6em auto;
-  padding-left: 0;
-  border-left: none;
-  font-size: 0.9em;
-  color: #555555;
-}
-
-.quote-inline em{
-  display: block;
-  font-style: italic;
-  line-height: 1.55;
-  font-size: 1em;
-}
-
-.quote-inline .quote-attrib{
-  display: inline-block;
-  margin-top: 6px;
-  color: #666666;
-  font-size: 0.95em;
-}
-
-.quote-inline + .quote-inline{
-  margin-top: 1em;
-}
-
-/* ============================= */
-/* Notdel – lista */
-/* ============================= */
-
-.note-list{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.note-list li{
-  margin: 0 0 1.1rem 0;
-}
-
-.note-list strong{
-  display: block;
-  margin-bottom: 0.2em;
-}
-
-/* Kärnvapenepoken: diskreta avdelare */
-.karnvapenepoken .note-list li{
-  padding-bottom: 0.9em;
-  border-bottom: 1px solid #eeeeee;
-  margin: 0 0 1.2em 0;
-}
-
-.karnvapenepoken .note-list li:last-child{
-  border-bottom: none;
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-
-/* Gör källraden (tiny) till egen rad */
-.note-list .tiny{
-  display: block;
-  margin-top: 0.25em;
-}
-
-.note-list .tiny a{
-  display: inline-block;
-  padding-top: 0.1em;
-}
-
-/* ============================= */
-/* Center-not (om du använder den) */
-/* ============================= */
-
-.center-note{
-  text-align: center;
-  max-width: 560px;
-  margin: 1.4em auto 0 auto;
-  font-size: 0.95em;
-  color: #555555;
-}
-
-/* ============================= */
-/* Strong / fetstil (NORMAL) */
-/* ============================= */
-
-strong{
-  font-weight: 600;
+.tiny-link,
+.footer-note,
+.quote-inline,
+.quote-inline em,
+.quote-inline .quote-attrib,
+.note-list,
+.note-list li,
+.center-note,
+.bridge {
+  font-family: Georgia, "Times New Roman", Times, serif;
   color: #222222;
 }
 
-/* =======================================================
-   TYPOGRAFI – SLUTLIG & LÅST
-   ======================================================= */
-
-/* Brödtext – lugn, klassisk serif (inte rund/bullig) */
-body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+/* Brödtext */
+main p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #222222;
-}
-
-main p {
   margin: 0 0 1.1em 0;
 }
 
-main p:last-child {
-  margin-bottom: 0;
-}
+/* ========================================================= */
+/* Rubriker – ENDAST SANS */
+/* ========================================================= */
 
-/* Rubriker – rak sans (Samsung-säker) */
 h1, h2, h3 {
   font-family:
     -apple-system,
@@ -340,18 +131,19 @@ h1, h2, h3 {
     "Helvetica Neue",
     Arial,
     sans-serif;
-  color: #222222;
+  font-weight: 700;
   letter-spacing: -0.01em;
+  color: #222222;
   text-transform: none;
 }
 
-/* H1 – bas (desktop + allmänt) */
+/* H1 */
 h1 {
   font-size: 3rem;
+  font-weight: 600;          /* luftigare än 700 */
   line-height: 1.15;
   margin: 0 0 0.6rem 0;
 
-  font-weight: 600;
   background: none;
   padding: 0;
   border-radius: 0;
@@ -361,32 +153,33 @@ h1 {
   word-break: normal;
 }
 
-/* H2 + H3 (tydlig hierarki) */
-h2 { 
+/* H2 */
+h2 {
   font-size: 1.8rem;
   line-height: 1.2;
   margin: 1.7em 0 0.7em 0;
-  font-weight: 700;
 }
 
+/* H3 */
 h3 {
   font-size: 1.05rem;
   line-height: 1.25;
-  margin: 2.0em 0 0.6em 0;
+  margin: 2em 0 0.6em 0;
   letter-spacing: 0;
-  font-weight: 700;
 }
 
-/* Ingress – tydligare (global) */
-.ingress{
+/* ========================================================= */
+/* Ingress & bryggor */
+/* ========================================================= */
+
+.ingress {
   font-size: 1.12em;
   font-weight: 500;
   line-height: 1.55;
-  color: #222222;
   margin: 0 0 0.75em 0;
 }
 
-.ingress-sub{
+.ingress-sub {
   font-size: 1.03em;
   font-weight: 400;
   line-height: 1.55;
@@ -394,39 +187,69 @@ h3 {
   margin: 0 0 1.4em 0;
 }
 
-/* Brygga – om du använder klass i HTML */
-.bridge{
-  font-size: 1.12rem;
+/* Viktig bryggtext – t.ex. "Mot denna bakgrund..." */
+.bridge {
+  font-size: 1.08rem;
   font-style: italic;
-  font-weight: 500;
-  line-height: 1.55;
-  color: #222222;
-  margin: 1.4em 0 2.0em 0;
+  line-height: 1.6;
+  color: #333333;
+  margin: 1.6em 0 2em 0;
 }
 
-/* VIKTIGT SKIFTE mellan block: figure + p (om raden saknar klass) */
-.karnvapenepoken figure + p{
-  font-size: 1.12rem;
-  font-style: italic;
-  font-weight: 500;
-  line-height: 1.55;
-  color: #222222;
-  margin: 1.4em 0 2.0em 0;
+/* ========================================================= */
+/* Media – LÅST STANDARD */
+/* ========================================================= */
+
+.media-image,
+.media-wide {
+  text-align: center;
+  margin: 24px 0;
 }
 
-/* Mobil – luftig H1 (mindre svart/kantig) */
+.media-image img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #dddddd;
+}
+
+.media-wide img {
+  width: 100%;
+  max-width: 860px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #dddddd;
+}
+
+.caption {
+  font-size: 0.95em;
+  color: #555555;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* ========================================================= */
+/* Mobiljustering */
+/* ========================================================= */
+
 @media (max-width: 600px) {
-  body { margin: 22px auto; }
 
-  h1{
-    font-size: 2.6rem;
-    font-weight: 450;        /* luftigare på Samsung */
-    letter-spacing: 0.005em; /* öppnar upp formen */
-    line-height: 1.12;
-    color: #2a2a2a;          /* pyttelite mjukare än #222 */
+  body {
+    margin: 22px auto;
   }
 
-  h2{
+  h1 {
+    font-size: 2.6rem;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.12;
+  }
+
+  h2 {
     font-size: 1.45rem;
   }
 }
+
