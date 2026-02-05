@@ -142,14 +142,6 @@ color: #333333;
 margin-top: 0.6em;
 }
 
-.subtitle{
-  margin-top: 1.0em;
-  font-size: 1.15rem;
-  line-height: 1.45;
-  font-weight: 600;
-  color: #222222;
-  opacity: 1;
-}
 
 /* Stoppa rubrik från att "flyta ut" */
 h1{
@@ -158,24 +150,11 @@ h1{
 }
 
 /* Ingress och underrubrik – enkel, läsbar */
-.ingress{
-  margin-top: 1.1em;
-  font-size: 1.05rem;
-  line-height: 1.55;
-  color: #222222;
-  opacity: 1;
-}
 
-.tiny,
+
 .tiny-link{
 font-size: 0.85em;
 color: #555555;
-}
-
-.tiny-link{
-display: block;
-margin-top: 0.8em;
-margin-bottom: 1.6em;
 }
 
 .footer-note{
