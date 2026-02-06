@@ -1,54 +1,35 @@
-
 /* =========================================================
    STACK-RYTM – KÄRNVAPENEPOKEN
    Isolerad layoutkontroll för jämn luft
-   Påverkar ENDAST denna sida
+   Påverkar ENDAST <main class="karnvapenepoken">
    ========================================================= */
 
+/* TEST: bevisa att filen laddas (TA BORT när klart) */
 .karnvapenepoken { outline: 4px solid red; }
 
-
-/* Säkerställ block-layout */
-.karnvapenepoken .section-block {
-  display: block;
+/* Hindra margin-kollaps i blocken */
+.karnvapenepoken .section-block,
+.karnvapenepoken .section-block > header {
+  display: flow-root;
 }
 
-/* 1) GLOBAL RYTM: varje syskon får luft ovanför */
+/* 1) Stack-rytm: varje syskon får luft ovanför */
 .karnvapenepoken .section-block > * + * {
   margin-top: 1.4em;
 }
 
-/* 2) NOLLA interna toppmarginaler
-   (rytmen ska styra, inte elementen själva) */
-.karnvapenepoken .section-block > h1,
-.karnvapenepoken .section-block > h2,
-.karnvapenepoken .section-block > h3,
-.karnvapenepoken .section-block > p,
-.karnvapenepoken .section-block > figure,
-.karnvapenepoken .section-block > header {
-  margin-top: 0;
-}
-
-/* 3) Header: behåll lite intern struktur */
+/* 2) Header: lite tajtare intern rytm */
 .karnvapenepoken .section-block > header > * + * {
   margin-top: 0.6em;
 }
 
-/* 4) Figcaption: tydlig bottenluft före nästa block */
-.karnvapenepoken figure figcaption,
-.karnvapenepoken .caption {
-  margin-bottom: 0;
-}
-
-/* 5) Bild → rubrik: lite extra andning */
+/* 3) Bild → rubrik: extra andning */
 .karnvapenepoken figure + h2,
 .karnvapenepoken figure + h3 {
   margin-top: 1.8em;
 }
 
-
-
-/* 6) Mobil – något tajtare men samma rytm */
+/* 4) Mobil: lite tajtare men samma princip */
 @media (max-width: 600px) {
   .karnvapenepoken .section-block > * + * {
     margin-top: 1.25em;
