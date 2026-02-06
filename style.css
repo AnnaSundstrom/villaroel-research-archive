@@ -161,7 +161,7 @@ h3{
   font-weight: 600;
   line-height: 1.55;
   color: #222222;
-  margin: 0 0 0.6em 0;
+  margin: 0.55em 0 0.6em 0; /* <-- NYTT: top-luft */
 }
 
 .ingress-sub{
@@ -324,12 +324,12 @@ main p + h3{
     font-size: 1.45rem;
   }
 
-  .ingress{
-    font-size: 1.06em;
-    font-weight: 600;
-    line-height: 1.5;
-    margin: 0 0 0.55em 0;
-  }
+.ingress{
+  font-size: 1.06em;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0.45em 0 0.55em 0; /* <-- NYTT: top-luft */
+}
 
   .ingress-sub{
     font-size: 1.00em;
