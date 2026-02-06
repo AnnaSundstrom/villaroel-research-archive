@@ -32,4 +32,14 @@
     margin-top: 1.25em;
   }
 }
+/* Mer luft: avslutande citatrad -> nästa rubrik */
+.karnvapenepoken p + h2,
+.karnvapenepoken p + h3{
+  margin-top: 2.2em;
+}
+
+.karnvapenepoken .closing-quote + h2{
+  margin-top: 2.4em;
+}
+
 
