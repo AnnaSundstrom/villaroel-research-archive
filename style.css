@@ -93,6 +93,17 @@ figcaption,
 .bridge{
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #222222;
+   
+}
+
+/* --- Slutradsmarkering / avslutande citat --- */
+.closing-quote {
+  font-size: 1.15em;
+  font-weight: 600;
+  margin: 2.5rem 0 3rem;
+  text-align: center;
+  font-style: italic;
+  opacity: 0.9;
 }
 
 /* Hårdlås captions/figcaption (för att aldrig få sans av misstag) */
