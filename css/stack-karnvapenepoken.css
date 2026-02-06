@@ -30,8 +30,15 @@
 @media (max-width: 600px) {
   .karnvapenepoken .section-block > * + * {
     margin-top: 1.25em;
+  
+}
+
+@media (max-width: 600px){
+  .karnvapenepoken .closing-quote{
+    line-height: 1.48;   /* från 1.55 */
   }
 }
+   
 /* Mer luft: avslutande citatrad -> nästa rubrik */
 .karnvapenepoken p + h2,
 .karnvapenepoken p + h3{
