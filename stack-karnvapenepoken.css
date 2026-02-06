@@ -5,6 +5,9 @@
    Påverkar ENDAST denna sida
    ========================================================= */
 
+.karnvapenepoken { outline: 4px solid red; }
+
+
 /* Säkerställ block-layout */
 .karnvapenepoken .section-block {
   display: block;
