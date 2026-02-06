@@ -370,4 +370,40 @@ main .caption + p { margin-top: 1.25em; }
 main div + p { margin-top: 1.25em; }
 main p + div { margin-top: 1.6em; }
 
+/* ===== STOPPA MARGINKOLLAPS & SKAPA ÄKTA LUFT ===== */
+
+/* Hindrar att marginaler “äter upp varandra” i blocken */
+.section-block,
+.section-block > header,
+main.karnvapenepoken > header,
+header {
+  display: flow-root;
+}
+
+/* Mer luft mellan H1 och ingress (utan att röra h2/h3) */
+header h1 + .ingress {
+  margin-top: 0.55em;
+}
+
+/* Äkta luft mellan ingress-sub och första bilden */
+header + figure.media-image,
+header + figure.media-wide,
+header + figure {
+  margin-top: 34px; /* kan ökas om du vill */
+}
+
+/* Äkta luft UNDER media (padding kollapsar inte) */
+figure.media-image,
+figure.media-wide,
+figure.embed,
+figure {
+  padding-bottom: 14px;
+}
+
+/* Äkta luft mellan figcaption och nästa textblock */
+figcaption + p,
+.caption + p {
+  margin-top: 1.2em;
+}
+
 
