@@ -402,7 +402,15 @@ header {
 
 /* Mer luft mellan H1 och ingress (utan att röra h2/h3) */
 header h1 + .ingress {
-  margin-top: 0.55em;
+  margin-top: 1.1em;
+}
+
+.karnvapenepoken header h1{
+  margin-bottom: 0.9em;   /* ökar avståndet nedåt */
+}
+
+.karnvapenepoken .media-image{
+  margin-top: 3.2em;
 }
 
 /* Äkta luft mellan ingress-sub och första bilden */
@@ -411,6 +419,11 @@ header + figure.media-wide,
 header + figure {
   margin-top: 34px; /* kan ökas om du vill */
 }
+
+.karnvapenepoken .ingress-sub{
+  margin-bottom: 2.2em;
+}
+
 
 /* Äkta luft UNDER media (padding kollapsar inte) */
 figure.media-image,
@@ -426,4 +439,10 @@ figcaption + p,
   margin-top: 1.2em;
 }
 
+.caption,
+figcaption{
+  font-size: 0.95em;
+  line-height: 1.45;
+  color: #333;
+}
 
