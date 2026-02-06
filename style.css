@@ -408,4 +408,17 @@ main p + h3{
     font-weight: 600;
   }
 }
+/* Extra luft mellan brödtext och nästa mediablock (alla skärmar) */
+.karnvapenepoken main p + figure,
+.karnvapenepoken main p + .media-image,
+.karnvapenepoken main p + .media-wide,
+.karnvapenepoken main p + figure.embed {
+  margin-top: 2.4em;
+}
+
+/* Säkerställ normal brödtext-vikt överallt */
+.karnvapenepoken main p {
+  font-weight: 400;
+}
+
 
