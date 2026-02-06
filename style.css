@@ -421,4 +421,19 @@ main p + h3{
   font-weight: 400;
 }
 
+/* Caption: liten, tät, direkt under bild */
+figcaption.caption{
+  font-size: 0.90em;
+  line-height: 1.35;
+  margin: 8px 0 0 0;      /* tätt mot bilden och ingen extra bottenluft */
+  color: #444;
+  text-align: center;
+}
+
+figcaption.caption .caption-link{
+  display: inline-block;
+  margin-top: 2px;        /* minimalt mellan rad och länk */
+  font-size: 0.98em;
+}
+
 
