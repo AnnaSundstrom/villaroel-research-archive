@@ -361,18 +361,13 @@ main p + h3{
   }
 }
 
-/* Luft efter fristående bilder (img direkt i content) */
-img + p {
-  margin-top: 1.3em;
-}
+/* Luft runt fristående bilder i MAIN */
+main img + p { margin-top: 1.3em; }
+main p + img { margin-top: 1.6em; }
+main .caption + p { margin-top: 1.25em; }
 
-/* Luft före fristående bilder */
-p + img {
-  margin-top: 1.6em;
-}
+/* Fångar också vanliga wrappers: div -> p / p -> div */
+main div + p { margin-top: 1.25em; }
+main p + div { margin-top: 1.6em; }
 
-/* Caption → text */
-.caption + p {
-  margin-top: 1.25em;
-}
 
