@@ -1,15 +1,14 @@
 /* =========================================================
    style.css – VILLARROEL-INFO.ORG
-   SLUTLIG TYPOGRAFI & LAYOUT (SANERAD: inga dubbletter)
-   + LUFTPAKET FÖR ÖVERGÅNGAR (MEDIA → TEXT)
-   + MEDIA-STANDARD v1.0 (PORTRÄTT 380px, VIDEO/IFRAME 520px)
+   SLUTLIG TYPOGRAFI & LAYOUT (SANERAD, REN ORDNING)
+   Bas → Typografi → Media → Övergångar → Mobil
    ========================================================= */
 
 /* ============================= */
-/* Bas */
+/* 1) BAS */
 /* ============================= */
 
-html, body {
+html, body{
   background-color: #ffffff;
   color: #222222;
   margin: 0;
@@ -17,75 +16,59 @@ html, body {
 }
 
 /* Layout */
-body {
+body{
   max-width: 860px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-/* ============================= */
 /* Navigation */
-/* ============================= */
+nav p{ margin: 0; }
 
-nav p { margin: 0; }
-
-nav hr {
+nav hr{
   margin: 12px 0 22px 0;
 }
 
-nav a {
+nav a{
   color: #222222;
   text-decoration: none;
 }
 
 nav a:hover,
-nav a.active {
+nav a.active{
   text-decoration: underline;
   color: #7a3cff;
 }
 
-/* ============================= */
 /* Länkar */
-/* ============================= */
-
-main a {
+main a{
   color: #222222;
   text-decoration: underline;
 }
 
 main a:hover,
-main a:focus {
+main a:focus{
   color: #7a3cff;
 }
 
-/* ============================= */
 /* Listor */
-/* ============================= */
-
-ul, ol {
-  padding-left: 18px;
-}
+ul, ol{ padding-left: 18px; }
 
 main ul,
-main ol {
-  margin-left: 1.2em;
-}
+main ol{ margin-left: 1.2em; }
 
-/* ============================= */
 /* Horisontella linjer */
-/* ============================= */
-
-hr {
+hr{
   border: none;
   border-top: 1px solid #dddddd;
-  margin: 28px 0; /* EN definition (lite mer luft som blockmarkör) */
+  margin: 28px 0;
 }
 
-/* ========================================================= */
-/* TYPOGRAFI – ABSOLUT LÅSNING */
-/* ========================================================= */
+/* ============================= */
+/* 2) TYPOGRAFI */
+/* ============================= */
 
-/* Brödtext – SERIF ÖVERALLT (inkl. captions/figcaption) */
+/* Brödtext – SERIF ÖVERALLT (inkl. runt bilder/captions) */
 body,
 main,
 main p,
@@ -107,29 +90,26 @@ figcaption,
 .note-list,
 .note-list li,
 .center-note,
-.bridge {
+.bridge{
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #222222;
 }
 
-/* Extra hårdlås ifall någon sida råkar få in sans på figcaption */
+/* Hårdlås captions/figcaption (för att aldrig få sans av misstag) */
 figcaption,
-.caption {
+.caption{
   font-family: Georgia, "Times New Roman", Times, serif !important;
 }
 
 /* Brödtext */
-main p {
+main p{
   font-size: 1rem;
   line-height: 1.6;
   margin: 0 0 1.1em 0;
 }
 
-/* ========================================================= */
 /* Rubriker – ENDAST SANS */
-/* ========================================================= */
-
-h1, h2, h3 {
+h1, h2, h3{
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -145,7 +125,7 @@ h1, h2, h3 {
 }
 
 /* H1 */
-h1 {
+h1{
   font-size: 3rem;
   font-weight: 600;
   line-height: 1.15;
@@ -160,26 +140,23 @@ h1 {
   word-break: normal;
 }
 
-/* H2 */
-h2 {
+/* H2 – (behåller dina exakta margin-värden) */
+h2{
   font-size: 1.8rem;
   line-height: 1.2;
   margin: 1.7em 0 0.7em 0;
 }
 
-/* H3 */
-h3 {
+/* H3 – (behåller dina exakta margin-värden) */
+h3{
   font-size: 1.05rem;
   line-height: 1.25;
   margin: 2em 0 0.6em 0;
   letter-spacing: 0;
 }
 
-/* ========================================================= */
 /* Ingress & bryggor */
-/* ========================================================= */
-
-.ingress {
+.ingress{
   font-size: 1.12em;
   font-weight: 600;
   line-height: 1.55;
@@ -187,7 +164,7 @@ h3 {
   margin: 0 0 0.6em 0;
 }
 
-.ingress-sub {
+.ingress-sub{
   font-size: 1.04em;
   font-weight: 600;
   line-height: 1.55;
@@ -196,7 +173,7 @@ h3 {
 }
 
 /* Viktig bryggtext – t.ex. "Mot denna bakgrund..." */
-.bridge {
+.bridge{
   font-size: 1.08rem;
   font-style: italic;
   line-height: 1.6;
@@ -204,7 +181,7 @@ h3 {
   margin: 1.8em 0 2.2em 0;
 }
 
-.subtitle {
+.subtitle{
   font-size: 1.05em;
   font-weight: 600;
   line-height: 1.45;
@@ -212,24 +189,24 @@ h3 {
   margin: 0.6em 0 1.2em 0;
 }
 
-/* ========================================================= */
-/* Media – LÅST STANDARD (v1.0) */
-/* ========================================================= */
+/* ============================= */
+/* 3) MEDIA (STANDARD v1.0) */
+/* ============================= */
 
-/* Samlad luft runt media-block */
-figure {
+/* Basluft runt figure generellt */
+figure{
   margin: 30px 0 34px 0;
 }
 
-/* Om vissa sidor använder div-klasser istället för figure */
+/* Om du använder div-klasser istället för figure */
 .media-image,
-.media-wide {
+.media-wide{
   text-align: center;
-  margin: 30px 0 34px 0;
+  margin: 30px 0 36px 0; /* bottenluft är nyckeln */
 }
 
 /* Porträtt/stillbilder */
-.media-image img {
+.media-image img{
   width: 100%;
   max-width: 380px;
   height: auto;
@@ -238,8 +215,8 @@ figure {
   border: 1px solid #dddddd;
 }
 
-/* Bred historisk media (max 860px) */
-.media-wide img {
+/* Bred historisk media */
+.media-wide img{
   width: 100%;
   max-width: 860px;
   height: auto;
@@ -248,21 +225,21 @@ figure {
   border: 1px solid #dddddd;
 }
 
-/* Embed-standard: figure.embed → div.embed-frame → iframe */
-figure.embed {
+/* Embed-standard (video/iframe) */
+figure.embed{
   margin: 30px 0 34px 0;
   text-align: center;
 }
 
-.embed-frame {
+.embed-frame{
   width: 100%;
-  max-width: 520px;        /* låst video/iframe-bredd */
+  max-width: 520px;
   margin: 0 auto;
   aspect-ratio: 16 / 9;
   position: relative;
 }
 
-.embed-frame iframe {
+.embed-frame iframe{
   position: absolute;
   inset: 0;
   width: 100%;
@@ -270,32 +247,44 @@ figure.embed {
   border: 0;
 }
 
-/* Caption/figcaption – serif, diskret, med extra luft under */
+/* Caption/figcaption – diskret, med tydlig luft under */
 figcaption,
-.caption {
+.caption{
   font-size: 0.95em;
   color: #555555;
-  margin: 10px 0 26px 0;   /* mer luft under captions */
+  margin: 10px 0 26px 0;
   text-align: center;
 }
 
-/* ========================================================= */
-/* Luft i övergångar (rubriker & stycken som hamnar “för nära”) */
-/* ========================================================= */
+/* ============================= */
+/* 4) ÖVERGÅNGAR (LUFT/RYTM) */
+/* ============================= */
 
 /* Caption → rubrik */
 figcaption + h2,
 figcaption + h3,
 .caption + h2,
-.caption + h3 {
+.caption + h3{
   margin-top: 1.55em;
+}
+
+/* Media/figure → rubrik (fångar “bild utan caption” också) */
+figure + h2,
+figure + h3,
+.media-image + h2,
+.media-image + h3,
+.media-wide + h2,
+.media-wide + h3,
+figure.embed + h2,
+figure.embed + h3{
+  margin-top: 1.45em;
 }
 
 /* Media/figure → brödtext */
 figure + p,
 .media-image + p,
 .media-wide + p,
-figure.embed + p {
+figure.embed + p{
   margin-top: 1.25em;
 }
 
@@ -303,21 +292,21 @@ figure.embed + p {
 p + figure,
 p + .media-image,
 p + .media-wide,
-p + figure.embed {
+p + figure.embed{
   margin-top: 1.6em;
 }
 
-/* Brödtext → rubrik (t.ex. “När samma epok…” får mer andning) */
+/* Brödtext → rubrik (extra andning) */
 main p + h2,
-main p + h3 {
+main p + h3{
   margin-top: 1.45em;
 }
 
-/* ========================================================= */
-/* Mobil – FINJUSTERAD & LÅST */
-/* ========================================================= */
+/* ============================= */
+/* 5) MOBIL (FINJUSTERAD & LÅST) */
+/* ============================= */
 
-@media (max-width: 600px) {
+@media (max-width: 600px){
 
   body{
     margin: 22px auto;
@@ -358,16 +347,16 @@ main p + h3 {
     margin: 0.55em 0 1.05em 0;
   }
 
-  /* Lite tajtare men fortfarande luft på mobil */
+  /* Mobil: lite tajtare media-luft men fortfarande rytm */
   figure,
   .media-image,
   .media-wide,
-  figure.embed {
+  figure.embed{
     margin: 24px 0 28px 0;
   }
 
   figcaption,
-  .caption {
+  .caption{
     margin: 8px 0 20px 0;
   }
 }
