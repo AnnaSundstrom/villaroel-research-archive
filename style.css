@@ -361,3 +361,18 @@ main p + h3{
   }
 }
 
+/* Luft efter fristående bilder (img direkt i content) */
+img + p {
+  margin-top: 1.3em;
+}
+
+/* Luft före fristående bilder */
+p + img {
+  margin-top: 1.6em;
+}
+
+/* Caption → text */
+.caption + p {
+  margin-top: 1.25em;
+}
+
