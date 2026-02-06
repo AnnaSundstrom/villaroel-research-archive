@@ -97,13 +97,18 @@ figcaption,
 }
 
 /* --- Slutradsmarkering / avslutande citat --- */
-.closing-quote {
+.closing-quote{
   font-size: 1.15em;
   font-weight: 600;
-  margin: 2.5rem 0 3rem;
+  line-height: 1.55;
+
+  margin: 3.2em 0 3.6em 0;   /* luft upp & ned */
+  padding: 0;               /* ingen extra indragning */
+
   text-align: center;
   font-style: italic;
-  opacity: 0.9;
+  color: #222222;
+  opacity: 0.92;
 }
 
 /* Hårdlås captions/figcaption (för att aldrig få sans av misstag) */
