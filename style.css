@@ -1,6 +1,5 @@
 /* =========================================================
-   style.css – VILLARROEL-INFO.ORG
-   SLUTLIG TYPOGRAFI & LAYOUT (SANERAD)
+   style.css – VILLARROEL-INFO.ORG (SANERAD v1.x)
    Bas → Typografi → Media → Rytm/övergångar → Sid-specifikt → Mobil
    ========================================================= */
 
@@ -39,7 +38,7 @@ nav a.active{
   color: #7a3cff;
 }
 
-/* Länkar */
+/* Länkar i brödtext */
 main a{
   color: #222222;
   text-decoration: underline;
@@ -67,7 +66,7 @@ hr{
 /* 2) TYPOGRAFI */
 /* ============================= */
 
-/* Brödtext – SERIF (inkl captions) */
+/* Brödtext – SERIF ÖVERALLT (inkl captions/figcaption) */
 body,
 main,
 main p,
@@ -95,6 +94,20 @@ figcaption,
   color: #222222;
 }
 
+/* Hårdlås captions/figcaption (kan aldrig få sans) */
+figcaption,
+.caption{
+  font-family: Georgia, "Times New Roman", Times, serif !important;
+}
+
+/* Brödtext */
+main p{
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 1.1em 0;
+  font-weight: 400;
+}
+
 /* Rubriker – ENDAST SANS */
 h1, h2, h3{
   font-family:
@@ -117,12 +130,10 @@ h1{
   font-weight: 600;
   line-height: 1.15;
   margin: 0 0 0.6rem 0;
-
   background: none;
   padding: 0;
   border-radius: 0;
   box-shadow: none;
-
   overflow-wrap: break-word;
   word-break: normal;
 }
@@ -142,15 +153,7 @@ h3{
   letter-spacing: 0;
 }
 
-/* Brödtext */
-main p{
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0 0 1.1em 0;
-  font-weight: 400;
-}
-
-/* Ingress */
+/* Ingress & bryggor */
 .ingress{
   font-size: 1.12em;
   font-weight: 600;
@@ -184,14 +187,12 @@ main p{
   margin: 0.6em 0 1.2em 0;
 }
 
-/* Closing-quote v1.0 (LÅST) */
+/* Slutradsmarkering / closing-quote v1.0 (LÅST) */
 .karnvapenepoken .closing-quote{
   text-align: left;
   margin: 3.2em 0 4.0em 0;
   padding: 0.45em 0 0.45em 1.0em;
-
   border-left: 3px solid #d6d6d6;
-
   font-size: 1.22em;
   font-weight: 650;
   font-style: italic;
@@ -203,10 +204,13 @@ main p{
 /* 3) MEDIA (STANDARD v1.0) */
 /* ============================= */
 
+/* Figure: bär luften runt media (så captions kan vara tajta) */
 figure{
-  margin: 30px 0 34px 0;
+  margin: 30px 0 36px 0;     /* luft efter media-block */
+  padding: 0;               /* ingen onödig padding */
 }
 
+/* Media wrappers */
 .media-image,
 .media-wide{
   text-align: center;
@@ -233,10 +237,10 @@ figure{
   border: 1px solid #dddddd;
 }
 
-/* Embed */
+/* Embed-standard (video/iframe) */
 figure.embed{
   text-align: center;
-  margin: 30px 0 34px 0;
+  margin: 30px 0 36px 0;
 }
 
 .embed-frame{
@@ -258,78 +262,55 @@ figure.embed{
   display: block;
 }
 
-/* CAPTIONS: små, täta, direkt under bild (globalt) */
+/* Caption/figcaption – liten, tät, direkt under bild (LÅST PRINCIP) */
 figcaption.caption,
-figcaption.caption,
-figcaption.caption *{
-  font-family: Georgia, "Times New Roman", Times, serif !important;
-}
-
-figcaption.caption{
+figcaption,
+.caption{
   font-size: 0.90em;
   line-height: 1.35;
-  color: #444;
+  color: #444444;
   text-align: center;
-
-  /* TÄTT: ingen “hängande luft” */
-  margin: 8px 0 0 0;
-  padding: 0;
+  margin: 8px 0 0 0;         /* tajt under bild, ingen bottenluft */
 }
 
-figcaption.caption .caption-link{
+/* Länk i caption: minimalt avstånd */
+.caption-link{
   display: inline-block;
   margin-top: 2px;
   font-size: 0.98em;
 }
 
-/* Om du ibland använder figcaption utan class="caption" */
-figcaption:not(.caption){
-  font-size: 0.90em;
-  line-height: 1.35;
-  color: #444;
-  text-align: center;
-  margin: 8px 0 0 0;
+/* Om du använder tiny-link i captions */
+.tiny-link{
+  display: block;
+  margin-top: 4px;
+  font-size: 0.95em;
 }
 
 /* ============================= */
 /* 4) RYTM / ÖVERGÅNGAR */
 /* ============================= */
 
-/* Caption → rubrik */
-figcaption + h2,
-figcaption + h3{
-  margin-top: 1.55em;
-}
-
-/* Media/figure → rubrik */
+/* Rubrik efter media: lite luft */
 figure + h2,
-figure + h3,
-.media-image + h2,
-.media-image + h3,
-.media-wide + h2,
-.media-wide + h3,
-figure.embed + h2,
-figure.embed + h3{
+figure + h3{
   margin-top: 1.45em;
 }
 
-/* Media/figure → brödtext */
-figure + p,
-.media-image + p,
-.media-wide + p,
-figure.embed + p{
+/* Brödtext direkt efter media: lite luft */
+figure + p{
   margin-top: 1.25em;
 }
 
-/* Brödtext → media/figure */
+/* Media efter brödtext: extra luft så det inte klistrar (laptop-problemet) */
 main p + figure,
 main p + .media-image,
 main p + .media-wide,
 main p + figure.embed{
-  margin-top: 1.9em;
+  margin-top: 2.4em;
 }
 
-/* Brödtext → rubrik */
+/* Brödtext → rubrik (extra andning) */
 main p + h2,
 main p + h3{
   margin-top: 1.45em;
@@ -339,7 +320,7 @@ main p + h3{
 /* 5) SID-SPECIFIKT – KÄRNVAPENEPOKEN */
 /* ============================= */
 
-/* Stoppa margin-kollaps i block */
+/* Stoppa margin-kollaps i block och header */
 .karnvapenepoken .section-block,
 .karnvapenepoken .section-block > header{
   display: flow-root;
@@ -350,13 +331,13 @@ main p + h3{
   margin-bottom: 0.95em;
 }
 
-/* Extra luft: sista stycket i Inledning → Trinity-bilden (laptop-problemet) */
-.karnvapenepoken #punkt-1 p + figure.media-image{
-  margin-top: 2.4em;
+/* Mer luft mellan sista introstycket och första bilden i blocket */
+.karnvapenepoken .section-block p + figure{
+  margin-top: 2.0em;
 }
 
 /* ============================= */
-/* 6) MOBIL */
+/* 6) MOBIL (FINJUSTERAD & LÅST) */
 /* ============================= */
 
 @media (max-width: 600px){
@@ -400,16 +381,20 @@ main p + h3{
     margin: 0.55em 0 1.05em 0;
   }
 
+  /* Mobil: lite tajtare media-marginaler */
   figure,
+  figure.embed,
   .media-image,
-  .media-wide,
-  figure.embed{
+  .media-wide{
     margin: 24px 0 28px 0;
   }
 
-  figcaption.caption{
-    font-size: 0.90em;
+  /* Mobil: caption fortfarande tajt */
+  figcaption.caption,
+  figcaption,
+  .caption{
     margin: 7px 0 0 0;
+    font-size: 0.90em;
   }
 
   .karnvapenepoken .closing-quote{
