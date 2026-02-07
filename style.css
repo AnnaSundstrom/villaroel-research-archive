@@ -179,6 +179,13 @@ h3{
   margin: 1.8em 0 2.2em 0;
 }
 
+.bridge-line{
+  font-style: normal;     /* rak */
+  font-weight: 500;       /* markerad men inte fet */
+  line-height: 1.6;
+  margin: 2.0em 0 2.0em 0;
+}
+
 .subtitle{
   font-size: 1.08em;
   font-weight: 600;
