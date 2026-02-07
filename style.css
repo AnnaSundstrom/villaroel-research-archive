@@ -413,3 +413,41 @@ main p + h3{
     color: #222222;
   }
 }
+
+/* === Stabil text på mobil (stoppar "knasiga mellanslag") === */
+main p,
+main li,
+main blockquote {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  overflow-wrap: anywhere;
+  word-spacing: normal;
+}
+
+/* === Citatblock (Fry/Sagan-typ, men eget så det inte krockar) === */
+.quote-block {
+  margin: 18px 0 22px;
+  padding: 14px 16px;
+  border-left: 4px solid rgba(0,0,0,0.25);
+  font-style: italic;
+}
+
+.quote-block p { margin: 0 0 10px; }
+.quote-block p:last-child { margin-bottom: 0; }
+
+.quote-block footer {
+  margin-top: 10px;
+  font-style: normal;
+  font-size: 0.95em;
+  opacity: 0.85;
+}
+
+/* Mobil: tvinga vänsterjustering så "glapp" aldrig kan uppstå */
+@media (max-width: 600px) {
+  .karnvapenepoken p,
+  .karnvapenepoken li,
+  .karnvapenepoken blockquote {
+    text-align: left;
+    word-spacing: normal;
+  }
+}
