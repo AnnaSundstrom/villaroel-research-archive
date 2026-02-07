@@ -2,64 +2,92 @@
    STACK-RYTM – KÄRNVAPENEPOKEN
    Isolerad layoutkontroll för jämn luft
    Påverkar ENDAST <main class="karnvapenepoken">
+   (Inga font-regler här – bara spacing/rytm)
    ========================================================= */
 
 /* Hindra margin-kollaps i blocken */
 .karnvapenepoken .section-block,
-.karnvapenepoken .section-block > header {
+.karnvapenepoken .section-block > header{
   display: flow-root;
 }
 
-/* 1) Global rytm: varje syskon får luft ovanför */
-.karnvapenepoken .section-block > * + * {
+/* 1) Global rytm: varje syskon får luft ovanför (inom varje block) */
+.karnvapenepoken .section-block > * + *{
   margin-top: 1.4em;
 }
 
-/* 2) Header: lite tajtare intern rytm */
-.karnvapenepoken .section-block > header > * + * {
-  margin-top: 0.6em;
+/* 2) Header: lite tajtare intern rytm (H1/ingress/ingress-sub) */
+.karnvapenepoken .section-block > header > * + *{
+  margin-top: 0.65em;
 }
 
-/* 3) Bild → rubrik: extra andning */
-.karnvapenepoken figure + h2,
-.karnvapenepoken figure + h3 {
-  margin-top: 1.8em;
+/* 3) Brödtext → rubrik: lite extra andning */
+.karnvapenepoken .section-block p + h2,
+.karnvapenepoken .section-block p + h3{
+  margin-top: 2.0em;
 }
 
-/* 4) Mobil: lite tajtare men samma princip */
-@media (max-width: 600px) {
-  .karnvapenepoken .section-block > * + * {
-    margin-top: 1.25em;
-  
-}
-
-@media (max-width: 600px){
-  .karnvapenepoken .closing-quote{
-    line-height: 1.48;   /* från 1.55 */
-  }
-}
-   
-/* Mer luft: avslutande citatrad -> nästa rubrik */
-.karnvapenepoken p + h2,
-.karnvapenepoken p + h3{
-  margin-top: 2.2em;
-}
-
-.karnvapenepoken .closing-quote + h2{
+/* 4) Brödtext → media: detta löser “bilden sitter för nära texten” (laptop) */
+.karnvapenepoken .section-block p + figure,
+.karnvapenepoken .section-block p + .media-image,
+.karnvapenepoken .section-block p + .media-wide,
+.karnvapenepoken .section-block p + figure.embed{
   margin-top: 2.4em;
 }
 
-/* Slutradsmarkering – vänster, luft, citatkänsla */
+/* 5) Media → rubrik: extra andning */
+.karnvapenepoken figure + h2,
+.karnvapenepoken figure + h3,
+.karnvapenepoken .media-image + h2,
+.karnvapenepoken .media-image + h3,
+.karnvapenepoken .media-wide + h2,
+.karnvapenepoken .media-wide + h3,
+.karnvapenepoken figure.embed + h2,
+.karnvapenepoken figure.embed + h3{
+  margin-top: 1.8em;
+}
+
+/* 6) Closing-quote v1.0 – vänsterförankrad, lugn, med luft */
 .karnvapenepoken .closing-quote{
   text-align: left;
-  margin: 2.2em 0 3.0em 0;   /* MER luft ovan/under */
-  padding: 0.4em 0 0.4em 0.9em;
+  margin: 2.4em 0 3.2em 0;
+  padding: 0.45em 0 0.45em 1.0em;
 
   border-left: 3px solid #d8d8d8;
 
   font-size: 1.08em;
   font-weight: 600;
-  line-height: 1.9;
+  font-style: italic;
+  line-height: 1.55;
   color: #333;
+}
+
+/* Mer luft: closing-quote → nästa rubrik */
+.karnvapenepoken .closing-quote + h2,
+.karnvapenepoken .closing-quote + h3{
+  margin-top: 2.4em;
+}
+
+/* 7) Mobil: lite tajtare men samma princip */
+@media (max-width: 600px){
+  .karnvapenepoken .section-block > * + *{
+    margin-top: 1.25em;
+  }
+
+  .karnvapenepoken .section-block > header > * + *{
+    margin-top: 0.6em;
+  }
+
+  .karnvapenepoken .section-block p + figure,
+  .karnvapenepoken .section-block p + .media-image,
+  .karnvapenepoken .section-block p + .media-wide,
+  .karnvapenepoken .section-block p + figure.embed{
+    margin-top: 2.0em;
+  }
+
+  .karnvapenepoken .closing-quote{
+    line-height: 1.48;
+    margin: 2.2em 0 2.8em 0;
+  }
 }
 
