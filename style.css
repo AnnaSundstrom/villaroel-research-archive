@@ -414,13 +414,14 @@ main p + h3{
   }
 }
 
-/* === Stabil text på mobil (stoppar "knasiga mellanslag") === */
+/* === Stabil text (ingen "smart" brytning som skapar glapp) === */
 main p,
 main li,
-main blockquote {
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  overflow-wrap: anywhere;
+main blockquote{
+  hyphens: manual;
+  -webkit-hyphens: manual;
+  overflow-wrap: break-word;
+  word-break: normal;
   word-spacing: normal;
 }
 
@@ -451,3 +452,10 @@ main blockquote {
     word-spacing: normal;
   }
 }
+/* Kärnvapenepoken: alltid vänsterställt */
+.karnvapenepoken p,
+.karnvapenepoken li,
+.karnvapenepoken blockquote{
+  text-align: left;
+   }
+
