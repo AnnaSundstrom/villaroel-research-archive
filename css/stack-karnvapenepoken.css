@@ -91,3 +91,10 @@
   }
 }
 
+/* Mobil: dra ihop closing-quote + efterföljande rubrik */
+@media (max-width: 600px){
+  .karnvapenepoken .closing-quote + h2{
+    margin-top: 0.9em;
+  }
+}
+
