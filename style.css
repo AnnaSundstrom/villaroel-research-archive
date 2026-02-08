@@ -354,6 +354,43 @@ main p + h3{
   letter-spacing: normal;
 }
 
+/* =========================================================
+   OVERRIDE – KÄRNVAPENEPOKEN: INGA MEDIA-WIDE BILDER
+   All stillbild/porträtt blir 380px (embed fortsatt 520px)
+   ========================================================= */
+
+/* 1) Tvinga alla media-wrappers att vara "smala" på Kärnvapenepoken */
+.karnvapenepoken .media-image,
+.karnvapenepoken .media-wide{
+  text-align: center;
+  margin: 30px 0 36px 0;
+}
+
+/* 2) Tvinga både .media-image och .media-wide att använda 380px */
+.karnvapenepoken .media-image img,
+.karnvapenepoken .media-wide img{
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #dddddd;
+}
+
+/* 3) Säkerhetsnät: om du råkat lägga img i <figure> utan class */
+.karnvapenepoken figure:not(.embed){
+  text-align: center;
+}
+
+.karnvapenepoken figure:not(.embed) img{
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #dddddd;
+}
+
 /* ============================= */
 /* 6) CITATBLOCK (Fry/Sagan-typ) */
 /* ============================= */
@@ -446,3 +483,10 @@ main p + h3{
   }
    
 }
+/* Mobil: samma smala standard även om .media-wide råkar användas */
+  .karnvapenepoken .media-wide img,
+  .karnvapenepoken figure:not(.embed) img{
+    max-width: 380px;
+  }
+
+
