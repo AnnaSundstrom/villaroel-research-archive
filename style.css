@@ -180,8 +180,8 @@ h3{
 }
 
 .bridge-line{
-  font-style: normal;     /* rak */
-  font-weight: 500;       /* markerad men inte fet */
+  font-style: normal;
+  font-weight: 500;
   line-height: 1.6;
   margin: 2.0em 0 2.0em 0;
 }
@@ -213,8 +213,8 @@ h3{
 
 /* Figure: bär luften runt media (så captions kan vara tajta) */
 figure{
-  margin: 30px 0 36px 0;     /* luft efter media-block */
-  padding: 0;               /* ingen onödig padding */
+  margin: 30px 0 36px 0;
+  padding: 0;
 }
 
 /* Media wrappers */
@@ -277,7 +277,7 @@ figcaption,
   line-height: 1.35;
   color: #444444;
   text-align: center;
-  margin: 8px 0 0 0;         /* tajt under bild, ingen bottenluft */
+  margin: 8px 0 0 0; /* tajt under bild, ingen bottenluft */
 }
 
 /* Länk i caption: minimalt avstånd */
@@ -287,7 +287,6 @@ figcaption,
   font-size: 0.98em;
 }
 
-/* Om du använder tiny-link i captions */
 .tiny-link{
   display: block;
   margin-top: 4px;
@@ -309,7 +308,7 @@ figure + p{
   margin-top: 1.25em;
 }
 
-/* Media efter brödtext: extra luft så det inte klistrar (laptop-problemet) */
+/* Media efter brödtext: extra luft så det inte klistrar */
 main p + figure,
 main p + .media-image,
 main p + .media-wide,
@@ -343,8 +342,41 @@ main p + h3{
   margin-top: 2.0em;
 }
 
+/* === LÅS: Kärnvapenepoken – ingen justify, ingen “smart” tolkning === */
+.karnvapenepoken p,
+.karnvapenepoken li,
+.karnvapenepoken blockquote{
+  text-align: left;
+  hyphens: manual;
+  overflow-wrap: break-word;
+  word-break: normal;
+  word-spacing: normal;
+  letter-spacing: normal;
+}
+
 /* ============================= */
-/* 6) MOBIL (FINJUSTERAD & LÅST) */
+/* 6) CITATBLOCK (Fry/Sagan-typ) */
+/* ============================= */
+
+.quote-block{
+  margin: 18px 0 22px;
+  padding: 14px 16px;
+  border-left: 4px solid rgba(0,0,0,0.25);
+  font-style: italic;
+}
+
+.quote-block p{ margin: 0 0 10px; }
+.quote-block p:last-child{ margin-bottom: 0; }
+
+.quote-block footer{
+  margin-top: 10px;
+  font-style: normal;
+  font-size: 0.95em;
+  opacity: 0.85;
+}
+
+/* ============================= */
+/* 7) MOBIL (FINJUSTERAD & LÅST) */
 /* ============================= */
 
 @media (max-width: 600px){
@@ -412,50 +444,5 @@ main p + h3{
     line-height: 1.5;
     color: #222222;
   }
+   
 }
-
-/* === Stabil text (ingen "smart" brytning som skapar glapp) === */
-main p,
-main li,
-main blockquote{
-  hyphens: manual;
-  -webkit-hyphens: manual;
-  overflow-wrap: break-word;
-  word-break: normal;
-  word-spacing: normal;
-}
-
-/* === Citatblock (Fry/Sagan-typ, men eget så det inte krockar) === */
-.quote-block {
-  margin: 18px 0 22px;
-  padding: 14px 16px;
-  border-left: 4px solid rgba(0,0,0,0.25);
-  font-style: italic;
-}
-
-.quote-block p { margin: 0 0 10px; }
-.quote-block p:last-child { margin-bottom: 0; }
-
-.quote-block footer {
-  margin-top: 10px;
-  font-style: normal;
-  font-size: 0.95em;
-  opacity: 0.85;
-}
-
-/* Mobil: tvinga vänsterjustering så "glapp" aldrig kan uppstå */
-@media (max-width: 600px) {
-  .karnvapenepoken p,
-  .karnvapenepoken li,
-  .karnvapenepoken blockquote {
-    text-align: left;
-    word-spacing: normal;
-  }
-}
-/* Kärnvapenepoken: alltid vänsterställt */
-.karnvapenepoken p,
-.karnvapenepoken li,
-.karnvapenepoken blockquote{
-  text-align: left;
-   }
-
