@@ -1,33 +1,27 @@
 /* =========================================================
-   STACK-RYTM – KÄRNVAPENEPOKEN
-   Isolerad layoutkontroll för jämn luft
+   STACK-RYTM – KÄRNVAPENEPOKEN (MINIMAL & ICKE-KROCKANDE)
    Påverkar ENDAST <main class="karnvapenepoken">
-   (Inga font-regler här – bara spacing/rytm)
+   Endast spacing/stack – inga typsnitt, inga färger
    ========================================================= */
 
-/* Hindra margin-kollaps i blocken */
+/* Stoppa margin-kollaps i block och header */
 .karnvapenepoken .section-block,
 .karnvapenepoken .section-block > header{
   display: flow-root;
 }
 
-/* 1) Global rytm: varje syskon får luft ovanför (inom varje block) */
-.karnvapenepoken .section-block > * + *{
-  margin-top: 1.4em;
-}
-
-/* 2) Header: lite tajtare intern rytm (H1/ingress/ingress-sub) */
+/* Header: intern rytm (H1 → ingress → ingress-sub) */
 .karnvapenepoken .section-block > header > * + *{
   margin-top: 0.65em;
 }
 
-/* 3) Brödtext → rubrik: lite extra andning */
+/* Brödtext → rubrik */
 .karnvapenepoken .section-block p + h2,
 .karnvapenepoken .section-block p + h3{
   margin-top: 2.0em;
 }
 
-/* 4) Brödtext → media: detta löser “bilden sitter för nära texten” (laptop) */
+/* Brödtext → media */
 .karnvapenepoken .section-block p + figure,
 .karnvapenepoken .section-block p + .media-image,
 .karnvapenepoken .section-block p + .media-wide,
@@ -35,7 +29,7 @@
   margin-top: 2.4em;
 }
 
-/* 5) Media → rubrik: extra andning */
+/* Media → rubrik */
 .karnvapenepoken figure + h2,
 .karnvapenepoken figure + h3,
 .karnvapenepoken .media-image + h2,
@@ -47,32 +41,15 @@
   margin-top: 1.8em;
 }
 
-/* 6) Closing-quote v1.0 – vänsterförankrad, lugn, med luft */
-.karnvapenepoken .closing-quote{
-  text-align: left;
-  margin: 2.4em 0 3.2em 0;
-  padding: 0.45em 0 0.45em 1.0em;
-
-  border-left: 3px solid #d8d8d8;
-
-  font-size: 1.08em;
-  font-weight: 600;
-  font-style: italic;
-  line-height: 1.55;
-  color: #333;
-}
-
-/* Mer luft: closing-quote → nästa rubrik */
+/* Closing-quote → nästa rubrik
+   (själva citatets utseende styrs ENDAST i style.css) */
 .karnvapenepoken .closing-quote + h2,
 .karnvapenepoken .closing-quote + h3{
   margin-top: 2.4em;
 }
 
-/* 7) Mobil: lite tajtare men samma princip */
+/* Mobil – samma logik, något tajtare */
 @media (max-width: 600px){
-  .karnvapenepoken .section-block > * + *{
-    margin-top: 1.25em;
-  }
 
   .karnvapenepoken .section-block > header > * + *{
     margin-top: 0.6em;
@@ -85,16 +62,7 @@
     margin-top: 2.0em;
   }
 
-  .karnvapenepoken .closing-quote{
-    line-height: 1.48;
-    margin: 2.2em 0 2.8em 0;
-  }
-}
-
-/* Mobil: dra ihop closing-quote + efterföljande rubrik */
-@media (max-width: 600px){
   .karnvapenepoken .closing-quote + h2{
     margin-top: 0.9em;
   }
 }
-
