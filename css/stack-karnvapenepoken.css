@@ -66,3 +66,13 @@
     margin-top: 0.9em;
   }
 }
+/* Kärnvapenepoken: gör ALLA bilder kompakta (som .media-image-standard) */
+.karnvapenepoken figure.media-wide img{
+  max-width: 380px;
+}
+
+/* Extra: om någon råkar lägga en bild utan wrapper */
+.karnvapenepoken img{
+  max-width: 100%;
+  height: auto;
+}
