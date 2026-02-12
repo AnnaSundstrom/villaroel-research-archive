@@ -489,4 +489,145 @@ main p + h3{
     max-width: 380px;
   }
 
+.section-block {
+margin-bottom: 70px;
+}
 
+/* =====================================
+SOL-sidan – Ren, tydlig, minimalistisk
+===================================== */
+
+/* =========================
+
+1. Mini-index
+========================= */
+
+.mini-index {
+margin: 30px 0 50px 0;
+}
+
+.mini-index h2 {
+margin-bottom: 12px;
+}
+
+.mini-index ul {
+columns: 2;
+column-gap: 40px;
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.mini-index li {
+margin-bottom: 8px;
+}
+
+.mini-index a {
+text-decoration: none;
+}
+
+.mini-index a:hover {
+text-decoration: underline;
+}
+
+/* Mobil */
+@media (max-width: 600px) {
+.mini-index ul {
+columns: 1;
+}
+}
+
+/* =========================
+2. Bildmoduler (luft + struktur)
+========================= */
+
+.image-item {
+padding: 28px 0;
+margin: 0;
+}
+
+.image-item + .image-item {
+border-top: 1px solid #efefef;
+}
+
+.image-item h3 {
+margin: 0 0 12px 0;
+font-weight: 500;
+line-height: 1.25;
+}
+
+.image-item h4 {
+margin: 18px 0 6px 0;
+font-size: 0.95rem;
+font-weight: 600;
+letter-spacing: 0.01em;
+}
+
+.image-item p {
+margin: 0 0 12px 0;
+}
+
+.media-wide {
+margin: 10px 0 14px 0;
+}
+
+.media-wide a {
+display: inline-block;
+text-decoration: none;
+}
+
+.media-wide a:hover img {
+outline: 1px solid #e2e2e2;
+outline-offset: 2px;
+}
+
+/* =========================
+3. Diskret personruta
+========================= */
+
+.person-box {
+border: 1px solid #e6e6e6;
+padding: 20px;
+margin: 40px 0;
+background: #fafafa;
+}
+
+.person-box h3 {
+margin-top: 0;
+}
+
+.person-box p {
+margin: 0 0 12px 0;
+}
+
+/* Tiny-länkar enligt låst princip */
+.person-box small a {
+font-size: 0.85em;
+}
+
+/* =========================
+4. Desktop-layout (valfri men stark)
+Två kolumner: bild vänster, text höger
+========================= */
+
+@media (min-width: 920px) {
+
+.image-item {
+display: grid;
+grid-template-columns: 460px 1fr;
+column-gap: 34px;
+align-items: start;
+}
+
+.image-item .media-wide,
+.image-item .media-image {
+grid-column: 1;
+}
+
+.image-item h3,
+.image-item h4,
+.image-item p {
+grid-column: 2;
+}
+
+}
