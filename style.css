@@ -321,22 +321,22 @@ figcaption,
   text-decoration: underline;
 }
 
-/* ============================= */
-/* 7) BILDÖVERSIKT (thumbnails) */
-/* ============================= */
+/* =========================
+   BILDÖVERSIKT (thumbnails) – LUFT + KORTA RUBRIKER
+   ========================= */
 
 .block-overview{
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 10px;
-  margin: 14px 0 22px 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 16px 0 26px 0;
   padding: 0;
 }
 
 .block-overview .thumb{
   display: block;
   border: 1px solid #eee;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   background: #fafafa;
   text-decoration: none;
@@ -345,8 +345,39 @@ figcaption,
 .block-overview .thumb img{
   display: block;
   width: 100%;
-  height: 64px;
+  height: 78px;
   object-fit: cover;
+}
+
+/* Kort rubrik under bilden */
+.block-overview .thumb .cap{
+  display: block;
+  padding: 8px 10px 10px 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.88rem;
+  line-height: 1.25;
+  color: #222;
+  text-align: left;
+}
+
+@media (min-width: 920px){
+  .block-overview{
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+  }
+  .block-overview .thumb img{
+    height: 72px;
+  }
+}
+
+@media (max-width: 600px){
+  .block-overview{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .block-overview .thumb img{
+    height: 82px;
+  }
 }
 
 /* ============================= */
