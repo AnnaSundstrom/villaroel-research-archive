@@ -631,3 +631,20 @@ grid-column: 2;
 }
 
 }
+
+.block-footer {
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #efefef;
+  font-size: 0.9em;
+}
+
+.block-footer a {
+  text-decoration: none;
+}
+
+.block-footer a:hover {
+  text-decoration: underline;
+}
+
+
