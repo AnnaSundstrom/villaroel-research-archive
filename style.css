@@ -1,8 +1,7 @@
 /* =========================================================
-   style.css – villarroel-info.org (GLOBAL v1.0 – LÅST)
-   Princip: En bildklass (.media-image) → max 380px
-   Embed: 520px (16:9)
-   Bas → Typografi → Media → Moduler → Mobil
+   style.css – VILLARROEL-INFO.ORG (REN v1.0)
+   Bas → Typografi → Media → Rytm → Komponenter → Mobil
+   Global princip: EN bildklass (.media-image) = 380px
    ========================================================= */
 
 /* ============================= */
@@ -10,8 +9,8 @@
 /* ============================= */
 
 html, body{
-  background: #fff;
-  color: #222;
+  background-color: #ffffff;
+  color: #222222;
   margin: 0;
   padding: 0;
 }
@@ -23,24 +22,28 @@ body{
 }
 
 /* Länkar */
-a{ color:#222; }
-a:hover, a:focus{ color:#7a3cff; }
-
-/* Horisontell linje */
-hr{
-  border: none;
-  border-top: 1px solid #ddd;
-  margin: 28px 0;
+a{
+  color: #222222;
+  text-decoration: underline;
 }
 
-/* Listor */
-ul, ol{ padding-left: 18px; }
+a:hover,
+a:focus{
+  color: #7a3cff;
+}
+
+/* Horisontella linjer */
+hr{
+  border: none;
+  border-top: 1px solid #dddddd;
+  margin: 28px 0;
+}
 
 /* ============================= */
 /* 2) TYPOGRAFI */
 /* ============================= */
 
-/* Brödtext – SERIF (inkl captions) */
+/* Brödtext – SERIF */
 body,
 main,
 main p,
@@ -48,80 +51,93 @@ main li,
 main blockquote,
 figure,
 figcaption,
-.caption{
+.caption,
+.intro p,
+.sol-brief{
   font-family: Georgia, "Times New Roman", Times, serif;
+  color: #222222;
+}
+
+/* Brödtext */
+main p{
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 1.1em 0;
+  font-weight: 400;
 }
 
 /* Rubriker – SANS */
 h1, h2, h3, h4{
   font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  color:#222;
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  color: #222222;
+  text-transform: none;
 }
 
-main p{
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0 0 1.1em 0;
-}
-
-/* H1/H2/H3/H4 */
+/* H1 */
 h1{
   font-size: 3rem;
   font-weight: 600;
   line-height: 1.15;
   margin: 0 0 0.6rem 0;
+  overflow-wrap: break-word;
 }
 
+/* H2 */
 h2{
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.2;
-  margin: 1.6em 0 0.7em 0;
+  margin: 1.7em 0 0.7em 0;
 }
 
+/* H3 (rubriker i bildblock/personrutor) */
 h3{
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 650;
   line-height: 1.25;
-  margin: 1.8em 0 0.6em 0;
+  margin: 0 0 0.6em 0;
 }
 
+/* H4 (små rubriker som “Originaltext”) */
 h4{
   font-size: 0.95rem;
   font-weight: 700;
-  margin: 1.2em 0 0.4em 0;
   letter-spacing: 0.01em;
+  margin: 18px 0 6px 0;
 }
 
 /* ============================= */
-/* 3) MEDIA – GLOBAL STANDARD */
+/* 3) MEDIA – EN STANDARD (380px) */
 /* ============================= */
 
-/* Säkerhetsnät: bilder blir aldrig större än viewport */
-img{
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* FIGURE: bär luften runt media */
 figure{
-  margin: 22px 0 26px 0;
+  margin: 14px 0 18px 0;
   padding: 0;
-  text-align: center;
 }
 
-/* ENDA BILDKLASSEN */
+/* EN bildklass */
+.media-image{
+  text-align: center;
+  margin: 14px 0 18px 0;
+}
+
 .media-image img{
   width: 100%;
-  max-width: 380px;          /* LÅST STANDARD */
+  max-width: 380px;
+  height: auto;
+  display: block;
   margin: 0 auto;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
 }
 
-/* Klickbar bild (öppna original i ny flik) */
+/* Klickbar bild */
 .img-link{
   display: inline-block;
   text-decoration: none;
@@ -132,20 +148,7 @@ figure{
   outline-offset: 3px;
 }
 
-/* Caption/figcaption – liten, tajt, direkt under bild */
-figcaption,
-.caption{
-  font-size: 0.90em;
-  line-height: 1.35;
-  color: #444;
-  text-align: center;
-  margin: 8px 0 0 0;
-}
-
-/* ============================= */
-/* 4) EMBED (video/iframe) */
-/* ============================= */
-
+/* Embed-standard (video/iframe) */
 figure.embed{
   text-align: center;
   margin: 22px 0 26px 0;
@@ -153,7 +156,7 @@ figure.embed{
 
 .embed-frame{
   width: 100%;
-  max-width: 520px;          /* LÅST */
+  max-width: 520px;
   margin: 0 auto;
   aspect-ratio: 16 / 9;
   position: relative;
@@ -170,12 +173,41 @@ figure.embed{
   display: block;
 }
 
+/* Caption/figcaption */
+figcaption,
+.caption{
+  font-family: Georgia, "Times New Roman", Times, serif !important;
+  font-size: 0.90em;
+  line-height: 1.35;
+  color: #444444;
+  text-align: center;
+  margin: 8px 0 0 0;
+}
+
 /* ============================= */
-/* 5) MODULER (SOL-sida m.fl.) */
+/* 4) RYTM / STRUKTUR */
 /* ============================= */
 
 .section-block{
-  margin-bottom: 70px;
+  margin: 0 0 70px 0;
+  scroll-margin-top: 18px; /* bättre ankare */
+}
+
+.section-head p{
+  margin: 0.2em 0 0 0;
+}
+
+.image-item{
+  padding: 34px 0;
+  margin: 0;
+}
+
+.image-item + .image-item{
+  border-top: 1px solid #efefef;
+}
+
+.image-item p{
+  margin: 0 0 12px 0;
 }
 
 .block-footer{
@@ -193,30 +225,92 @@ figure.embed{
   text-decoration: underline;
 }
 
-/* Personrutor */
+/* ============================= */
+/* 5) SOL – Övre sektion */
+/* ============================= */
+
+.page-header{
+  margin-bottom: 26px;
+}
+
+.sol-brief{
+  margin: 20px 0 22px 0;
+  padding-bottom: 18px;
+  font-size: 0.95rem;
+  color: #444;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.intro{
+  margin: 18px 0 26px 0;
+}
+
+.intro-link a{
+  text-decoration: none;
+}
+
+.intro-link a:hover{
+  text-decoration: underline;
+}
+
+/* Personsektion */
+.person-section{
+  margin-top: 10px;
+}
+
+.person-wrapper{
+  display: block;
+}
+
 .person-box{
   border: 1px solid #e6e6e6;
   padding: 20px;
-  margin: 40px 0;
+  margin: 26px 0;
   background: #fafafa;
 }
 
 .person-box h3{
   margin-top: 0;
+  font-size: 1.00rem; /* lite mindre */
+  font-weight: 650;
 }
 
-/* Mini-index (din enkla rad) */
+.person-box small a{
+  font-size: 0.85em;
+  text-decoration: none;
+}
+
+.person-box small a:hover{
+  text-decoration: underline;
+}
+
+/* Desktop: två kolumner för personrutorna */
+@media (min-width: 920px){
+  .person-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    align-items: start;
+  }
+}
+
+/* ============================= */
+/* 6) MINI-INDEX (rad) */
+/* ============================= */
+
 .mini-index{
-  margin: 30px 0 40px 0;
+  margin: 18px 0 14px 0;
 }
 
 .mini-index h2{
   margin: 0 0 10px 0;
+  font-size: 1.15rem;
 }
 
 .toc-line{
   margin: 0;
-  line-height: 1.6;
+  padding: 0;
+  font-size: 0.98rem;
 }
 
 .toc-line a{
@@ -227,49 +321,61 @@ figure.embed{
   text-decoration: underline;
 }
 
-/* Bildblock (artiklar) – mer luft och tydliga avdelare */
-.image-item{
-  padding: 34px 0;
-  margin: 0;
+/* ============================= */
+/* 7) BILDÖVERSIKT (thumbnails) */
+/* ============================= */
+
+.block-overview{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin: 14px 0 22px 0;
+  padding: 0;
 }
 
-.image-item + .image-item{
-  border-top: 1px solid #efefef;
+.block-overview .thumb{
+  display: block;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fafafa;
+  text-decoration: none;
 }
 
-.image-item h3{
-  margin: 0 0 12px 0;
-  font-weight: 700;
+.block-overview .thumb img{
+  display: block;
+  width: 100%;
+  height: 64px;
+  object-fit: cover;
 }
 
 /* ============================= */
-/* 6) MOBIL */
+/* 8) MOBIL */
 /* ============================= */
 
 @media (max-width: 600px){
 
   body{
     margin: 22px auto;
-    padding: 0 18px;
   }
 
   h1{
     font-size: 2.35rem;
+    font-weight: 560;
+    letter-spacing: -0.015em;
     line-height: 1.12;
+    margin-bottom: 0.45rem;
   }
 
   h2{
     font-size: 1.45rem;
   }
 
-  figure,
-  figure.embed{
-    margin: 20px 0 22px 0;
+  .block-overview{
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .image-item{
-    padding: 28px 0;
+  .block-overview .thumb img{
+    height: 58px;
   }
-}
-
-
+   }
