@@ -647,4 +647,97 @@ grid-column: 2;
   text-decoration: underline;
 }
 
+/* =====================================
+   SOL-sidan – Övre sektion (Personer)
+   ===================================== */
+
+/* Kort SOL-intro */
+.sol-brief {
+  margin: 20px 0 40px 0;
+  padding-bottom: 18px;
+  font-size: 0.95rem;
+  color: #444;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* Personsektion – avdelare */
+.person-section {
+  margin-top: 60px;
+}
+
+/* Wrapper för två kolumner */
+.person-wrapper {
+  display: block;
+}
+
+/* Personruta */
+.person-box {
+  border: 1px solid #e6e6e6;
+  padding: 20px;
+  margin: 40px 0;
+  background: #fafafa;
+}
+
+/* Mindre rubrik än h3 i bildblock */
+.person-box h3 {
+  margin-top: 0;
+  font-size: 1.05rem;   /* mindre än vanliga h3 */
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Text */
+.person-box p {
+  margin: 0 0 12px 0;
+}
+
+/* Tiny-länkar enligt låst princip */
+.person-box small a {
+  font-size: 0.85em;
+  text-decoration: none;
+}
+
+.person-box small a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Bilder – max 460px
+   ========================= */
+
+.media-wide img,
+.media-image img {
+  max-width: 460px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Klickbar bild */
+.media-wide a,
+.media-image a {
+  display: inline-block;
+}
+
+.media-wide a:hover img,
+.media-image a:hover img {
+  outline: 1px solid #e2e2e2;
+  outline-offset: 2px;
+}
+
+/* =========================
+   Desktop – två kolumner
+   ========================= */
+
+@media (min-width: 920px) {
+
+  .person-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    align-items: start;
+  }
+
+}
+
 
