@@ -1,7 +1,10 @@
 /* =========================================================
-   style.css – VILLARROEL-INFO.ORG (SANERAD v1.x)
-   Bas → Typografi → Media → Rytm/övergångar → Sid-specifikt → Mobil
+   style.css – VILLARROEL-INFO.ORG (REN v1.0)
+   Bas → Typografi → Media (EN standard) → Layoutmoduler → Rytm → Mobil
+   LÅST: Alla stillbilder = .media-image (max 380px). Ingen .media-wide.
+   Embed/video = 520px.
    ========================================================= */
+
 
 /* ============================= */
 /* 1) BAS */
@@ -20,40 +23,34 @@ body{
   padding: 0 20px;
 }
 
-/* Navigation */
-nav p{ margin: 0; }
-
-nav hr{
-  margin: 12px 0 22px 0;
+/* Ankare: mjukare hopp */
+html{
+  scroll-behavior: smooth;
 }
 
-nav a{
+/* Länkar */
+a{
   color: #222222;
-  text-decoration: none;
 }
 
-nav a:hover,
-nav a.active{
-  text-decoration: underline;
+a:hover,
+a:focus{
   color: #7a3cff;
 }
 
 /* Länkar i brödtext */
 main a{
-  color: #222222;
   text-decoration: underline;
 }
 
 main a:hover,
 main a:focus{
-  color: #7a3cff;
+  text-decoration: underline;
 }
 
 /* Listor */
 ul, ol{ padding-left: 18px; }
-
-main ul,
-main ol{ margin-left: 1.2em; }
+main ul, main ol{ margin-left: 1.2em; }
 
 /* Horisontella linjer */
 hr{
@@ -62,11 +59,12 @@ hr{
   margin: 28px 0;
 }
 
+
 /* ============================= */
 /* 2) TYPOGRAFI */
 /* ============================= */
 
-/* Brödtext – SERIF ÖVERALLT (inkl captions/figcaption) */
+/* Brödtext – SERIF överallt (inkl captions) */
 body,
 main,
 main p,
@@ -109,7 +107,7 @@ main p{
 }
 
 /* Rubriker – ENDAST SANS */
-h1, h2, h3{
+h1, h2, h3, h4{
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -118,7 +116,6 @@ h1, h2, h3{
     "Helvetica Neue",
     Arial,
     sans-serif;
-  font-weight: 700;
   letter-spacing: -0.01em;
   color: #222222;
   text-transform: none;
@@ -130,10 +127,6 @@ h1{
   font-weight: 600;
   line-height: 1.15;
   margin: 0 0 0.6rem 0;
-  background: none;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
   overflow-wrap: break-word;
   word-break: normal;
 }
@@ -141,16 +134,26 @@ h1{
 /* H2 */
 h2{
   font-size: 1.8rem;
+  font-weight: 700;
   line-height: 1.2;
   margin: 1.7em 0 0.7em 0;
 }
 
-/* H3 */
+/* H3 (generell) */
 h3{
   font-size: 1.05rem;
+  font-weight: 700;
   line-height: 1.25;
   margin: 2em 0 0.6em 0;
   letter-spacing: 0;
+}
+
+/* H4 (används i bildblock) */
+h4{
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 18px 0 6px 0;
+  letter-spacing: 0.01em;
 }
 
 /* Ingress & bryggor */
@@ -170,6 +173,14 @@ h3{
   margin: 0 0 1.4em 0;
 }
 
+.subtitle{
+  font-size: 1.08em;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #333333;
+  margin: 0.6em 0 1.2em 0;
+}
+
 .bridge{
   font-size: 1.08rem;
   font-weight: 600;
@@ -179,72 +190,44 @@ h3{
   margin: 1.8em 0 2.2em 0;
 }
 
-.bridge-line{
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.6;
-  margin: 2.0em 0 2.0em 0;
-}
-
-.subtitle{
-  font-size: 1.08em;
-  font-weight: 600;
-  line-height: 1.45;
-  color: #333333;
-  margin: 0.6em 0 1.2em 0;
-}
-
-/* Slutradsmarkering / closing-quote v1.0 (LÅST) */
-.karnvapenepoken .closing-quote{
-  text-align: left;
-  margin: 3.2em 0 4.0em 0;
-  padding: 0.45em 0 0.45em 1.0em;
-  border-left: 3px solid #d6d6d6;
-  font-size: 1.22em;
-  font-weight: 650;
-  font-style: italic;
-  line-height: 1.55;
-  color: #333333;
-}
 
 /* ============================= */
-/* 3) MEDIA (STANDARD v1.0) */
+/* 3) MEDIA – EN STANDARD (LÅST) */
 /* ============================= */
 
-/* Figure: bär luften runt media (så captions kan vara tajta) */
+/* Figure bär luften */
 figure{
   margin: 30px 0 36px 0;
   padding: 0;
 }
 
-/* Media wrappers */
-.media-image,
-.media-wide{
+/* Stillbild – ENDA klass */
+.media-image{
   text-align: center;
   margin: 30px 0 36px 0;
 }
 
-/* Porträtt/stillbilder */
 .media-image img{
   width: 100%;
-  max-width: 380px;
+  max-width: 380px;     /* GLOBAL STANDARD */
   height: auto;
   display: block;
   margin: 0 auto;
   border: 1px solid #dddddd;
 }
 
-/* Bred historisk media */
-.media-wide img{
-  width: 100%;
-  max-width: 860px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border: 1px solid #dddddd;
+/* Klickbar bild (valfri) */
+.img-link{
+  display: inline-block;
+  text-decoration: none;
 }
 
-/* Embed-standard (video/iframe) */
+.img-link:hover img{
+  outline: 1px solid #e2e2e2;
+  outline-offset: 3px;
+}
+
+/* Embed/video – ENDA undantaget */
 figure.embed{
   text-align: center;
   margin: 30px 0 36px 0;
@@ -252,7 +235,7 @@ figure.embed{
 
 .embed-frame{
   width: 100%;
-  max-width: 520px;
+  max-width: 520px;     /* Endast video */
   margin: 0 auto;
   aspect-ratio: 16 / 9;
   position: relative;
@@ -269,7 +252,7 @@ figure.embed{
   display: block;
 }
 
-/* Caption/figcaption – liten, tät, direkt under bild (LÅST PRINCIP) */
+/* Caption/figcaption – liten, tät, direkt under bild */
 figcaption.caption,
 figcaption,
 .caption{
@@ -277,14 +260,7 @@ figcaption,
   line-height: 1.35;
   color: #444444;
   text-align: center;
-  margin: 8px 0 0 0; /* tajt under bild, ingen bottenluft */
-}
-
-/* Länk i caption: minimalt avstånd */
-.caption-link{
-  display: inline-block;
-  margin-top: 2px;
-  font-size: 0.98em;
+  margin: 8px 0 0 0;
 }
 
 .tiny-link{
@@ -293,106 +269,226 @@ figcaption,
   font-size: 0.95em;
 }
 
+
 /* ============================= */
 /* 4) RYTM / ÖVERGÅNGAR */
 /* ============================= */
 
-/* Rubrik efter media: lite luft */
+/* Rubrik efter media */
 figure + h2,
-figure + h3{
+figure + h3,
+.media-image + h2,
+.media-image + h3,
+figure.embed + h2,
+figure.embed + h3{
   margin-top: 1.45em;
 }
 
-/* Brödtext direkt efter media: lite luft */
-figure + p{
+/* Brödtext direkt efter media */
+figure + p,
+.media-image + p,
+figure.embed + p{
   margin-top: 1.25em;
 }
 
-/* Media efter brödtext: extra luft så det inte klistrar */
+/* Media efter brödtext: extra luft */
 main p + figure,
 main p + .media-image,
-main p + .media-wide,
 main p + figure.embed{
   margin-top: 2.4em;
 }
 
-/* Brödtext → rubrik (extra andning) */
+/* Brödtext → rubrik */
 main p + h2,
 main p + h3{
   margin-top: 1.45em;
 }
 
+
 /* ============================= */
-/* 5) SID-SPECIFIKT – KÄRNVAPENEPOKEN */
+/* 5) SEKTIONER (GLOBALT) */
 /* ============================= */
 
-/* Stoppa margin-kollaps i block och header */
-.karnvapenepoken .section-block,
-.karnvapenepoken .section-block > header{
-  display: flow-root;
+.section-block{
+  margin-bottom: 70px;
 }
 
-/* Mer luft mellan H1 och ingress */
-.karnvapenepoken header h1{
-  margin-bottom: 0.95em;
+.section-head p{
+  margin-top: 0.4em;
 }
 
-/* Mer luft mellan sista introstycket och första bilden i blocket */
-.karnvapenepoken .section-block p + figure{
-  margin-top: 2.0em;
+
+/* ============================= */
+/* 6) MINI-INDEX (SOL-sidan m.fl.) */
+/* ============================= */
+
+.mini-index{
+  margin: 30px 0 50px 0;
 }
 
-/* === LÅS: Kärnvapenepoken – ingen justify, ingen “smart” tolkning === */
-.karnvapenepoken p,
-.karnvapenepoken li,
-.karnvapenepoken blockquote{
-  text-align: left;
-  hyphens: manual;
-  overflow-wrap: break-word;
-  word-break: normal;
-  word-spacing: normal;
-  letter-spacing: normal;
+.mini-index h2{
+  margin-bottom: 12px;
 }
 
-/* =========================================================
-   OVERRIDE – KÄRNVAPENEPOKEN: INGA MEDIA-WIDE BILDER
-   All stillbild/porträtt blir 380px (embed fortsatt 520px)
-   ========================================================= */
-
-/* 1) Tvinga alla media-wrappers att vara "smala" på Kärnvapenepoken */
-.karnvapenepoken .media-image,
-.karnvapenepoken .media-wide{
-  text-align: center;
-  margin: 30px 0 36px 0;
+/* Enkel variant (toc-line) */
+.toc-line{
+  margin: 0;
 }
 
-/* 2) Tvinga både .media-image och .media-wide att använda 380px */
-.karnvapenepoken .media-image img,
-.karnvapenepoken .media-wide img{
-  width: 100%;
-  max-width: 380px;
-  height: auto;
+.toc-line a{
+  text-decoration: none;
+}
+
+.toc-line a:hover{
+  text-decoration: underline;
+}
+
+/* (Om du någon gång använder UL-variant igen) */
+.mini-index ul{
+  columns: 2;
+  column-gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mini-index li{
+  margin-bottom: 8px;
+}
+
+.mini-index ul a{
+  text-decoration: none;
+}
+
+.mini-index ul a:hover{
+  text-decoration: underline;
+}
+
+
+/* ============================= */
+/* 7) SOL – Övre sektion (Personer) */
+/* ============================= */
+
+/* Kort SOL-intro */
+.sol-brief{
+  margin: 20px 0 40px 0;
+  padding-bottom: 18px;
+  font-size: 0.95rem;
+  color: #444444;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* Personsektion – avdelare */
+.person-section{
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid #eaeaea;
+}
+
+.person-wrapper{
   display: block;
-  margin: 0 auto;
-  border: 1px solid #dddddd;
 }
 
-/* 3) Säkerhetsnät: om du råkat lägga img i <figure> utan class */
-.karnvapenepoken figure:not(.embed){
-  text-align: center;
+/* Personruta */
+.person-box{
+  border: 1px solid #e6e6e6;
+  padding: 20px;
+  margin: 40px 0;
+  background: #fafafa;
 }
 
-.karnvapenepoken figure:not(.embed) img{
-  width: 100%;
-  max-width: 380px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border: 1px solid #dddddd;
+/* Mindre rubrik i personrutor */
+.person-box h3{
+  margin-top: 0;
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
+
+.person-box p{
+  margin: 0 0 12px 0;
+}
+
+.person-box small a{
+  font-size: 0.85em;
+  text-decoration: none;
+}
+
+.person-box small a:hover{
+  text-decoration: underline;
+}
+
+/* Desktop: två kolumner för personrutor */
+@media (min-width: 920px){
+  .person-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    align-items: start;
+  }
+}
+
 
 /* ============================= */
-/* 6) CITATBLOCK (Fry/Sagan-typ) */
+/* 8) BILDBLOCK (SOL-sidan) */
+/* ============================= */
+
+.image-item{
+  padding: 34px 0;          /* lite mer luft */
+  margin: 0;
+}
+
+.image-item + .image-item{
+  border-top: 1px solid #efefef;
+}
+
+.image-item h3{
+  margin: 0 0 12px 0;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* Bilden ligger i 380px-kolumn, text till höger på desktop */
+@media (min-width: 920px){
+  .image-item{
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    column-gap: 34px;
+    align-items: start;
+  }
+
+  .image-item .media-image,
+  .image-item figure,
+  .image-item figure.embed{
+    grid-column: 1;
+  }
+
+  .image-item h3,
+  .image-item h4,
+  .image-item p{
+    grid-column: 2;
+  }
+}
+
+/* Blockfooter */
+.block-footer{
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #efefef;
+  font-size: 0.9em;
+}
+
+.block-footer a{
+  text-decoration: none;
+}
+
+.block-footer a:hover{
+  text-decoration: underline;
+}
+
+
+/* ============================= */
+/* 9) CITATBLOCK (om du använder) */
 /* ============================= */
 
 .quote-block{
@@ -412,8 +508,9 @@ main p + h3{
   opacity: 0.85;
 }
 
+
 /* ============================= */
-/* 7) MOBIL (FINJUSTERAD & LÅST) */
+/* 10) MOBIL */
 /* ============================= */
 
 @media (max-width: 600px){
@@ -434,34 +531,10 @@ main p + h3{
     font-size: 1.45rem;
   }
 
-  .ingress{
-    font-size: 1.06em;
-    font-weight: 600;
-    line-height: 1.5;
-    margin: 0.45em 0 0.55em 0;
-  }
-
-  .ingress-sub{
-    font-size: 1.00em;
-    font-weight: 600;
-    line-height: 1.5;
-    color: #333333;
-    margin: 0 0 1.15em 0;
-  }
-
-  .subtitle{
-    font-size: 1.01em;
-    font-weight: 600;
-    line-height: 1.45;
-    color: #333333;
-    margin: 0.55em 0 1.05em 0;
-  }
-
   /* Mobil: lite tajtare media-marginaler */
   figure,
   figure.embed,
-  .media-image,
-  .media-wide{
+  .media-image{
     margin: 24px 0 28px 0;
   }
 
@@ -473,271 +546,8 @@ main p + h3{
     font-size: 0.90em;
   }
 
-  .karnvapenepoken .closing-quote{
-    margin: 2.6em 0 3.2em 0;
-    font-size: 1.14em;
-    font-style: italic;
-    font-weight: 600;
-    line-height: 1.5;
-    color: #222222;
+  /* Mini-index UL variant */
+  .mini-index ul{
+    columns: 1;
   }
-   
 }
-/* Mobil: samma smala standard även om .media-wide råkar användas */
-  .karnvapenepoken .media-wide img,
-  .karnvapenepoken figure:not(.embed) img{
-    max-width: 380px;
-  }
-
-.section-block {
-margin-bottom: 70px;
-}
-
-/* =====================================
-SOL-sidan – Ren, tydlig, minimalistisk
-===================================== */
-
-/* =========================
-
-1. Mini-index
-========================= */
-
-.mini-index {
-margin: 30px 0 50px 0;
-}
-
-.mini-index h2 {
-margin-bottom: 12px;
-}
-
-.mini-index ul {
-columns: 2;
-column-gap: 40px;
-list-style: none;
-padding: 0;
-margin: 0;
-}
-
-.mini-index li {
-margin-bottom: 8px;
-}
-
-.mini-index a {
-text-decoration: none;
-}
-
-.mini-index a:hover {
-text-decoration: underline;
-}
-
-/* Mobil */
-@media (max-width: 600px) {
-.mini-index ul {
-columns: 1;
-}
-}
-
-/* =========================
-2. Bildmoduler (luft + struktur)
-========================= */
-
-.image-item {
-padding: 28px 0;
-margin: 0;
-}
-
-.image-item + .image-item {
-border-top: 1px solid #efefef;
-}
-
-.image-item h3 {
-margin: 0 0 12px 0;
-font-weight: 500;
-line-height: 1.25;
-}
-
-.image-item h4 {
-margin: 18px 0 6px 0;
-font-size: 0.95rem;
-font-weight: 600;
-letter-spacing: 0.01em;
-}
-
-.image-item p {
-margin: 0 0 12px 0;
-}
-
-.media-wide {
-margin: 10px 0 14px 0;
-}
-
-.media-wide a {
-display: inline-block;
-text-decoration: none;
-}
-
-.media-wide a:hover img {
-outline: 1px solid #e2e2e2;
-outline-offset: 2px;
-}
-
-/* =========================
-3. Diskret personruta
-========================= */
-
-.person-box {
-border: 1px solid #e6e6e6;
-padding: 20px;
-margin: 40px 0;
-background: #fafafa;
-}
-
-.person-box h3 {
-margin-top: 0;
-}
-
-.person-box p {
-margin: 0 0 12px 0;
-}
-
-/* Tiny-länkar enligt låst princip */
-.person-box small a {
-font-size: 0.85em;
-}
-
-/* =========================
-4. Desktop-layout (valfri men stark)
-Två kolumner: bild vänster, text höger
-========================= */
-
-@media (min-width: 920px) {
-
-.image-item {
-display: grid;
-grid-template-columns: 460px 1fr;
-column-gap: 34px;
-align-items: start;
-}
-
-.image-item .media-wide,
-.image-item .media-image {
-grid-column: 1;
-}
-
-.image-item h3,
-.image-item h4,
-.image-item p {
-grid-column: 2;
-}
-
-}
-
-.block-footer {
-  margin-top: 40px;
-  padding-top: 15px;
-  border-top: 1px solid #efefef;
-  font-size: 0.9em;
-}
-
-.block-footer a {
-  text-decoration: none;
-}
-
-.block-footer a:hover {
-  text-decoration: underline;
-}
-
-/* =====================================
-   SOL-sidan – Övre sektion (Personer)
-   ===================================== */
-
-/* Kort SOL-intro */
-.sol-brief {
-  margin: 20px 0 40px 0;
-  padding-bottom: 18px;
-  font-size: 0.95rem;
-  color: #444;
-  border-bottom: 1px solid #eaeaea;
-}
-
-/* Personsektion – avdelare */
-.person-section {
-  margin-top: 60px;
-}
-
-/* Wrapper för två kolumner */
-.person-wrapper {
-  display: block;
-}
-
-/* Personruta */
-.person-box {
-  border: 1px solid #e6e6e6;
-  padding: 20px;
-  margin: 40px 0;
-  background: #fafafa;
-}
-
-/* Mindre rubrik än h3 i bildblock */
-.person-box h3 {
-  margin-top: 0;
-  font-size: 1.05rem;   /* mindre än vanliga h3 */
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-
-/* Text */
-.person-box p {
-  margin: 0 0 12px 0;
-}
-
-/* Tiny-länkar enligt låst princip */
-.person-box small a {
-  font-size: 0.85em;
-  text-decoration: none;
-}
-
-.person-box small a:hover {
-  text-decoration: underline;
-}
-
-/* =========================
-   Bilder – max 460px
-   ========================= */
-
-.media-wide img,
-.media-image img {
-  max-width: 460px;
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Klickbar bild */
-.media-wide a,
-.media-image a {
-  display: inline-block;
-}
-
-.media-wide a:hover img,
-.media-image a:hover img {
-  outline: 1px solid #e2e2e2;
-  outline-offset: 2px;
-}
-
-/* =========================
-   Desktop – två kolumner
-   ========================= */
-
-@media (min-width: 920px) {
-
-  .person-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
-    align-items: start;
-  }
-
-}
-
-
