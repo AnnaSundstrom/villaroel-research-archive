@@ -397,13 +397,18 @@ figcaption,
 
 /* Kort rubrik under bilden */
 .block-overview .thumb .cap{
-  display: block;
   padding: 8px 10px 10px 10px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 0.88rem;
   line-height: 1.25;
   color: #222;
   text-align: left;
+
+  min-height: 2.6em;      /* ca 2 rader */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;  /* max 2 rader */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* ============================= */
