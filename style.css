@@ -393,6 +393,11 @@ figcaption,
   display: block;
 }
 
+.block-overview .thumb .thumb-frame{
+  display: block;
+  overflow: hidden;
+}
+
 /* Kort rubrik under bilden */
 .block-overview .thumb .cap{
   display: block;
