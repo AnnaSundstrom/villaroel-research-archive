@@ -384,18 +384,15 @@ figcaption,
   width: 100%;
   aspect-ratio: 16 / 9;
   background: #f8f8f8;
+  display: block;
+  overflow: hidden;
 }
 
 .block-overview .thumb img{
   width: 100%;
   height: 100%;
-  object-fit: cover; /* beskär lugnt istället för att deformera */
+  object-fit: cover;
   display: block;
-}
-
-.block-overview .thumb .thumb-frame{
-  display: block;
-  overflow: hidden;
 }
 
 /* Kort rubrik under bilden */
