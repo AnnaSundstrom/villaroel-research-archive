@@ -1,7 +1,8 @@
 /* =========================================================
-   style.css – VILLARROEL-INFO.ORG (REN v1.0)
+   style.css – VILLARROEL-INFO.ORG (REN v1.0 → v1.1)
    Bas → Typografi → Media → Rytm → Komponenter → Mobil
    Global princip: EN bildklass (.media-image) = 380px
+   Lås mobilgrid också: thumbnails i block ska ha samma storlek
    ========================================================= */
 
 /* ============================= */
@@ -322,31 +323,55 @@ figcaption,
 }
 
 /* =========================
-   BILDÖVERSIKT (thumbnails) – LUFT + KORTA RUBRIKER
+   7) BILDÖVERSIKT (thumbnails) – LÅST GRID + SAMMA STORLEK
+   Lås mobilgrid också: alltid 2 kolumner på mobil
    ========================= */
 
 .block-overview{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  grid-template-columns: repeat(6, 1fr); /* desktop */
+  gap: 12px;
   margin: 16px 0 26px 0;
   padding: 0;
+}
+
+/* Mellanläge */
+@media (max-width: 920px){
+  .block-overview{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+}
+
+/* Mobil: alltid 2 kolumner */
+@media (max-width: 600px){
+  .block-overview{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
 }
 
 .block-overview .thumb{
   display: block;
   border: 1px solid #eee;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   background: #fafafa;
   text-decoration: none;
 }
 
-.block-overview .thumb img{
-  display: block;
+/* Låser tile-höjd så alla blir identiska */
+.block-overview .thumb .thumb-frame{
   width: 100%;
-  height: 78px;
-  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  background: #f8f8f8;
+}
+
+.block-overview .thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* beskär lugnt istället för att deformera */
+  display: block;
 }
 
 /* Kort rubrik under bilden */
@@ -358,26 +383,6 @@ figcaption,
   line-height: 1.25;
   color: #222;
   text-align: left;
-}
-
-@media (min-width: 920px){
-  .block-overview{
-    grid-template-columns: repeat(6, 1fr);
-    gap: 12px;
-  }
-  .block-overview .thumb img{
-    height: 72px;
-  }
-}
-
-@media (max-width: 600px){
-  .block-overview{
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-  .block-overview .thumb img{
-    height: 82px;
-  }
 }
 
 /* ============================= */
@@ -401,38 +406,5 @@ figcaption,
   h2{
     font-size: 1.45rem;
   }
-
-  .block-overview{
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .block-overview .thumb img{
-    height: 58px;
-  }
    }
-
-.block-overview{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 16px 0 28px 0;
-}
-
-.block-overview .thumb{
-  display: inline-block;
-  padding: 6px 10px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  font-size: 0.85rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #444;
-  background: #fafafa;
-}
-
-.block-overview .thumb:hover{
-  background: #f0f0f0;
-}
-
-
 
