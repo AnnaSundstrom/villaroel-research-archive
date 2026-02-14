@@ -1,48 +1,48 @@
 /* =========================================================
-   style.css – VILLARROEL-INFO.ORG (REN v1.0 → v1.1)
-   Bas → Typografi → Media → Rytm → Komponenter → Mobil
-   Global princip: EN bildklass (.media-image) = 380px
-   Lås mobilgrid också: thumbnails i block ska ha samma storlek
-   ========================================================= */
+style.css – VILLARROEL-INFO.ORG (REN v1.0 → v1.1)
+Bas → Typografi → Media → Rytm → Komponenter → Mobil
+Global princip: EN bildklass (.media-image) = 380px
+Lås mobilgrid också: thumbnails i block ska ha samma storlek
+========================================================= */
 
-/* ============================= */
-/* 1) BAS */
-/* ============================= */
+/* ============================= /
+/ 1) BAS /
+/ ============================= */
 
 html, body{
-  background-color: #ffffff;
-  color: #222222;
-  margin: 0;
-  padding: 0;
+background-color: #ffffff;
+color: #222222;
+margin: 0;
+padding: 0;
 }
 
 body{
-  max-width: 860px;
-  margin: 40px auto;
-  padding: 0 20px;
+max-width: 860px;
+margin: 40px auto;
+padding: 0 20px;
 }
 
 /* Länkar */
 a{
-  color: #222222;
-  text-decoration: underline;
+color: #222222;
+text-decoration: underline;
 }
 
 a:hover,
 a:focus{
-  color: #7a3cff;
+color: #7a3cff;
 }
 
 /* Horisontella linjer */
 hr{
-  border: none;
-  border-top: 1px solid #dddddd;
-  margin: 28px 0;
+border: none;
+border-top: 1px solid #dddddd;
+margin: 28px 0;
 }
 
-/* ============================= */
-/* 2) TYPOGRAFI */
-/* ============================= */
+/* ============================= /
+/ 2) TYPOGRAFI /
+/ ============================= */
 
 /* Brödtext – SERIF */
 body,
@@ -55,376 +55,375 @@ figcaption,
 .caption,
 .intro p,
 .sol-brief{
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #222222;
+font-family: Georgia, "Times New Roman", Times, serif;
+color: #222222;
 }
 
 /* Brödtext */
 main p{
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0 0 1.1em 0;
-  font-weight: 400;
+font-size: 1rem;
+line-height: 1.6;
+margin: 0 0 1.1em 0;
+font-weight: 400;
 }
 
 /* Rubriker – SANS */
 h1, h2, h3, h4{
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
-  color: #222222;
-  text-transform: none;
+font-family:
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+sans-serif;
+color: #222222;
+text-transform: none;
 }
 
 /* H1 */
 h1{
-  font-size: 3rem;
-  font-weight: 600;
-  line-height: 1.15;
-  margin: 0 0 0.6rem 0;
-  overflow-wrap: break-word;
+font-size: 3rem;
+font-weight: 600;
+line-height: 1.15;
+margin: 0 0 0.6rem 0;
+overflow-wrap: break-word;
 }
 
 /* H2 */
 h2{
-  font-size: 1.8rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 1.7em 0 0.7em 0;
+font-size: 1.8rem;
+font-weight: 700;
+line-height: 1.2;
+margin: 1.7em 0 0.7em 0;
 }
 
 /* H3 (rubriker i bildblock/personrutor) */
 h3{
-  font-size: 1.05rem;
-  font-weight: 650;
-  line-height: 1.25;
-  margin: 0 0 0.6em 0;
+font-size: 1.05rem;
+font-weight: 650;
+line-height: 1.25;
+margin: 0 0 0.6em 0;
 }
 
 /* H4 (små rubriker som “Originaltext”) */
 h4{
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  margin: 18px 0 6px 0;
+font-size: 0.95rem;
+font-weight: 700;
+letter-spacing: 0.01em;
+margin: 18px 0 6px 0;
 }
 
-/* ============================= */
-/* 3) MEDIA – EN STANDARD (380px) */
-/* ============================= */
+/* ============================= /
+/ 3) MEDIA – EN STANDARD (380px) /
+/ ============================= */
 
 figure{
-  margin: 14px 0 18px 0;
-  padding: 0;
+margin: 14px 0 18px 0;
+padding: 0;
 }
 
 /* EN bildklass */
 .media-image{
-  text-align: center;
-  margin: 14px 0 18px 0;
+text-align: center;
+margin: 14px 0 18px 0;
 }
 
 .media-image img{
-  width: 100%;
-  max-width: 380px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border: 1px solid #dddddd;
+width: 100%;
+max-width: 380px;
+height: auto;
+display: block;
+margin: 0 auto;
+border: 1px solid #dddddd;
 }
 
 /* Klickbar bild */
 .img-link{
-  display: inline-block;
-  text-decoration: none;
+display: inline-block;
+text-decoration: none;
 }
 
 .img-link:hover img{
-  outline: 1px solid #e2e2e2;
-  outline-offset: 3px;
+outline: 1px solid #e2e2e2;
+outline-offset: 3px;
 }
 
 /* Embed-standard (video/iframe) */
 figure.embed{
-  text-align: center;
-  margin: 22px 0 26px 0;
+text-align: center;
+margin: 22px 0 26px 0;
 }
 
 .embed-frame{
-  width: 100%;
-  max-width: 520px;
-  margin: 0 auto;
-  aspect-ratio: 16 / 9;
-  position: relative;
-  overflow: hidden;
-  background: #000;
+width: 100%;
+max-width: 520px;
+margin: 0 auto;
+aspect-ratio: 16 / 9;
+position: relative;
+overflow: hidden;
+background: #000;
 }
 
 .embed-frame iframe{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+border: 0;
+display: block;
 }
 
 /* Caption/figcaption */
 figcaption,
 .caption{
-  font-family: Georgia, "Times New Roman", Times, serif !important;
-  font-size: 0.90em;
-  line-height: 1.35;
-  color: #444444;
-  text-align: center;
-  margin: 8px 0 0 0;
+font-family: Georgia, "Times New Roman", Times, serif !important;
+font-size: 0.90em;
+line-height: 1.35;
+color: #444444;
+text-align: center;
+margin: 8px 0 0 0;
 }
 
-/* ============================= */
-/* 4) RYTM / STRUKTUR */
-/* ============================= */
+/* ============================= /
+/ 4) RYTM / STRUKTUR /
+/ ============================= */
 
 .section-block{
-  margin: 0 0 70px 0;
-  scroll-margin-top: 18px; /* bättre ankare */
+margin: 0 0 70px 0;
+scroll-margin-top: 18px; /* bättre ankare */
 }
 
 .section-head p{
-  margin: 0.2em 0 0 0;
+margin: 0.2em 0 0 0;
 }
 
 .image-item{
-  padding: 34px 0;
-  margin: 0;
+padding: 34px 0;
+margin: 0;
 }
 
 .image-item + .image-item{
-  border-top: 1px solid #efefef;
+border-top: 1px solid #efefef;
 }
 
 .image-item p{
-  margin: 0 0 12px 0;
+margin: 0 0 12px 0;
 }
 
 .block-footer{
-  margin-top: 40px;
-  padding-top: 15px;
-  border-top: 1px solid #efefef;
-  font-size: 0.9em;
+margin-top: 40px;
+padding-top: 15px;
+border-top: 1px solid #efefef;
+font-size: 0.9em;
 }
 
 .block-footer a{
-  text-decoration: none;
+text-decoration: none;
 }
 
 .block-footer a:hover{
-  text-decoration: underline;
+text-decoration: underline;
 }
 
-/* ============================= */
-/* 5) SOL – Övre sektion */
-/* ============================= */
+/* ============================= /
+/ 5) SOL – Övre sektion /
+/ ============================= */
 
 .page-header{
-  margin-bottom: 26px;
+margin-bottom: 26px;
 }
 
 .sol-brief{
-  margin: 20px 0 22px 0;
-  padding-bottom: 18px;
-  font-size: 0.95rem;
-  color: #444;
-  border-bottom: 1px solid #eaeaea;
+margin: 20px 0 22px 0;
+padding-bottom: 18px;
+font-size: 0.95rem;
+color: #444;
+border-bottom: 1px solid #eaeaea;
 }
 
 .intro{
-  margin: 18px 0 26px 0;
+margin: 18px 0 26px 0;
 }
 
 .intro-link a{
-  text-decoration: none;
+text-decoration: none;
 }
 
 .intro-link a:hover{
-  text-decoration: underline;
+text-decoration: underline;
 }
 
-/* ============================= */
-/* 5B) PERSONSTRUKTUR – T-LAYOUT */
-/* ============================= */
+/* ============================= /
+/ 5B) PERSONSTRUKTUR – T-LAYOUT /
+/ ============================= */
 
 .person-section{
-  margin-top: 10px;
+margin-top: 10px;
 }
 
-/* Bred översta ruta (SOL) */
+/* Bred översta ruta (SOL) /
 .person-box-wide{
-  background: #ededed;  /* lite mörkare än #fafafa */
-  border: 1px solid #e2e2e2;
-  padding: 24px;
-  margin: 36px auto 42px auto;
-  max-width: 640px;      /* gör att den inte känns för bred */
+background: #ededed;  / lite mörkare än #fafafa /
+border: 1px solid #e2e2e2;
+padding: 24px;
+margin: 36px auto 42px auto;
+max-width: 600px;      / gör att den inte känns för bred */
 }
 
 /* Underrutor (Nolan + Beatriz) */
 .person-wrapper{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: start;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+align-items: start;
 }
 
 .person-box{
-  border: 1px solid #e6e6e6;
-  padding: 20px;
-  margin: 0;            /* viktigt: låt grid styra vertikalt */
-  background: #fafafa;
+border: 1px solid #e6e6e6;
+padding: 20px;
+margin: 0;            /* viktigt: låt grid styra vertikalt */
+background: #fafafa;
 }
 
 .person-box h3{
-  margin-top: 0;
-  font-size: 1.00rem; /* lite mindre */
-  font-weight: 650;
+margin-top: 0;
+font-size: 1.00rem; /* lite mindre */
+font-weight: 650;
 }
 
 .person-box small a{
-  font-size: 0.85em;
-  text-decoration: none;
+font-size: 0.85em;
+text-decoration: none;
 }
 
 .person-box small a:hover{
-  text-decoration: underline;
+text-decoration: underline;
 }
 
 /* Mobil */
 @media (max-width: 820px){
-  .person-wrapper{
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-
-  .person-box-wide{
-    max-width: 100%;
-    margin: 28px auto 26px auto;
-  }
+.person-wrapper{
+grid-template-columns: 1fr;
+gap: 22px;
 }
 
-/* ============================= */
-/* 6) MINI-INDEX (rad) */
-/* ============================= */
+.person-box-wide{
+max-width: 100%;
+margin: 28px auto 26px auto;
+}
+}
+
+/* ============================= /
+/ 6) MINI-INDEX (rad) /
+/ ============================= */
 
 .mini-index{
-  margin: 18px 0 14px 0;
+margin: 18px 0 14px 0;
 }
 
 .mini-index h2{
-  margin: 0 0 10px 0;
-  font-size: 1.15rem;
+margin: 0 0 10px 0;
+font-size: 1.15rem;
 }
 
 .toc-line{
-  margin: 0;
-  padding: 0;
-  font-size: 0.98rem;
+margin: 0;
+padding: 0;
+font-size: 0.98rem;
 }
 
 .toc-line a{
-  text-decoration: none;
+text-decoration: none;
 }
 
 .toc-line a:hover{
-  text-decoration: underline;
+text-decoration: underline;
 }
 
 /* =========================
-   7) BILDÖVERSIKT (thumbnails) – LÅST GRID + SAMMA STORLEK
-   Lås mobilgrid också: alltid 2 kolumner på mobil
-   ========================= */
+7) BILDÖVERSIKT (thumbnails) – LÅST GRID + SAMMA STORLEK
+Lås mobilgrid också: alltid 2 kolumner på mobil
+========================= */
 
 .block-overview{
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); /* desktop */
-  gap: 12px;
-  margin: 16px 0 26px 0;
-  padding: 0;
+display: grid;
+grid-template-columns: repeat(6, 1fr); /* desktop /
+gap: 16px;   / luftigare än 12px */
+margin: 16px 0 26px 0;
+padding: 0;
 }
 
 /* Mellanläge */
 @media (max-width: 920px){
-  .block-overview{
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-  }
+.block-overview{
+grid-template-columns: repeat(3, 1fr);
+gap: 14px;
+}
 }
 
 /* Mobil: alltid 2 kolumner */
 @media (max-width: 600px){
-  .block-overview{
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
+.block-overview{
+grid-template-columns: repeat(2, 1fr);
+gap: 12px;
+}
 }
 
 .block-overview .thumb{
-  display: block;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #fafafa;
-  text-decoration: none;
+display: block;
+border: 1px solid #eee;
+border-radius: 12px;
+overflow: hidden;
+background: #fafafa;
+text-decoration: none;
 }
 
 /* Låser tile-höjd så alla blir identiska */
 .block-overview .thumb .thumb-frame{
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #f8f8f8;
+width: 100%;
+aspect-ratio: 16 / 9;
+background: #f8f8f8;
 }
 
 .block-overview .thumb img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* beskär lugnt istället för att deformera */
-  display: block;
+width: 100%;
+height: 100%;
+object-fit: cover; /* beskär lugnt istället för att deformera */
+display: block;
 }
 
 /* Kort rubrik under bilden */
 .block-overview .thumb .cap{
-  display: block;
-  padding: 8px 10px 10px 10px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 0.88rem;
-  line-height: 1.25;
-  color: #222;
-  text-align: left;
+display: block;
+padding: 8px 10px 10px 10px;
+font-family: Georgia, "Times New Roman", Times, serif;
+font-size: 0.88rem;
+line-height: 1.25;
+color: #222;
+text-align: left;
 }
 
-/* ============================= */
-/* 8) MOBIL */
-/* ============================= */
+/* ============================= /
+/ 8) MOBIL /
+/ ============================= */
 
 @media (max-width: 600px){
 
-  body{
-    margin: 22px auto;
-  }
-
-  h1{
-    font-size: 2.35rem;
-    font-weight: 560;
-    letter-spacing: -0.015em;
-    line-height: 1.12;
-    margin-bottom: 0.45rem;
-  }
-
-  h2{
-    font-size: 1.45rem;
-  }
+body{
+margin: 22px auto;
 }
 
+h1{
+font-size: 2.35rem;
+font-weight: 560;
+letter-spacing: -0.015em;
+line-height: 1.12;
+margin-bottom: 0.45rem;
+}
+
+h2{
+font-size: 1.45rem;
+}
+}
 
