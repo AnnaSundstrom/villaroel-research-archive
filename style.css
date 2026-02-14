@@ -254,21 +254,21 @@ text-decoration: none;
 text-decoration: underline;
 }
 
-/* ============================= /
-/ 5B) PERSONSTRUKTUR – T-LAYOUT /
-/ ============================= */
+/* ============================= */
+/* 5B) PERSONSTRUKTUR – T-LAYOUT */
+/* ============================= */
 
 .person-section{
-margin-top: 10px;
+  margin-top: 10px;
 }
 
-/* Bred översta ruta (SOL) /
+/* Bred översta ruta (SOL) */
 .person-box-wide{
-background: #ededed;  / lite mörkare än #fafafa /
-border: 1px solid #e2e2e2;
-padding: 24px;
-margin: 36px auto 42px auto;
-max-width: 600px;      / gör att den inte känns för bred */
+  background: #ededed;  /* lite mörkare än #fafafa */
+  border: 1px solid #e2e2e2;
+  padding: 24px;
+  margin: 36px auto 42px auto;
+  max-width: 640px;      /* gör att den inte känns för bred */
 }
 
 /* Underrutor (Nolan + Beatriz) */
