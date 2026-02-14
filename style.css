@@ -268,7 +268,7 @@ figcaption,
   border: 1px solid #e2e2e2;
   padding: 24px;
   margin: 36px auto 42px auto;
-  max-width: 640px;      /* gör att den inte känns för bred */
+  max-width: 600px;      /* gör att den inte känns för bred */
 }
 
 /* Underrutor (Nolan + Beatriz) */
@@ -349,7 +349,7 @@ figcaption,
 .block-overview{
   display: grid;
   grid-template-columns: repeat(6, 1fr); /* desktop */
-  gap: 12px;
+  gap: 16px;
   margin: 16px 0 26px 0;
   padding: 0;
 }
@@ -426,4 +426,3 @@ figcaption,
     font-size: 1.45rem;
   }
 }
-
