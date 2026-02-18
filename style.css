@@ -411,6 +411,44 @@ figcaption,
   overflow: hidden;
 }
 
+/* =============================
+   9) EXPANDERBAR METODTEXT
+   (används med <details class="method-expand">)
+   ============================= */
+
+.method-expand{
+  margin-top: 10px;
+  text-align: left;
+}
+
+.method-expand summary{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.88rem;
+  color: #444;
+  cursor: pointer;
+  list-style: none;
+}
+
+.method-expand summary::-webkit-details-marker{
+  display: none;
+}
+
+.method-expand summary::after{
+  content: " ▾";
+  font-size: 0.8em;
+}
+
+.method-expand[open] summary::after{
+  content: " ▴";
+}
+
+.method-text{
+  margin-top: 10px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #222;
+}
+
 /* ============================= */
 /* 8) MOBIL */
 /* ============================= */
