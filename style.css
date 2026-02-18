@@ -9,6 +9,9 @@
 /* 1) BAS */
 /* ============================= */
 
+*, *::before, *::after { box-sizing: border-box; }
+
+
 html, body{
   background-color: #ffffff;
   color: #222222;
