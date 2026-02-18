@@ -1,5 +1,5 @@
 /* =========================================================
-   style.css – VILLARROEL-INFO.ORG (REN v1.0 → v1.1)
+   style.css – VILLARROEL-INFO.ORG (REN v1.1 → v1.2)
    Bas → Typografi → Media → Rytm → Komponenter → Mobil
    Global princip: EN bildklass (.media-image) = 380px
    Lås mobilgrid också: thumbnails i block ska ha samma storlek
@@ -10,7 +10,6 @@
 /* ============================= */
 
 *, *::before, *::after { box-sizing: border-box; }
-
 
 html, body{
   background-color: #ffffff;
@@ -437,15 +436,25 @@ figcaption,
   display: none;
 }
 
-.method-expand summary::before{
+/* Viktigt: etiketter sätts bara om <summary> är tomt.
+   Då blir det stabilt oavsett om du skriver "Visa text" i HTML eller inte. */
+.method-expand summary:empty::before{
   content: "Visa text";
   font-weight: 600;
   margin-right: 6px;
 }
 
-.method-expand summary::after{
+.method-expand summary:empty::after{
   content: " ▾";
   font-size: 0.85em;
+}
+
+.method-expand[open] summary:empty::before{
+  content: "Dölj text";
+}
+
+.method-expand[open] summary:empty::after{
+  content: " ▴";
 }
 
 .method-expand summary:hover,
@@ -456,14 +465,6 @@ figcaption,
 .method-expand summary:focus{
   outline: 2px solid #dddddd;
   outline-offset: 3px;
-}
-
-.method-expand[open] summary::before{
-  content: "Dölj text";
-}
-
-.method-expand[open] summary::after{
-  content: " ▴";
 }
 
 .method-text{
@@ -493,5 +494,5 @@ figcaption,
   h2{
     font-size: 1.45rem;
   }
-     }
+}
 
