@@ -525,3 +525,30 @@ figcaption,
 .ref-item em{
   font-style: italic;
 }
+
+/* ============================= */
+/* 11) AKADEMISKA LISTOR */
+/* ============================= */
+
+.list-academic{
+  margin: 0 0 1.1em 1.25em;
+  padding: 0;
+}
+
+.list-academic li{
+  margin-bottom: 0.35em;
+  line-height: 1.55;
+  font-size: 0.98rem;
+}
+
+.list-academic li::marker{
+  font-size: 0.85em;
+  color: #444444;
+}
+
+/* Numrerad variant – metodsteg */
+
+ol.list-academic{
+  margin-left: 1.4em;
+}
+
