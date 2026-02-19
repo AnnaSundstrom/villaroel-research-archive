@@ -563,3 +563,29 @@ ol.list-academic{
   margin-left: 1.4em;
 }
 
+/* ============================= */
+/* 10B) AKADEMISK REFERENSDEL */
+/* ============================= */
+
+.academic-refs{
+  margin-top: 30px;
+}
+
+.academic-refs summary{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.academic-list p{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+
